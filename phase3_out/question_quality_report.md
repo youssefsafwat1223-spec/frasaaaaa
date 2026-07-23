@@ -1,0 +1,211 @@
+# تقرير جودة الأسئلة
+
+## الملخص
+
+- بنك الأسئلة: **951** سؤال
+- مرشّحين للحذف (صفة واحدة + مصدر واحد): **501**
+- النواة (Set-Cover تغطّي كل الصفات): **257** سؤال تغطّي **566** صفة
+- عناقيد دمج: **0** عنقود → ينفع نطوّي **0** سؤال
+- أسئلة التوافق: **73** في **65** بُعد
+- أماكن ابتكار (عنقود ضعيف يتحوّل لسؤال واحد ذكي): **106**
+
+## النتيجة المقترحة
+- بنك بعد الحذف والدمج: ~**450** سؤال (بدل 951)
+- النواة الفعّالة للماتشينج: **257** سؤال
+
+## أعلى 20 سؤال بكمية المعلومة
+- `q_0168` info=4.194 | صفات=8 | مصادر=8 | ينطبق عليّ: تُراقب أكثر مما تُعينّ
+- `q_0487` info=4.194 | صفات=8 | مصادر=8 | ينطبق عليّ: تتجنب المواجهة
+- `q_0086` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: لا تنظر مباشرة
+- `q_0117` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: تهرب عند المدح
+- `q_0151` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: يتردد
+- `q_0191` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: تبحث عن ردّة فعل الطرف الآخر
+- `q_0216` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: يغيّر الموضوع بشكل
+- `q_0343` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: يعلق على التفاصيل
+- `q_0356` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: تراقب التفاصيل
+- `q_0425` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: تنتظر رد فعل
+- `q_0452` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: مشدود دائمًا
+- `q_0461` info=3.745 | صفات=6 | مصادر=6 | أكرر مقولات مثل: “أنا عادي بس”
+- `q_0489` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: تبحث عن رضا الآخر
+- `q_0539` info=3.745 | صفات=6 | مصادر=6 | أكرر مقولات مثل: “يمكن يتغيّر”
+- `q_0549` info=3.745 | صفات=6 | مصادر=6 | أكرر مقولات مثل: “ما أحب أفرح بزيادة”
+- `q_0593` info=3.745 | صفات=6 | مصادر=6 | ينطبق عليّ: يردد: “ما كان قصدي”
+- `q_0011` info=3.466 | صفات=5 | مصادر=5 | ينطبق عليّ: مشدودة دائمًا
+- `q_0027` info=3.466 | صفات=5 | مصادر=5 | ينطبق عليّ: توتر في عضلات الفك
+- `q_0298` info=3.466 | صفات=5 | مصادر=5 | ينطبق عليّ: ابتسامة سريعة مائلة
+- `q_0330` info=3.466 | صفات=5 | مصادر=5 | أكرر مقولات مثل: “بعد ما أسوي كذا”…
+
+## أبعاد التوافق (أماكن الدمج)
+- الهوية: 6 سؤال ← مرشّح دمج
+- التعلق: 3 سؤال ← مرشّح دمج
+- القرارات: 2 سؤال
+- الهوية — الميلاد والعمر: 1 سؤال
+- الهوية — تفضيل الجنسيات: 1 سؤال
+- الهوية — الأصول: 1 سؤال
+- الهوية — الطول والوزن: 1 سؤال
+- الهوية — البنية: 1 سؤال
+- الدين: 1 سؤال
+- الدين — التزام: 1 سؤال
+- الدين — المذهب: 1 سؤال
+- الدين — توقعات: 1 سؤال
+- الدين — اللباس (إناث): 1 سؤال
+- الدين — تفضيل اللباس (ذكور): 1 سؤال
+- الدين — سلوك: 1 سؤال
+- الدين — نمط الحياة: 1 سؤال
+- الصلاة — التزام: 1 سؤال
+- الصلاة — جماعة: 1 سؤال
+- الصلاة — كاشف الفجر: 1 سؤال
+- الصلاة — الفجر: 1 سؤال
+- الدين — حفظ القرآن: 1 سؤال
+- الدين — حفظ الكتاب: 1 سؤال
+- الدين — مرجعية القرار: 1 سؤال
+- الدين — قيمة: 1 سؤال
+- القرارات — تعدد: 1 سؤال
+- القرارات — قبول التعدد: 1 سؤال
+- الصحة — الفحص: 1 سؤال
+- الصحة — مزمنة: 1 سؤال
+- الصحة — إعاقة: 1 سؤال
+- الصحة — نفسية: 1 سؤال
+- الصحة — تقبّل: 1 سؤال
+- BigFive — انفتاح (معكوس): 1 سؤال
+- BigFive — ضمير: 1 سؤال
+- BigFive — انبساط (معكوس): 1 سؤال
+- BigFive — توافق: 1 سؤال
+- BigFive — اتزان: 1 سؤال
+- Gottman — 4 Horsemen: 1 سؤال
+- الصراع — إعادة تأطير: 1 سؤال
+- الصراع — مبادرة الصلح: 1 سؤال
+- التواصل — استجابة: 1 سؤال
+- المال: 1 سؤال
+- الكرم: 1 سؤال
+- المال — هيكل: 1 سؤال
+- النظافة: 1 سؤال
+- الأهل — سكن: 1 سؤال
+- الأهل — تدخّل: 1 سؤال
+- الأهل — زيارات: 1 سؤال
+- لغة الحب: 1 سؤال
+- الحميمية: 1 سؤال
+- الحميمية — علني: 1 سؤال
+- التربية: 1 سؤال
+- الأدوار — عمل الزوجة: 1 سؤال
+- الترفيه: 1 سؤال
+- الإيقاع: 1 سؤال
+- الخطوط الحمراء: 1 سؤال
+- كاشف — نرجسية: 1 سؤال
+- كاشف — هشاشة الأنا: 1 سؤال
+- كاشف — تسلّط/غيرة ⚠: 1 سؤال
+- كاشف — أمانة: 1 سؤال
+- كاشف — أدب: 1 سؤال
+- كاشف — تعاطف: 1 سؤال
+- كاشف — عدوانية: 1 سؤال
+- كاشف — استحقاق: 1 سؤال
+- كاشف — تحكّم: 1 سؤال
+- كاشف — مكيافيلية: 1 سؤال
+
+## أماكن الابتكار (عنقود ضعيف → سؤال اختيار-إجباري/موقف واحد)
+- sabti_008: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_049: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_174: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_213: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_148: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_019: 4/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_249: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_261: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_023: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_026: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_027: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_029: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_062: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_033: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_039: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_570: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_079: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_169: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_480: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_055: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_056: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_131: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_140: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_068: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_069: 4/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_283: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_078: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_082: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_153: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_088: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_586: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_089: 3/4 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_123: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_126: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_139: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_130: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_134: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_136: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_161: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_137: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_138: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_145: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_563: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_149: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_150: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_154: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_242: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_156: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_162: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_179: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_167: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_168: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_173: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_278: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_185: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_193: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_189: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_190: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_195: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_199: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_203: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_205: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_214: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_221: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_240: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_225: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_385: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_565: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_234: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_238: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_272: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_241: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_247: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_543: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_258: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_265: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_553: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_273: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_277: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_485: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_429: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_299: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_576: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_556: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_356: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_534: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_532: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_395: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_455: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_531: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_394: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_465: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_404: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_419: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_413: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_416: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_421: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_439: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_461: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_468: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_504: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_482: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_528: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_514: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_522: 3/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item
+- sabti_568: 2/3 ضعيفة → replace weak Likert cluster with 1 forced-choice or situational item

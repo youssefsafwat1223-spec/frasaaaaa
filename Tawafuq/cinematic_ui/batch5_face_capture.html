@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - Cinematic UI: BATCH 5</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cine-peach': '#FFEACE',
+                        'cine-white': '#FFFEFF',
+                        'cine-pink': '#FEDEFB',
+                        'cine-gold': '#FECA83',
+                        'cine-green': '#2B4C41',
+                    },
+                    fontFamily: {
+                        soft: ['"Tajawal"', 'sans-serif'],
+                        display: ['"Readex Pro"', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(43, 76, 65, 0.15)',
+                        'glow': '0 0 20px rgba(254, 202, 131, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: linear-gradient(135deg, #FFEACE 0%, #FEDEFB 50%, #E6EFEA 100%); font-family: 'Tajawal', sans-serif; min-height: 100vh; color: #2B4C41; padding: 40px 20px; }
+        .immersive-card { width: 390px; height: 844px; border-radius: 44px; position: relative; overflow: hidden; box-shadow: 0 40px 80px rgba(43, 76, 65, 0.25), inset 0 0 0 6px #FFFEFF; background: linear-gradient(180deg, #FFFEFF 0%, #FFEACE 50%, #FEDEFB 100%); flex-shrink: 0; display: flex; flex-direction: column; }
+        .glass-panel { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 32px; box-shadow: var(--glass); }
+        .btn-primary { width: 100%; padding: 16px; border-radius: 99px; background: linear-gradient(135deg, #FECA83 0%, #FEDEFB 100%); color: #2B4C41; font-weight: 700; font-size: 1.125rem; box-shadow: var(--glow); transition: transform 0.3s ease; border: 1px solid #FFFEFF; }
+        
+        /* Face Scanner Specific */
+        .face-scanner-bg { background-color: #2B4C41; }
+        .face-oval {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 240px; height: 320px; border-radius: 50%;
+            box-shadow: 0 0 0 9999px rgba(43, 76, 65, 0.85);
+            border: 2px dashed #FECA83; z-index: 10;
+        }
+        .scan-line {
+            width: 100%; height: 3px; background: #FECA83; box-shadow: 0 0 15px 3px rgba(254, 202, 131, 0.8);
+            position: absolute; left: 0; animation: face-scan 2s ease-in-out infinite alternate;
+        }
+        @keyframes face-scan { 0% { top: 0%; } 100% { top: 100%; } }
+
+        /* AI Processing Nodes */
+        .ai-node { position: absolute; width: 6px; height: 6px; background: white; border-radius: 50%; box-shadow: 0 0 8px white; opacity: 0; }
+        @keyframes blink { 0%, 100% { opacity: 0; transform: scale(0.5); } 50% { opacity: 1; transform: scale(1.5); } }
+
+    </style>
+</head>
+<body>
+    <div class="text-center mb-8 max-w-4xl mx-auto"><h1 class="text-4xl font-bold font-display text-cine-green">Tawafuq — BATCH 5: Face Capture</h1></div>
+    <div class="flex gap-8 overflow-x-auto pb-10 px-4">
+
+        <!-- SCREEN 1: Face Intro -->
+        <div class="immersive-card p-6 pt-12 relative">
+            <div class="flex items-center mb-10"><button class="w-10 h-10 rounded-full bg-white/40 backdrop-blur flex items-center justify-center border border-white/50"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button></div>
+            <div class="flex-1 flex flex-col">
+                <div class="mb-8 text-center">
+                    <div class="w-24 h-24 rounded-full bg-gradient-to-br from-cine-peach to-cine-pink mx-auto mb-6 flex items-center justify-center shadow-glow border-4 border-white text-4xl">🤖</div>
+                    <h3 class="text-3xl font-bold font-display mb-3">تحليل الفراسة بالذكاء الاصطناعي</h3>
+                    <p class="opacity-80 leading-relaxed font-medium">خطوتك الأخيرة. دع خوارزمياتنا تقرأ ملامح وجهك لاستخراج سمات شخصيتك الدقيقة (الفراسة).</p>
+                </div>
+                <div class="glass-panel p-6 flex flex-col gap-4 mb-auto">
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-cine-green/10 flex items-center justify-center text-cine-green">📸</div>
+                        <div class="flex-1"><h4 class="font-bold text-sm mb-1">إضاءة جيدة</h4><p class="text-xs opacity-70">قف في مكان مضيء وتأكد من وضوح وجهك.</p></div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-cine-green/10 flex items-center justify-center text-cine-green">🚫</div>
+                        <div class="flex-1"><h4 class="font-bold text-sm mb-1">لا نظارات أو قبعات</h4><p class="text-xs opacity-70">يجب أن تكون ملامح الوجه واضحة تماماً.</p></div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-cine-green/10 flex items-center justify-center text-cine-green">🔒</div>
+                        <div class="flex-1"><h4 class="font-bold text-sm mb-1">خصوصية تامة</h4><p class="text-xs opacity-70">تُستخدم الصورة للتحليل فقط ولا تظهر للمستخدمين إلا برغبتك.</p></div>
+                    </div>
+                </div>
+                <button class="btn-primary mt-6 mb-4">فتح الكاميرا</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: Face Scanner -->
+        <div class="immersive-card relative face-scanner-bg">
+            <div class="absolute inset-0 bg-cover bg-center opacity-30 blur-sm" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop');"></div>
+            <div class="face-oval"><div class="scan-line"></div></div>
+            <div class="relative z-20 h-full flex flex-col p-6 pt-12">
+                <div class="flex justify-between items-center mb-auto">
+                    <button class="w-10 h-10 rounded-full bg-white/10 backdrop-blur flex items-center justify-center border border-white/20 text-white"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+                </div>
+                <div class="mt-auto mb-16 text-center">
+                    <h3 class="text-2xl font-bold font-display text-white mb-2">ضع وجهك داخل الإطار</h3>
+                    <p class="text-cine-peach opacity-90 text-sm">انظر مباشرة للكاميرا وحافظ على ثباتك</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: Liveness Check (Move head) -->
+        <div class="immersive-card relative face-scanner-bg">
+            <div class="absolute inset-0 bg-cover bg-center opacity-50 blur-none" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop');"></div>
+            <div class="face-oval border-cine-green shadow-[0_0_0_9999px_rgba(43,76,65,0.4)]"></div>
+            <div class="relative z-20 h-full flex flex-col p-6 pt-12">
+                <div class="mt-auto mb-16 text-center">
+                    <h3 class="text-2xl font-bold font-display text-white mb-2">حرك رأسك لليمين ببطء</h3>
+                    <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur mx-auto mt-4 flex items-center justify-center border border-white/40 text-white text-2xl animate-pulse">➡️</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 4: Processing (AI) -->
+        <div class="immersive-card relative face-scanner-bg">
+            <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop'); filter: grayscale(100%) contrast(120%);"></div>
+            <!-- Animated Nodes -->
+            <div class="ai-node top-[40%] left-[45%]" style="animation: blink 1.5s infinite 0.1s;"></div>
+            <div class="ai-node top-[45%] left-[55%]" style="animation: blink 1.5s infinite 0.3s;"></div>
+            <div class="ai-node top-[50%] left-[48%]" style="animation: blink 1.5s infinite 0.5s;"></div>
+            <div class="ai-node top-[38%] left-[52%]" style="animation: blink 1.5s infinite 0.2s;"></div>
+            <div class="ai-node top-[55%] left-[45%]" style="animation: blink 1.5s infinite 0.6s;"></div>
+            
+            <div class="absolute inset-0 bg-cine-green/60 z-10"></div>
+            
+            <div class="relative z-20 h-full flex flex-col items-center justify-center p-6 text-center">
+                <div class="w-20 h-20 rounded-full border-4 border-t-cine-gold border-r-cine-gold border-b-transparent border-l-transparent animate-spin mb-6"></div>
+                <h3 class="text-2xl font-bold font-display text-white mb-2">جاري استخراج السمات...</h3>
+                <p class="text-cine-peach opacity-90 text-sm">يقوم الذكاء الاصطناعي بتحليل 84 نقطة في وجهك</p>
+                <div class="w-full h-1 bg-white/20 rounded-full mt-8 overflow-hidden"><div class="h-full bg-cine-gold w-3/4"></div></div>
+            </div>
+        </div>
+
+        <!-- SCREEN 5: Teaser -->
+        <div class="immersive-card p-6 pt-12 relative">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+            <div class="relative z-10 h-full flex flex-col text-center">
+                <div class="w-20 h-20 rounded-full bg-white mx-auto mb-6 flex items-center justify-center shadow-glow text-3xl">✨</div>
+                <h2 class="text-3xl font-bold font-display mb-2">تم التحليل بنجاح!</h2>
+                <p class="opacity-80 mb-8 font-medium">اكتشفنا 3 سمات بارزة في شخصيتك من ملامحك:</p>
+                
+                <div class="flex flex-col gap-3 mb-auto text-right">
+                    <div class="glass-panel p-4 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-cine-peach flex items-center justify-center text-xl">🗣️</div>
+                        <div class="flex-1">
+                            <h4 class="font-bold">قدرة تواصل عالية</h4>
+                            <p class="text-xs opacity-70">بناءً على اتساع المسافة بين العينين.</p>
+                        </div>
+                    </div>
+                    <div class="glass-panel p-4 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-cine-gold flex items-center justify-center text-xl">🎯</div>
+                        <div class="flex-1">
+                            <h4 class="font-bold">تركيز حاد</h4>
+                            <p class="text-xs opacity-70">بناءً على شكل الحاجبين.</p>
+                        </div>
+                    </div>
+                    <div class="glass-panel p-4 flex items-center gap-4 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-white/60 backdrop-blur-md z-10 flex items-center justify-center">
+                            <span class="text-sm font-bold opacity-80">🔒 اشترك لمعرفة 152 سمة أخرى</span>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">?</div>
+                        <div class="flex-1"><h4 class="font-bold">سمة خفية</h4></div>
+                    </div>
+                </div>
+
+                <button class="btn-primary mt-6 mb-4">إنهاء وإعداد الحساب</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

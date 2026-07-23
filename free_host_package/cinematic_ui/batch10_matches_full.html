@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - Cinematic UI: BATCH 10</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'cine-peach': '#FFEACE', 'cine-white': '#FFFEFF', 'cine-pink': '#FEDEFB', 'cine-gold': '#FECA83', 'cine-green': '#2B4C41', 'cine-green-light': '#4A6B60' },
+                    fontFamily: { soft: ['"Tajawal"', 'sans-serif'], display: ['"Readex Pro"', 'sans-serif'] },
+                    boxShadow: { 'glass': '0 8px 32px 0 rgba(43, 76, 65, 0.15)', 'glow': '0 0 20px rgba(254, 202, 131, 0.4)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: linear-gradient(135deg, #FFEACE 0%, #FEDEFB 50%, #E6EFEA 100%); font-family: 'Tajawal', sans-serif; min-height: 100vh; color: #2B4C41; padding: 40px 20px; }
+        .immersive-card { width: 390px; height: 844px; border-radius: 44px; position: relative; overflow: hidden; box-shadow: 0 40px 80px rgba(43, 76, 65, 0.25), inset 0 0 0 6px #FFFEFF; background: linear-gradient(180deg, #FFFEFF 0%, #FFEACE 50%, #FEDEFB 100%); flex-shrink: 0; display: flex; flex-direction: column; }
+        .glass-panel { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 32px; box-shadow: var(--glass); }
+        .btn-primary { width: 100%; padding: 16px; border-radius: 99px; background: linear-gradient(135deg, #FECA83 0%, #FEDEFB 100%); color: #2B4C41; font-weight: 700; text-align: center; font-size: 1.125rem; box-shadow: var(--glow); transition: transform 0.3s ease; border: 1px solid #FFFEFF; cursor: pointer; }
+        
+        .profile-hero { position: absolute; top: 0; left: 0; width: 100%; height: 60%; background-image: url('https://images.unsplash.com/photo-1620052581237-5d36e8e895ec?q=80&w=1000&auto=format&fit=crop'); background-size: cover; background-position: center; mask-image: linear-gradient(to bottom, black 50%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%); z-index: 0; }
+        
+        .liquid-drop { width: 60px; height: 70px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1)); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-weight: bold; position: relative; overflow: hidden; }
+        .liquid-fill { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, #FECA83, #FFEACE); z-index: -1; }
+    </style>
+</head>
+<body>
+    <div class="text-center mb-8 max-w-4xl mx-auto"><h1 class="text-4xl font-bold font-display text-cine-green">Tawafuq — BATCH 10: Matches Full View</h1></div>
+    <div class="flex gap-8 overflow-x-auto pb-10 px-4">
+
+        <!-- SCREEN 1: Full Profile -->
+        <div class="immersive-card relative">
+            <div class="profile-hero"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cine-peach/30 to-cine-pink z-0"></div>
+            
+            <div class="relative z-10 h-full flex flex-col p-6 pt-12">
+                <div class="flex justify-between items-center mb-auto">
+                    <button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center border border-white/30 text-white"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                    <button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center border border-white/30 text-white"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" /></svg></button>
+                </div>
+
+                <div class="mt-auto mb-6 text-right text-white">
+                    <h2 class="text-5xl font-bold font-display mb-2 drop-shadow-lg">لمياء</h2>
+                    <p class="text-lg text-cine-peach font-medium drop-shadow-md">عمر 25 (تونس)</p>
+                    <p class="text-sm opacity-90 mt-1">طبيبة أسنان • تقيم في الرياض</p>
+                </div>
+
+                <!-- Match Compatibility Summary -->
+                <div class="glass-panel p-6 mb-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">نسبة التوافق الكلية</h3>
+                            <p class="text-xs opacity-70">بناءً على 8 أبعاد للتحليل</p>
+                        </div>
+                        <div class="liquid-drop">
+                            <div class="liquid-fill" style="height: 88%;"></div>
+                            <span class="z-10 text-sm">88%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-primary flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                    بدء محادثة
+                </button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: Deep Compatibility Details -->
+        <div class="immersive-card relative">
+            <div class="p-6 pt-12 flex-1 overflow-y-auto pb-24">
+                <div class="flex justify-between items-center mb-8">
+                    <button class="w-10 h-10 rounded-full bg-white/40 backdrop-blur flex items-center justify-center border border-white/50"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                    <h2 class="text-xl font-bold">لماذا تتوافقان؟</h2>
+                </div>
+
+                <div class="glass-panel p-6 mb-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-2 h-full bg-cine-green"></div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="text-3xl">🧩</div>
+                        <h3 class="font-bold text-lg">أسلوب إدارة الخلاف</h3>
+                    </div>
+                    <p class="text-sm font-medium leading-relaxed opacity-80">
+                        كلاكما يميل للانسحاب المؤقت لترتيب الأفكار قبل النقاش العقلاني. هذا يقلل جداً من فرص التصادم الحاد ويجعل التفاهم أسهل.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-6 mb-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-2 h-full bg-cine-gold"></div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="text-3xl">👨‍👩‍👧‍👦</div>
+                        <h3 class="font-bold text-lg">الرؤية العائلية</h3>
+                    </div>
+                    <p class="text-sm font-medium leading-relaxed opacity-80">
+                        تتطابق طموحاتكما في بناء عائلة مستقرة وتوزيع الأدوار التقليدية المرنة، مما يعكس استقراراً في القيم الجوهرية.
+                    </p>
+                </div>
+
+                <div class="bg-white/40 p-6 rounded-3xl border border-white/50 mb-6">
+                    <h3 class="font-bold text-lg mb-4 text-cine-green">نقطة اختلاف محتملة</h3>
+                    <p class="text-sm font-medium leading-relaxed opacity-80">
+                        هي تميل للانفتاح الاجتماعي وتعدد العلاقات، بينما تفضل أنت الدائرة الضيقة والمغلقة. قد تحتاجان لمرونة في هذا الجانب.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

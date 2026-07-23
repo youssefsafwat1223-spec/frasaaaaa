@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تَوَافُق — Demo</title>
+  <link rel="stylesheet" href="./demo.css">
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <h1>تَوَافُق <span class="muted">— Demo</span></h1>
+      <p class="muted small">اختبار تفاعلي للنظام: قراءة الوجه + الاستبيان + التحليل</p>
+    </header>
+
+    <!-- ============ STEP 1: pick plan ============ -->
+    <section class="step" id="step-plan">
+      <h2><span class="num">1</span> اختر الخطة</h2>
+      <div class="plans">
+        <button class="plan" data-plan="matching">
+          <strong>Matching</strong><span class="muted">مجاني · 7 أسئلة</span>
+          <small>نسبة توافق فقط</small>
+        </button>
+        <button class="plan" data-plan="basic">
+          <strong>Basic</strong><span class="muted">30 سؤال</span>
+          <small>تحليل عام</small>
+        </button>
+        <button class="plan" data-plan="basic_plus">
+          <strong>Basic+</strong><span class="muted">45 سؤال</span>
+          <small>تحليل ممتد</small>
+        </button>
+        <button class="plan" data-plan="advanced">
+          <strong>Advanced</strong><span class="muted">80 سؤال</span>
+          <small>تحليل أعمق</small>
+        </button>
+        <button class="plan" data-plan="premium">
+          <strong>Premium</strong><span class="muted">100 سؤال</span>
+          <small>تحليل تفصيلي</small>
+        </button>
+      </div>
+      <div id="boot-status" class="muted small"></div>
+    </section>
+
+    <!-- ============ STEP 2: face capture ============ -->
+    <section class="step hidden" id="step-face">
+      <h2><span class="num">2</span> قراءة الوجه</h2>
+      <p class="muted small">ارفع صورة واضحة لوجهك (الكاميرا الأمامية تكفي). الصورة لا تُرسَل لأي سيرفر.</p>
+      <div class="face-area">
+        <div class="dropzone" id="dropzone">
+          <label class="upload">
+            <input type="file" id="fileInput" accept="image/*">
+            <span>اختر صورة أو اسحبها هنا</span>
+          </label>
+          <img id="preview" alt="">
+        </div>
+        <div class="face-stats" id="faceStats"></div>
+      </div>
+      <button class="primary" id="goQuestions" disabled>متابعة إلى الأسئلة</button>
+    </section>
+
+    <!-- ============ STEP 3: questions ============ -->
+    <section class="step hidden" id="step-questions">
+      <h2><span class="num">3</span> الأسئلة (<span id="qProgress">0 / 0</span>)</h2>
+      <div class="questions" id="questionList"></div>
+      <button class="primary" id="goResults">عرض النتائج</button>
+    </section>
+
+    <!-- ============ STEP 4: results ============ -->
+    <section class="step hidden" id="step-results">
+      <h2><span class="num">4</span> النتائج</h2>
+      <div id="resultPanel"></div>
+      <button class="secondary" id="restart">إعادة التشغيل</button>
+    </section>
+  </div>
+
+  <script type="module" src="./face.js"></script>
+  <script src="./scoring.js"></script>
+  <script type="module" src="./demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - BATCH 1: Pre-Auth</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#FAFAF8',
+                        night: '#0F0F0E',
+                        surface: '#1A1C1A', /* Slightly lighter than night for cards */
+                        gold: '#B8975A',
+                        forest: '#2C5F4A',
+                        charcoal: '#1A1A1A',
+                        fog: '#F0EDE8',
+                        muted: '#8A8883',
+                        line: '#E8E4DC',
+                        'line-dark': '#2A2A2A',
+                        rose: '#9B3A3A'
+                    },
+                    fontFamily: {
+                        naskh: ['"Noto Naskh Arabic"', 'serif'],
+                        sans: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+                        display: ['"DM Serif Display"', 'serif']
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(0,0,0,0.5)',
+                        'gold-glow': '0 0 20px rgba(184, 151, 90, 0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f3f4f6; padding: 40px; }
+        
+        /* App Canvas Container */
+        .app-canvas {
+            width: 390px;
+            height: 844px;
+            background-color: #0F0F0E;
+            color: #F0EDE8;
+            position: relative;
+            overflow: hidden;
+            border-radius: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), inset 0 0 0 4px #2A2A2A;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Input styling overrides */
+        input:focus { outline: none; border-color: #B8975A; box-shadow: 0 0 0 1px #B8975A; }
+        
+        /* Hide scrollbar for OTP */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Abstract Background Pattern */
+        .bg-pattern {
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(184,151,90,0.08) 0%, rgba(15,15,14,0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .bg-pattern-2 {
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(44,95,74,0.1) 0%, rgba(15,15,14,0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+    <div class="mb-8 max-w-4xl">
+        <h1 class="text-3xl font-bold mb-2">Tawafuq — BATCH 1: Pre-Auth</h1>
+        <p class="text-gray-600">Horizontal scroll to view all 6 screens. Designed with a strict 390x844 mobile-first viewport, RTL layout, and Premium Dark Night theme.</p>
+    </div>
+
+    <!-- Scrollable Gallery -->
+    <div class="flex gap-8 overflow-x-auto pb-10 items-center">
+
+        <!-- SCREEN 1: Splash -->
+        <div class="app-canvas justify-center items-center">
+            <div class="bg-pattern"></div>
+            <div class="bg-pattern-2"></div>
+            
+            <div class="relative z-10 flex flex-col items-center">
+                <!-- Golden emblem -->
+                <div class="w-16 h-16 rounded-full border border-gold flex items-center justify-center mb-6 shadow-gold-glow">
+                    <svg class="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+                </div>
+                <h1 class="font-naskh text-5xl text-gold font-bold tracking-wider mb-3">تَوَافُق</h1>
+                <p class="text-muted tracking-widest text-sm font-medium">عِلم النفس • الفِراسَة • التّوَافُق</p>
+            </div>
+            
+            <!-- Loading indicator -->
+            <div class="absolute bottom-16 left-0 w-full flex justify-center z-10">
+                <div class="w-1.5 h-1.5 bg-gold rounded-full animate-ping opacity-75"></div>
+            </div>
+        </div>
+
+
+        <!-- SCREEN 2: Landing Page -->
+        <div class="app-canvas justify-end px-6 pb-12">
+            <div class="bg-pattern" style="width: 600px; height: 600px; top: -200px; right: -200px; opacity: 0.5;"></div>
+            
+            <div class="relative z-10 w-full flex flex-col gap-6">
+                <div>
+                    <h2 class="font-naskh text-4xl text-fog font-bold leading-tight mb-4">زواج مبني<br>على أُسس علمية</h2>
+                    <p class="text-muted text-lg leading-relaxed">
+                        نصلك بشريك حياتك الأنسب عبر تحليل عميق للشخصية وقراءة الملامح بالفراسة. 
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-4 mt-6">
+                    <button class="w-full bg-gold hover:bg-opacity-90 text-night font-bold text-lg py-4 rounded-2xl transition-all">
+                        إنشاء حساب جديد
+                    </button>
+                    <button class="w-full bg-transparent border border-line-dark text-fog hover:bg-surface font-semibold text-lg py-4 rounded-2xl transition-all">
+                        تسجيل الدخول
+                    </button>
+                </div>
+                
+                <p class="text-center text-xs text-muted mt-2">
+                    بالاستمرار أنت توافق على <span class="text-gold underline underline-offset-4">الشروط والأحكام</span>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- SCREEN 3: Register -->
+        <div class="app-canvas">
+            <!-- Header -->
+            <div class="flex items-center p-6 border-b border-line-dark">
+                <button class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-fog">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <h2 class="flex-1 text-center font-bold text-lg mr-10">إنشاء حساب</h2>
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 px-6 py-8 overflow-y-auto">
+                <div class="mb-8">
+                    <h3 class="font-naskh text-3xl font-bold mb-2 text-gold">أهلاً بك في تَوَافُق</h3>
+                    <p class="text-muted">أدخل بياناتك الأساسية لنبدأ رحلتك.</p>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-sm font-medium text-fog mb-2">البريد الإلكتروني</label>
+                        <input type="email" placeholder="name@example.com" class="w-full bg-surface border border-line-dark rounded-xl px-4 py-4 text-fog placeholder-muted focus:border-gold transition-colors text-left" dir="ltr">
+                    </div>
+                    
+                    <!-- Password -->
+                    <div>
+                        <label class="block text-sm font-medium text-fog mb-2">كلمة المرور</label>
+                        <input type="password" placeholder="••••••••" class="w-full bg-surface border border-line-dark rounded-xl px-4 py-4 text-fog placeholder-muted focus:border-gold transition-colors text-left" dir="ltr">
+                        <p class="text-xs text-muted mt-2">يجب أن تحتوي على ٨ أحرف على الأقل، وحرف كبير ورقم.</p>
+                    </div>
+
+                    <!-- Gender Selection -->
+                    <div class="mt-2">
+                        <label class="block text-sm font-medium text-fog mb-3">الجنس</label>
+                        <div class="flex gap-4">
+                            <label class="flex-1 relative">
+                                <input type="radio" name="gender" class="peer sr-only" checked>
+                                <div class="w-full py-4 rounded-xl border border-line-dark bg-surface text-center cursor-pointer peer-checked:border-gold peer-checked:bg-[rgba(184,151,90,0.1)] transition-all">
+                                    <span class="block text-2xl mb-1">👨🏻</span>
+                                    <span class="font-semibold text-fog">ذكر</span>
+                                </div>
+                            </label>
+                            <label class="flex-1 relative">
+                                <input type="radio" name="gender" class="peer sr-only">
+                                <div class="w-full py-4 rounded-xl border border-line-dark bg-surface text-center cursor-pointer peer-checked:border-gold peer-checked:bg-[rgba(184,151,90,0.1)] transition-all">
+                                    <span class="block text-2xl mb-1">👩🏻</span>
+                                    <span class="font-semibold text-fog">أنثى</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Action -->
+            <div class="p-6 pt-0 mt-auto">
+                <button class="w-full bg-gold text-night font-bold text-lg py-4 rounded-2xl">متابعة</button>
+            </div>
+        </div>
+
+
+        <!-- SCREEN 4: Login -->
+        <div class="app-canvas">
+            <div class="flex items-center p-6 border-b border-line-dark">
+                <button class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-fog">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <h2 class="flex-1 text-center font-bold text-lg mr-10">تسجيل الدخول</h2>
+            </div>
+
+            <div class="flex-1 px-6 py-8">
+                <div class="mb-10 text-center">
+                    <div class="w-20 h-20 bg-surface rounded-full mx-auto mb-4 flex items-center justify-center border border-line-dark">
+                        <svg class="w-10 h-10 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" /></svg>
+                    </div>
+                    <h3 class="font-naskh text-3xl font-bold mb-2">أهلاً بك مجدداً</h3>
+                    <p class="text-muted">أدخل بياناتك للعودة إلى حسابك</p>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <div>
+                        <input type="email" placeholder="البريد الإلكتروني" class="w-full bg-surface border border-line-dark rounded-xl px-4 py-4 text-fog focus:border-gold transition-colors text-right">
+                    </div>
+                    <div>
+                        <input type="password" placeholder="كلمة المرور" class="w-full bg-surface border border-line-dark rounded-xl px-4 py-4 text-fog focus:border-gold transition-colors text-right" dir="rtl">
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="text-sm text-gold font-medium hover:underline underline-offset-4">نسيت كلمة المرور؟</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 pt-0 mt-auto">
+                <button class="w-full bg-gold text-night font-bold text-lg py-4 rounded-2xl mb-4">دخول</button>
+                <p class="text-center text-sm text-muted">
+                    ليس لديك حساب؟ <button class="text-gold font-semibold ml-1">سجل الآن</button>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- SCREEN 5: OTP -->
+        <div class="app-canvas">
+            <div class="flex items-center p-6">
+                <button class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-fog">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+            </div>
+
+            <div class="flex-1 px-6 py-4">
+                <div class="mb-10">
+                    <h3 class="font-naskh text-3xl font-bold mb-4">تأكيد البريد الإلكتروني</h3>
+                    <p class="text-muted leading-relaxed">
+                        أرسلنا رمزاً مكوناً من <span class="font-display text-fog">6</span> أرقام إلى بريدك 
+                        <span class="block mt-1 text-fog font-medium" dir="ltr">ahmed@example.com</span>
+                    </p>
+                </div>
+
+                <!-- OTP Inputs -->
+                <div class="flex justify-between gap-2 mb-8" dir="ltr">
+                    <input type="text" maxlength="1" value="4" class="w-[50px] h-[60px] text-center text-2xl font-display bg-surface border border-gold rounded-xl text-gold focus:outline-none">
+                    <input type="text" maxlength="1" value="2" class="w-[50px] h-[60px] text-center text-2xl font-display bg-surface border border-gold rounded-xl text-gold focus:outline-none">
+                    <input type="text" maxlength="1" value="8" class="w-[50px] h-[60px] text-center text-2xl font-display bg-surface border border-gold rounded-xl text-gold focus:outline-none">
+                    <input type="text" maxlength="1" class="w-[50px] h-[60px] text-center text-2xl font-display bg-surface border border-line-dark rounded-xl text-fog focus:border-gold focus:outline-none">
+                    <input type="text" maxlength="1" class="w-[50px] h-[60px] text-center text-2xl font-display bg-surface border border-line-dark rounded-xl text-fog focus:border-gold focus:outline-none">
+                    <input type="text" maxlength="1" class="w-[50px] h-[60px] text-center text-2xl font-display bg-surface border border-line-dark rounded-xl text-fog focus:border-gold focus:outline-none">
+                </div>
+
+                <div class="text-center">
+                    <p class="text-sm text-muted mb-2">لم يصلك الرمز؟</p>
+                    <button class="text-gold font-medium">إعادة الإرسال (<span class="font-display">0:45</span>)</button>
+                </div>
+            </div>
+
+            <div class="p-6 pt-0 mt-auto">
+                <button class="w-full bg-gold opacity-50 cursor-not-allowed text-night font-bold text-lg py-4 rounded-2xl">تأكيد</button>
+            </div>
+        </div>
+
+
+        <!-- SCREEN 6: Forgot Password -->
+        <div class="app-canvas">
+            <div class="flex items-center p-6 border-b border-line-dark">
+                <button class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-fog">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <h2 class="flex-1 text-center font-bold text-lg mr-10">استعادة كلمة المرور</h2>
+            </div>
+
+            <div class="flex-1 px-6 py-8">
+                <div class="mb-8">
+                    <div class="w-16 h-16 bg-[rgba(155,58,58,0.1)] rounded-full mb-6 flex items-center justify-center border border-[rgba(155,58,58,0.3)]">
+                        <svg class="w-7 h-7 text-rose" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                    </div>
+                    <h3 class="font-naskh text-2xl font-bold mb-3">نسيت كلمة المرور؟</h3>
+                    <p class="text-muted leading-relaxed">
+                        لا تقلق، أدخل بريدك الإلكتروني المرتبط بحسابك وسنرسل لك رابطاً لإعادة التعيين.
+                    </p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-fog mb-2">البريد الإلكتروني</label>
+                    <input type="email" placeholder="name@example.com" class="w-full bg-surface border border-line-dark rounded-xl px-4 py-4 text-fog focus:border-gold transition-colors text-left" dir="ltr">
+                </div>
+            </div>
+
+            <div class="p-6 pt-0 mt-auto">
+                <button class="w-full bg-gold text-night font-bold text-lg py-4 rounded-2xl">إرسال الرابط</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

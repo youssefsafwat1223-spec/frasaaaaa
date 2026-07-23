@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - Splash Screen Proposals</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { background-color: #E2E8F0; padding: 40px; font-family: 'IBM Plex Sans Arabic', sans-serif; }
+        
+        .splash-canvas {
+            width: 320px;
+            height: 600px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .font-naskh { font-family: 'Noto Naskh Arabic', serif; }
+        .font-amiri { font-family: 'Amiri', serif; }
+
+        /* Animation 1: Pulse Glow */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 30px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        .animate-pulse-glow { animation: pulse-glow 2s infinite; }
+
+        /* Animation 2: Fluid Gradient */
+        @keyframes fluid-bg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .bg-fluid {
+            background: linear-gradient(-45deg, #7C3AED, #DB2777, #4F46E5, #0D9488);
+            background-size: 400% 400%;
+            animation: fluid-bg 10s ease infinite;
+        }
+
+        /* Animation 3: Radar/Scan */
+        @keyframes radar-spin {
+            100% { transform: rotate(360deg); }
+        }
+        .radar {
+            position: absolute;
+            width: 400px; height: 400px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent 70%, rgba(6, 182, 212, 0.3) 100%);
+            animation: radar-spin 3s linear infinite;
+        }
+
+        /* Animation 4: Floating Particles */
+        @keyframes float-up {
+            0% { transform: translateY(100px) scale(0); opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { transform: translateY(-200px) scale(1.5); opacity: 0; }
+        }
+        .particle { position: absolute; background: rgba(255,255,255,0.1); border-radius: 50%; }
+
+        /* Animation 5: Ripple Rings */
+        @keyframes ripple {
+            0% { transform: scale(0.8); opacity: 1; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+        .ripple-ring {
+            position: absolute; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%;
+            animation: ripple 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="mb-10 text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl font-bold mb-4 text-slate-800">مقترحات شاشة البداية (Splash Screen)</h1>
+        <p class="text-slate-600 text-lg">صممت لك 6 أفكار حركية وبصرية لشاشة البداية، كل منها يركز على رسالة مختلفة (الفخامة الكلاسيكية، الذكاء الاصطناعي، الرومانسية الحديثة).</p>
+    </div>
+
+    <div class="flex flex-wrap gap-8 justify-center pb-10">
+
+        <!-- Proposal 1: The Classic Luxury (Pulse Glow) -->
+        <div>
+            <h3 class="text-center font-bold text-lg mb-4 text-slate-700">1. الفخامة الكلاسيكية<br><span class="text-sm font-normal opacity-75">نبض هادئ، خلفية كحلية، لون ذهبي</span></h3>
+            <div class="splash-canvas" style="background-color: #0F172A;">
+                <!-- Decorative Pattern -->
+                <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#D4AF37 1px, transparent 1px); background-size: 20px 20px;"></div>
+                
+                <div class="w-24 h-24 rounded-full border border-[#D4AF37] flex items-center justify-center animate-pulse-glow z-10 bg-[#0F172A]">
+                    <span class="text-4xl">💍</span>
+                </div>
+                <h2 class="font-naskh text-5xl font-bold text-[#D4AF37] mt-8 z-10">تَوَافُق</h2>
+            </div>
+        </div>
+
+        <!-- Proposal 2: The Modern Fluid (Habii Style) -->
+        <div>
+            <h3 class="text-center font-bold text-lg mb-4 text-slate-700">2. الانسيابية العصرية<br><span class="text-sm font-normal opacity-75">ألوان متحركة، مناسب للشباب والحيوية</span></h3>
+            <div class="splash-canvas bg-fluid text-white">
+                <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 shadow-xl border border-white/30">
+                    <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                </div>
+                <h2 class="font-ibm text-5xl font-bold tracking-tight">تَوَافُق</h2>
+                <p class="mt-4 text-white/80 font-medium tracking-widest text-sm uppercase">T a w a f u q</p>
+            </div>
+        </div>
+
+        <!-- Proposal 3: The Science Scanner (Tech/AI Focus) -->
+        <div>
+            <h3 class="text-center font-bold text-lg mb-4 text-slate-700">3. عدسة الذكاء الاصطناعي<br><span class="text-sm font-normal opacity-75">يركز على (الفراسة/العلم) بخلفية رادار</span></h3>
+            <div class="splash-canvas bg-slate-900">
+                <div class="radar"></div>
+                <!-- Grid lines -->
+                <div class="absolute inset-0 border-[rgba(6,182,212,0.1)] border" style="background-image: linear-gradient(rgba(6,182,212,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+                
+                <div class="z-10 bg-slate-900 p-4 rounded-full">
+                    <div class="w-20 h-20 border-2 border-cyan-400 rounded-lg flex items-center justify-center transform rotate-45 shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+                        <span class="text-3xl transform -rotate-45 text-cyan-400">👁️</span>
+                    </div>
+                </div>
+                <h2 class="font-ibm text-4xl font-bold text-cyan-50 mt-10 z-10 tracking-wide">تَوَافُق</h2>
+                <p class="text-cyan-400 text-xs mt-2 font-mono z-10 tracking-widest">SCIENCE BASED MATCHING</p>
+            </div>
+        </div>
+
+        <!-- Proposal 4: The Pure Minimalist (Hawaya Style) -->
+        <div>
+            <h3 class="text-center font-bold text-lg mb-4 text-slate-700">4. المينيمالي النقي<br><span class="text-sm font-normal opacity-75">بسيط جداً، أبيض ساطع، يركز على الهدوء</span></h3>
+            <div class="splash-canvas bg-[#FDFBF7]">
+                <div class="w-32 h-32 opacity-10 absolute top-10 left-[-20px] rounded-full bg-[#8B5CF6] blur-2xl"></div>
+                <div class="w-32 h-32 opacity-10 absolute bottom-10 right-[-20px] rounded-full bg-[#F472B6] blur-2xl"></div>
+                
+                <h2 class="font-amiri text-6xl font-bold text-slate-800 z-10 mb-2">تَوَافُق</h2>
+                <div class="w-12 h-1 bg-gradient-to-r from-[#8B5CF6] to-[#F472B6] rounded-full z-10"></div>
+            </div>
+        </div>
+
+        <!-- Proposal 5: The Velvet Connection (Awaser Style) -->
+        <div>
+            <h3 class="text-center font-bold text-lg mb-4 text-slate-700">5. الروابط المخملية<br><span class="text-sm font-normal opacity-75">أمواج وحلقات متسعة تعبر عن الارتباط</span></h3>
+            <div class="splash-canvas bg-[#18182B]">
+                <div class="flex items-center justify-center relative w-full h-full">
+                    <div class="ripple-ring w-20 h-20"></div>
+                    <div class="ripple-ring w-20 h-20" style="animation-delay: 1s"></div>
+                    <div class="ripple-ring w-20 h-20" style="animation-delay: 2s"></div>
+                    
+                    <div class="z-10 text-center">
+                        <div class="text-5xl mb-4">✨</div>
+                        <h2 class="font-naskh text-4xl font-bold text-white tracking-widest">تَوَافُق</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal 6: The Particles Drop -->
+        <div>
+            <h3 class="text-center font-bold text-lg mb-4 text-slate-700">6. صعود الجزيئات<br><span class="text-sm font-normal opacity-75">خلفية داكنة وجزيئات بيضاء ترتفع بنعومة</span></h3>
+            <div class="splash-canvas bg-[#1C1C1C]">
+                <div class="particle w-2 h-2 left-10" style="animation: float-up 4s infinite 0s;"></div>
+                <div class="particle w-3 h-3 left-32" style="animation: float-up 5s infinite 1s;"></div>
+                <div class="particle w-1.5 h-1.5 right-20" style="animation: float-up 3.5s infinite 2s;"></div>
+                <div class="particle w-2 h-2 right-10" style="animation: float-up 4.5s infinite 0.5s;"></div>
+                
+                <div class="z-10 flex flex-col items-center">
+                    <svg class="w-12 h-12 text-[#E5E0D8] mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    <h2 class="font-ibm text-4xl font-bold text-[#E5E0D8]">تَوَافُق</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

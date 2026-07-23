@@ -1,0 +1,9 @@
+# Netlify config — static demo, no build step.
+[build]
+  publish = "."
+
+# Long-cache the ML models (they're large and immutable)
+[[headers]]
+  for = "/models/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

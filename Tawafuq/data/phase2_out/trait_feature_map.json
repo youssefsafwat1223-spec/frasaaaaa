@@ -1,0 +1,507 @@
+[
+  {
+    "id": "sabti_001",
+    "name": "الكرم",
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "mouth_height_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "chin_width_ratio",
+        "direction": "mid",
+        "hits": 1
+      },
+      {
+        "feature": "eye_warmth_proxy",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "lips",
+        1
+      ],
+      [
+        "chin",
+        1
+      ],
+      [
+        "eye",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_002",
+    "name": "الطيبة",
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "cheek_fullness",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "upper_lip_ratio",
+        "direction": "low",
+        "hits": 1
+      },
+      {
+        "feature": "forehead_smoothness",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "forehead_lines",
+        "direction": "low",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "forehead",
+        2
+      ],
+      [
+        "cheek",
+        1
+      ],
+      [
+        "lips",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_003",
+    "name": "الصبر",
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "forehead_width_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "brow_tilt",
+        "direction": "down",
+        "hits": 1
+      },
+      {
+        "feature": "mouth_stability",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "chin_width_ratio",
+        "direction": "mid",
+        "hits": 1
+      },
+      {
+        "feature": "chin_stability",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "chin",
+        2
+      ],
+      [
+        "forehead",
+        1
+      ],
+      [
+        "brow",
+        1
+      ],
+      [
+        "mouth",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_004",
+    "name": "الأنانية",
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "mouth_tension_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "chin_width_ratio",
+        "direction": "low",
+        "hits": 1
+      },
+      {
+        "feature": "brow_inner_distance",
+        "direction": "low",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "mouth",
+        1
+      ],
+      [
+        "chin",
+        1
+      ],
+      [
+        "brow",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_005",
+    "name": "الحزم",
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "jaw_width_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "brow_tilt",
+        "direction": "flat",
+        "hits": 1
+      },
+      {
+        "feature": "forehead_tension",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "mouth_open_ratio",
+        "direction": "low",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "jaw",
+        1
+      ],
+      [
+        "brow",
+        1
+      ],
+      [
+        "forehead",
+        1
+      ],
+      [
+        "mouth",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_006",
+    "name": "الاندفاع",
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "nostril_width_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "lower_lip_protrusion",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "nose",
+        1
+      ],
+      [
+        "lips",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_007",
+    "name": "الهدوء",
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "forehead_smoothness",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "face_muscle_tension",
+        "direction": "low",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "forehead",
+        1
+      ],
+      [
+        "face",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_010",
+    "name": "القيادة",
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "chin_projection_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "forehead_shape",
+        "direction": "flat",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "chin",
+        1
+      ],
+      [
+        "forehead",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_011",
+    "name": "التواضع",
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "eye_warmth_proxy",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "face_muscle_tension",
+        "direction": "low",
+        "hits": 1
+      },
+      {
+        "feature": "mouth_stability",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "eye",
+        1
+      ],
+      [
+        "face",
+        1
+      ],
+      [
+        "mouth",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_012",
+    "name": "الكتمان",
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "mouth_open_ratio",
+        "direction": "low",
+        "hits": 1
+      },
+      {
+        "feature": "lower_lip_tension",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "mouth",
+        1
+      ],
+      [
+        "lips",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_013",
+    "name": "التسلّط",
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "jaw_angle_sharpness",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "brow_density",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "jaw",
+        1
+      ],
+      [
+        "brow",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_018",
+    "name": "الطموح",
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "brow_arch",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "chin_projection_ratio",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "brow",
+        1
+      ],
+      [
+        "chin",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_021",
+    "name": "الوفاء",
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "lower_lip_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "brow_tilt",
+        "direction": "flat",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "lips",
+        1
+      ],
+      [
+        "brow",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_022",
+    "name": "الطموح المفرط",
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "chin_projection_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "mouth_tension_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "brow_eye_distance_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "forehead_tension",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "chin",
+        1
+      ],
+      [
+        "mouth",
+        1
+      ],
+      [
+        "brow",
+        1
+      ],
+      [
+        "forehead",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sabti_222",
+    "name": "قمع المشاعر حفاظًا على الصورة",
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "forehead_smoothness",
+        "direction": "high",
+        "hits": 2
+      },
+      {
+        "feature": "feature_rigidity",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "forehead",
+        2
+      ],
+      [
+        "face",
+        1
+      ]
+    ]
+  }
+]

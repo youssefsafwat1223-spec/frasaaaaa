@@ -1,0 +1,681 @@
+[
+  {
+    "id": "sabti_001",
+    "name": "الكرم",
+    "total_indicators": 4,
+    "structural_image": 3,
+    "non_image_behavioral": 0,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 1,
+    "structural_ratio": 0.75,
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "mouth_height_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "chin_width_ratio",
+        "direction": "mid",
+        "hits": 1
+      },
+      {
+        "feature": "eye_warmth_proxy",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "lips",
+        1
+      ],
+      [
+        "chin",
+        1
+      ],
+      [
+        "eye",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "شفاه ممتلئة ومرتخية",
+      "ذقن ناعم غير مشدود",
+      "عين دافئة النظرة"
+    ]
+  },
+  {
+    "id": "sabti_002",
+    "name": "الطيبة",
+    "total_indicators": 4,
+    "structural_image": 3,
+    "non_image_behavioral": 1,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 0,
+    "structural_ratio": 0.75,
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "cheek_fullness",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "upper_lip_ratio",
+        "direction": "low",
+        "hits": 1
+      },
+      {
+        "feature": "forehead_smoothness",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "forehead_lines",
+        "direction": "low",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "forehead",
+        2
+      ],
+      [
+        "cheek",
+        1
+      ],
+      [
+        "lips",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "وجنتان ناعمتان",
+      "شفة علوية قصيرة",
+      "جبهة خالية من التجاعيد"
+    ]
+  },
+  {
+    "id": "sabti_003",
+    "name": "الصبر",
+    "total_indicators": 4,
+    "structural_image": 4,
+    "non_image_behavioral": 0,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 0,
+    "structural_ratio": 1.0,
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "forehead_width_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "brow_tilt",
+        "direction": "down",
+        "hits": 1
+      },
+      {
+        "feature": "mouth_stability",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "chin_width_ratio",
+        "direction": "mid",
+        "hits": 1
+      },
+      {
+        "feature": "chin_stability",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "chin",
+        2
+      ],
+      [
+        "forehead",
+        1
+      ],
+      [
+        "brow",
+        1
+      ],
+      [
+        "mouth",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "جبهة عريضة",
+      "حواجب مائلة للأسفل بلطف",
+      "خط الفم مستقر",
+      "ذقن ثابت بلا توتر"
+    ]
+  },
+  {
+    "id": "sabti_004",
+    "name": "الأنانية",
+    "total_indicators": 4,
+    "structural_image": 3,
+    "non_image_behavioral": 0,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 1,
+    "structural_ratio": 0.75,
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "mouth_tension_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "chin_width_ratio",
+        "direction": "low",
+        "hits": 1
+      },
+      {
+        "feature": "brow_inner_distance",
+        "direction": "low",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "mouth",
+        1
+      ],
+      [
+        "chin",
+        1
+      ],
+      [
+        "brow",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "شفاه مشدودة ومائلة للأسفل",
+      "ذقن مدبب مائل للداخل",
+      "حواجب متقاربة أو مشدودة"
+    ]
+  },
+  {
+    "id": "sabti_005",
+    "name": "الحزم",
+    "total_indicators": 4,
+    "structural_image": 4,
+    "non_image_behavioral": 0,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 0,
+    "structural_ratio": 1.0,
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "jaw_width_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "brow_tilt",
+        "direction": "flat",
+        "hits": 1
+      },
+      {
+        "feature": "forehead_tension",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "mouth_open_ratio",
+        "direction": "low",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "jaw",
+        1
+      ],
+      [
+        "brow",
+        1
+      ],
+      [
+        "forehead",
+        1
+      ],
+      [
+        "mouth",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "فكّ عريض",
+      "حاجبان مستقيمان",
+      "جبهة مقطبة قليلاً",
+      "فم مغلق بإحكام دون تشنج"
+    ]
+  },
+  {
+    "id": "sabti_006",
+    "name": "الاندفاع",
+    "total_indicators": 4,
+    "structural_image": 2,
+    "non_image_behavioral": 2,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 0,
+    "structural_ratio": 0.5,
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "nostril_width_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "lower_lip_protrusion",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "nose",
+        1
+      ],
+      [
+        "lips",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "فتحات أنف متوسعة",
+      "شفة سفلية بارزة"
+    ]
+  },
+  {
+    "id": "sabti_007",
+    "name": "الهدوء",
+    "total_indicators": 4,
+    "structural_image": 2,
+    "non_image_behavioral": 1,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 1,
+    "structural_ratio": 0.5,
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "forehead_smoothness",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "face_muscle_tension",
+        "direction": "low",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "forehead",
+        1
+      ],
+      [
+        "face",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "جبهة ملساء وواسعة",
+      "عضلات وجه غير مشدودة"
+    ]
+  },
+  {
+    "id": "sabti_010",
+    "name": "القيادة",
+    "total_indicators": 4,
+    "structural_image": 2,
+    "non_image_behavioral": 2,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 0,
+    "structural_ratio": 0.5,
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "chin_projection_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "forehead_shape",
+        "direction": "flat",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "chin",
+        1
+      ],
+      [
+        "forehead",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "ذقن بارز وصلب",
+      "جبهة مستقيمة مع حواجب واضحة الحدود"
+    ]
+  },
+  {
+    "id": "sabti_011",
+    "name": "التواضع",
+    "total_indicators": 4,
+    "structural_image": 3,
+    "non_image_behavioral": 1,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 0,
+    "structural_ratio": 0.75,
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "eye_warmth_proxy",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "face_muscle_tension",
+        "direction": "low",
+        "hits": 1
+      },
+      {
+        "feature": "mouth_stability",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "eye",
+        1
+      ],
+      [
+        "face",
+        1
+      ],
+      [
+        "mouth",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "نظرة عين هادئة دون تحديق",
+      "عضلات وجه مرتخية",
+      "فم مستقر لا يطلب إثباتًا"
+    ]
+  },
+  {
+    "id": "sabti_012",
+    "name": "الكتمان",
+    "total_indicators": 4,
+    "structural_image": 2,
+    "non_image_behavioral": 2,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 0,
+    "structural_ratio": 0.5,
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "mouth_open_ratio",
+        "direction": "low",
+        "hits": 1
+      },
+      {
+        "feature": "lower_lip_tension",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "mouth",
+        1
+      ],
+      [
+        "lips",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "فم مغلق بإحكام",
+      "شفة سفلية مضمومة قليلاً"
+    ]
+  },
+  {
+    "id": "sabti_013",
+    "name": "التسلّط",
+    "total_indicators": 4,
+    "structural_image": 2,
+    "non_image_behavioral": 1,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 1,
+    "structural_ratio": 0.5,
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "jaw_angle_sharpness",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "brow_density",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "jaw",
+        1
+      ],
+      [
+        "brow",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "فك بارز وصلب",
+      "حواجب كثيفة ومائلة نحو الأسفل"
+    ]
+  },
+  {
+    "id": "sabti_018",
+    "name": "الطموح",
+    "total_indicators": 4,
+    "structural_image": 2,
+    "non_image_behavioral": 1,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 1,
+    "structural_ratio": 0.5,
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "brow_arch",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "chin_projection_ratio",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "brow",
+        1
+      ],
+      [
+        "chin",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "حاجبان مقوسان بلطف",
+      "ذقن مائل للأمام"
+    ]
+  },
+  {
+    "id": "sabti_021",
+    "name": "الوفاء",
+    "total_indicators": 4,
+    "structural_image": 2,
+    "non_image_behavioral": 2,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 0,
+    "structural_ratio": 0.5,
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "lower_lip_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "brow_tilt",
+        "direction": "flat",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "lips",
+        1
+      ],
+      [
+        "brow",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "شفة سفلية ممتلئة",
+      "حاجبان مستقيمان مع تقارب بسيط"
+    ]
+  },
+  {
+    "id": "sabti_022",
+    "name": "الطموح المفرط",
+    "total_indicators": 4,
+    "structural_image": 3,
+    "non_image_behavioral": 0,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 1,
+    "structural_ratio": 0.75,
+    "confidence": "high",
+    "features": [
+      {
+        "feature": "chin_projection_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "mouth_tension_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "brow_eye_distance_ratio",
+        "direction": "high",
+        "hits": 1
+      },
+      {
+        "feature": "forehead_tension",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "chin",
+        1
+      ],
+      [
+        "mouth",
+        1
+      ],
+      [
+        "brow",
+        1
+      ],
+      [
+        "forehead",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "ذقن بارز بقوة للأمام",
+      "فم مشدود باستمرار",
+      "جبهة مشدودة بحاجبي مرتفعين"
+    ]
+  },
+  {
+    "id": "sabti_222",
+    "name": "قمع المشاعر حفاظًا على الصورة",
+    "total_indicators": 3,
+    "structural_image": 2,
+    "non_image_behavioral": 1,
+    "verbal": 0,
+    "posture_body": 0,
+    "ambiguous": 0,
+    "structural_ratio": 0.67,
+    "confidence": "medium",
+    "features": [
+      {
+        "feature": "forehead_smoothness",
+        "direction": "high",
+        "hits": 2
+      },
+      {
+        "feature": "feature_rigidity",
+        "direction": "high",
+        "hits": 1
+      }
+    ],
+    "regions": [
+      [
+        "forehead",
+        2
+      ],
+      [
+        "face",
+        1
+      ]
+    ],
+    "structural_indicators": [
+      "ملامح ثابتة أكثر من اللازم",
+      "جبهة هادئة بشكل مفرط"
+    ]
+  }
+]

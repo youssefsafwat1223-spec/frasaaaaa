@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>تَوَافُق — التصوير متعدّد الزوايا</title>
+<style>
+  :root { --bg:#0e1117; --card:#161b22; --line:#283142; --accent:#6ea8fe;
+          --ok:#3fb950; --warn:#d29922; --txt:#e6edf3; --mut:#8b949e; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,"Segoe UI",Tahoma,sans-serif;
+         background:var(--bg); color:var(--txt); }
+  header { padding:16px 20px; border-bottom:1px solid var(--line); }
+  header h1 { margin:0; font-size:18px; }
+  header p { margin:4px 0 0; color:var(--mut); font-size:13px; }
+  .wrap { max-width:860px; margin:0 auto; padding:20px; }
+  .stage { display:grid; grid-template-columns:1fr; gap:16px; }
+  .videoBox { position:relative; background:#000; border-radius:14px;
+              overflow:hidden; aspect-ratio:4/3; border:2px solid var(--line); }
+  video { width:100%; height:100%; object-fit:cover; transform:scaleX(-1); }
+  .ring { position:absolute; inset:0; pointer-events:none;
+          border:3px solid transparent; border-radius:14px; transition:border-color .2s; }
+  .ring.ok { border-color:var(--ok); box-shadow:0 0 24px rgba(63,185,80,.4) inset; }
+  .hud { position:absolute; top:10px; inset-inline-start:10px; background:rgba(0,0,0,.55);
+         padding:6px 10px; border-radius:8px; font-size:12px; line-height:1.6; }
+  .target { position:absolute; bottom:10px; inset-inline:10px; text-align:center;
+            background:rgba(0,0,0,.55); padding:8px; border-radius:10px; font-size:14px; }
+  .steps { display:flex; gap:8px; }
+  .chip { flex:1; text-align:center; padding:10px; border:1px solid var(--line);
+          border-radius:10px; background:var(--card); font-size:13px; color:var(--mut); }
+  .chip.active { border-color:var(--accent); color:var(--txt); }
+  .chip.done { border-color:var(--ok); color:var(--ok); }
+  .chip .thumb { width:100%; aspect-ratio:1; object-fit:cover; border-radius:8px;
+                 margin-top:8px; display:none; }
+  .chip.done .thumb { display:block; }
+  button { font:inherit; padding:10px 16px; border-radius:10px; border:1px solid var(--line);
+           background:var(--card); color:var(--txt); cursor:pointer; }
+  button.primary { background:var(--accent); color:#06101f; border-color:var(--accent); font-weight:600; }
+  button:disabled { opacity:.5; cursor:not-allowed; }
+  .row { display:flex; gap:10px; align-items:center; margin-top:14px; flex-wrap:wrap; }
+  .results { margin-top:20px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:8px; }
+  .metric { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:13px; }
+  .metric b { color:var(--accent); font-variant-numeric:tabular-nums; }
+  .sec { margin:18px 0 8px; font-size:15px; color:var(--txt); border-inline-start:3px solid var(--accent); padding-inline-start:8px; }
+  .note { background:#1c2128; border:1px solid var(--warn); color:#e3b341; padding:10px 12px; border-radius:8px; font-size:13px; margin-top:10px; }
+  .hidden { display:none; }
+  .overlay { position:fixed; inset:0; background:rgba(8,11,18,.92); z-index:50;
+             display:flex; align-items:center; justify-content:center; padding:20px; }
+  .prepCard { background:var(--card); border:1px solid var(--line); border-radius:16px;
+              max-width:460px; width:100%; padding:24px; }
+  .prepCard h2 { margin:0 0 4px; font-size:18px; }
+  .prepCard .sub { color:var(--mut); font-size:13px; margin:0 0 16px; }
+  .prepList { list-style:none; margin:0 0 18px; padding:0; }
+  .prepList li { display:flex; gap:10px; align-items:flex-start; padding:9px 0;
+                 border-bottom:1px solid var(--line); font-size:14px; }
+  .prepList li:last-child { border-bottom:none; }
+  .prepList .ic { flex:0 0 22px; text-align:center; color:var(--accent); font-weight:700; }
+  .prepCard button { width:100%; }
+</style>
+</head>
+<body>
+<header>
+  <h1>تَوَافُق — التصوير متعدّد الزوايا (تجربة الاقتراح 3)</h1>
+  <p>أمامية + يمين + يسار. التطبيق يلتقط تلقائيًا لمّا تكون الزاوية صح.</p>
+</header>
+<div class="overlay" id="prep">
+  <div class="prepCard">
+    <h2>تجهيز قبل التصوير</h2>
+    <p class="sub">جودة القياس تعتمد على الصورة — ظبّط دول الأول:</p>
+    <ul class="prepList">
+      <li><span class="ic">١</span><span><b>شيل النضارة</b> — بتعمل وهج على العين وتخفي شكلها.</span></li>
+      <li><span class="ic">٢</span><span><b>ارفع الشعر عن الجبهة</b> — عشان خط الشعر وقمة الأرملة.</span></li>
+      <li><span class="ic">٣</span><span><b>الضوء قدّامك مش وراك</b> — إضاءة أمامية متساوية بدون ظل جانبي.</span></li>
+      <li><span class="ic">٤</span><span><b>تعبير محايد</b> — بُق مقفول، عيون مفتوحة طبيعي، بدون ابتسامة.</span></li>
+      <li><span class="ic">٥</span><span><b>الكاميرا في مستوى العين</b> وثبّت إيدك.</span></li>
+    </ul>
+    <button class="primary" id="prepStart">جاهز — شغّل الكاميرا</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="steps" id="steps">
+    <div class="chip active" data-k="front">١) أمامية (0°) <img class="thumb" data-t="front"></div>
+    <div class="chip" data-k="left">٢) لِف لليمين (~55°) <img class="thumb" data-t="left"></div>
+    <div class="chip" data-k="right">٣) لِف لليسار (~55°) <img class="thumb" data-t="right"></div>
+  </div>
+
+  <div class="stage" style="margin-top:14px;">
+    <div class="videoBox">
+      <video id="vid" playsinline muted></video>
+      <div class="ring" id="ring"></div>
+      <div class="hud" id="hud">جارٍ التحميل…</div>
+      <div class="target" id="target">—</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <button class="primary" id="startBtn">تشغيل الكاميرا</button>
+    <button id="manualBtn" disabled>التقاط يدوي</button>
+    <button id="resetBtn" disabled>إعادة</button>
+    <button id="analyzeBtn" disabled>تحليل ودمج</button>
+  </div>
+
+  <div class="results hidden" id="results">
+    <div class="sec">الزوايا الملتقطة</div>
+    <div class="grid" id="anglesOut"></div>
+    <div class="sec">قياسات أمامية (الـ32 المعتادة)</div>
+    <div class="grid" id="frontOut"></div>
+    <div class="sec">قياسات جانبية جديدة (Profile) — انفتحت بفضل الاقتراح 3</div>
+    <div class="grid" id="profileOut"></div>
+    <div class="sec">قياسات بكسل/تقطيع (لون العين + البياض + الشعر)</div>
+    <div class="grid" id="pixelOut"></div>
+    <div class="note" id="limitNote"></div>
+  </div>
+</div>
+
+<script type="module" src="./face.js"></script>
+<script type="module" src="./segment.js"></script>
+<script type="module" src="./multi_capture.js"></script>
+</body>
+</html>

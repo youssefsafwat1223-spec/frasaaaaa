@@ -1,0 +1,1268 @@
+[
+ {
+  "num": 1,
+  "name": "الكرم",
+  "frontal_metrics": [
+   "eye_open_ratio",
+   "eye_warmth_proxy",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "nostril_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن",
+   "شحمة الأذن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 2,
+  "name": "الثقة في الآخرين",
+  "frontal_metrics": [
+   "brow_arch",
+   "eye_open_ratio",
+   "face_aspect_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [],
+  "to_questions": [
+   "الجفن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 3,
+  "name": "الصراحة والتعبير المباشر",
+  "frontal_metrics": [
+   "brow_eye_distance_ratio",
+   "brow_tilt",
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [],
+  "to_questions": [
+   "الجفن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 4,
+  "name": "التعاطف",
+  "frontal_metrics": [
+   "brow_arch",
+   "eye_open_ratio",
+   "eye_tilt_ratio",
+   "eye_warmth_proxy",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه مائي"
+  ],
+  "to_questions": [
+   "الأذن",
+   "الجفن"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 5,
+  "name": "الحنان العاطفي",
+  "frontal_metrics": [
+   "brow_arch",
+   "face_aspect_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [],
+  "to_questions": [
+   "تحت العين",
+   "لون العين"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 6,
+  "name": "الرومانسية",
+  "frontal_metrics": [
+   "brow_arch",
+   "eye_warmth_proxy",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه مائي"
+  ],
+  "to_questions": [
+   "الأذن",
+   "تحت العين",
+   "شحمة الأذن"
+  ],
+  "n_face": 3,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 7,
+  "name": "الوفاء",
+  "frontal_metrics": [
+   "brow_eye_distance_ratio",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "to_questions": [
+   "الأذن",
+   "طول الحاجب"
+  ],
+  "n_face": 3,
+  "verdict_before": "جزئي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 8,
+  "name": "الاستقرار الأسري",
+  "frontal_metrics": [
+   "forehead_shape",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "to_questions": [
+   "الأذن",
+   "شحمة الأذن",
+   "طول الحاجب",
+   "لون العين"
+  ],
+  "n_face": 2,
+  "verdict_before": "جزئي",
+  "verdict_after": "جزئي"
+ },
+ {
+  "num": 9,
+  "name": "تحمل المسؤولية",
+  "frontal_metrics": [
+   "brow_density",
+   "chin_projection_ratio",
+   "face_squareness",
+   "forehead_width_ratio",
+   "jaw_width_ratio",
+   "nose_length_ratio"
+  ],
+  "profile_metrics": [
+   "chin_sagittal_projection"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 7,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 10,
+  "name": "الطموح",
+  "frontal_metrics": [
+   "brow_tilt",
+   "chin_projection_ratio",
+   "eye_tilt_ratio",
+   "forehead_width_ratio",
+   "nose_length_ratio"
+  ],
+  "profile_metrics": [
+   "chin_sagittal_projection"
+  ],
+  "derivable_element": [
+   "وجه خشبي"
+  ],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 11,
+  "name": "القيادة",
+  "frontal_metrics": [
+   "brow_tilt",
+   "face_squareness",
+   "forehead_width_ratio",
+   "jaw_width_ratio",
+   "nose_width_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن",
+   "مؤخرة الرأس"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 12,
+  "name": "الجرأة",
+  "frontal_metrics": [
+   "brow_density",
+   "chin_projection_ratio",
+   "eye_tilt_ratio",
+   "forehead_width_ratio"
+  ],
+  "profile_metrics": [
+   "chin_sagittal_projection",
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 13,
+  "name": "الاستقلالية",
+  "frontal_metrics": [
+   "brow_tilt",
+   "forehead_lines",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه خشبي"
+  ],
+  "to_questions": [
+   "الأذن",
+   "شحمة الأذن"
+  ],
+  "n_face": 3,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 14,
+  "name": "الحكمة",
+  "frontal_metrics": [
+   "chin_projection_ratio",
+   "forehead_shape"
+  ],
+  "profile_metrics": [
+   "brow_ridge_projection",
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن",
+   "شحمة الأذن"
+  ],
+  "n_face": 4,
+  "verdict_before": "جزئي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 15,
+  "name": "التركيز العالي",
+  "frontal_metrics": [
+   "brow_density",
+   "eye_open_ratio",
+   "eye_spacing_ratio",
+   "forehead_lines",
+   "forehead_shape"
+  ],
+  "profile_metrics": [
+   "forehead_slope_profile"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الجفن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 16,
+  "name": "التحليل والدقة",
+  "frontal_metrics": [
+   "brow_tilt",
+   "eye_spacing_ratio",
+   "forehead_shape",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "تحت العين",
+   "لون العين"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 17,
+  "name": "التخطيط بعيد المدى",
+  "frontal_metrics": [
+   "chin_projection_ratio",
+   "face_aspect_ratio",
+   "forehead_shape",
+   "mouth_width_ratio",
+   "nose_length_ratio"
+  ],
+  "profile_metrics": [
+   "chin_sagittal_projection"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن",
+   "شحمة الأذن",
+   "طول الحاجب"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 18,
+  "name": "الانضباط",
+  "frontal_metrics": [
+   "brow_tilt",
+   "forehead_width_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [
+   "nose_profile_angle"
+  ],
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 19,
+  "name": "العملية",
+  "frontal_metrics": [
+   "chin_projection_ratio",
+   "eye_open_ratio",
+   "face_squareness",
+   "forehead_shape",
+   "mouth_width_ratio",
+   "nose_length_ratio"
+  ],
+  "profile_metrics": [
+   "chin_sagittal_projection"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 7,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 20,
+  "name": "الإصرار",
+  "frontal_metrics": [
+   "brow_tilt",
+   "chin_projection_ratio",
+   "face_squareness",
+   "jaw_width_ratio",
+   "nose_length_ratio"
+  ],
+  "profile_metrics": [
+   "brow_ridge_projection",
+   "chin_sagittal_projection"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 7,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 21,
+  "name": "الصبر",
+  "frontal_metrics": [
+   "brow_eye_distance_ratio",
+   "chin_projection_ratio",
+   "forehead_shape",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [
+   "brow_ridge_projection",
+   "forehead_slope_profile"
+  ],
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 22,
+  "name": "المرونة",
+  "frontal_metrics": [
+   "brow_arch",
+   "eye_spacing_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [
+   "وجه مائي"
+  ],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 23,
+  "name": "التسامح",
+  "frontal_metrics": [
+   "brow_arch",
+   "eye_spacing_ratio",
+   "eye_tilt_ratio",
+   "face_aspect_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 24,
+  "name": "الاجتماعية",
+  "frontal_metrics": [
+   "brow_tilt",
+   "eye_open_ratio",
+   "face_aspect_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 25,
+  "name": "الانفتاح على التجارب",
+  "frontal_metrics": [
+   "brow_tilt",
+   "eye_open_ratio",
+   "forehead_shape",
+   "nose_tip_drop_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "to_questions": [
+   "الأذن",
+   "الشعر / خط الشعر",
+   "خط الشعر"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 26,
+  "name": "الإبداع",
+  "frontal_metrics": [
+   "eye_spacing_ratio",
+   "forehead_shape"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه خشبي"
+  ],
+  "to_questions": [
+   "الأذن",
+   "طول الحاجب",
+   "لون العين"
+  ],
+  "n_face": 2,
+  "verdict_before": "جزئي",
+  "verdict_after": "جزئي"
+ },
+ {
+  "num": 27,
+  "name": "الخيال",
+  "frontal_metrics": [
+   "brow_arch",
+   "eye_spacing_ratio",
+   "eye_warmth_proxy",
+   "forehead_shape"
+  ],
+  "profile_metrics": [
+   "forehead_slope_profile"
+  ],
+  "derivable_element": [
+   "وجه مائي"
+  ],
+  "to_questions": [
+   "الشامات"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 28,
+  "name": "الحس الفني",
+  "frontal_metrics": [
+   "brow_arch",
+   "eye_warmth_proxy",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه معدني"
+  ],
+  "to_questions": [
+   "الشعر / خط الشعر",
+   "خط الشعر"
+  ],
+  "n_face": 3,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 29,
+  "name": "المثالية",
+  "frontal_metrics": [
+   "brow_eye_distance_ratio",
+   "eye_tilt_ratio",
+   "forehead_shape",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [
+   "وجه معدني"
+  ],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 30,
+  "name": "النظام",
+  "frontal_metrics": [
+   "brow_tilt",
+   "forehead_width_ratio",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "to_questions": [
+   "الأذن",
+   "الجفن"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 31,
+  "name": "الحذر",
+  "frontal_metrics": [
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "nostril_width_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه معدني"
+  ],
+  "to_questions": [
+   "الأذن",
+   "تحت العين"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 32,
+  "name": "التحفظ والخصوصية",
+  "frontal_metrics": [
+   "brow_eye_distance_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [
+   "brow_ridge_projection"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن",
+   "الجفن",
+   "لون العين"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 33,
+  "name": "السرية وحفظ الأسرار",
+  "frontal_metrics": [
+   "brow_eye_distance_ratio",
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [
+   "brow_ridge_projection"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الجفن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 34,
+  "name": "العناد",
+  "frontal_metrics": [
+   "brow_inner_distance",
+   "chin_projection_ratio",
+   "forehead_shape",
+   "jaw_width_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "profile_metrics": [
+   "chin_sagittal_projection",
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 7,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 35,
+  "name": "العصبية وسرعة الاستثارة",
+  "frontal_metrics": [
+   "brow_inner_distance",
+   "brow_tilt",
+   "eye_open_ratio"
+  ],
+  "profile_metrics": [
+   "nose_profile_angle"
+  ],
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "to_questions": [
+   "بياض العين",
+   "بياض/قزحية العين",
+   "طول الحاجب"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 36,
+  "name": "الاندفاع",
+  "frontal_metrics": [
+   "brow_tilt",
+   "eye_open_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "to_questions": [
+   "الأذن",
+   "شحمة الأذن",
+   "طول الحاجب"
+  ],
+  "n_face": 3,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 37,
+  "name": "حب المخاطرة",
+  "frontal_metrics": [
+   "brow_tilt",
+   "eye_tilt_ratio",
+   "forehead_width_ratio",
+   "nose_width_ratio",
+   "nostril_width_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 38,
+  "name": "الحرص المالي",
+  "frontal_metrics": [
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "nostril_width_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن",
+   "شحمة الأذن"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 39,
+  "name": "الإنفاق والتبذير",
+  "frontal_metrics": [
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "nose_width_ratio",
+   "nostril_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن",
+   "حجم طرف الأنف",
+   "شحمة الأذن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 40,
+  "name": "حب الرفاهية والمتعة",
+  "frontal_metrics": [
+   "cheek_fullness",
+   "face_aspect_ratio",
+   "lower_lip_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن",
+   "حجم طرف الأنف"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 41,
+  "name": "الفضول وحب المعرفة",
+  "frontal_metrics": [
+   "brow_density",
+   "eye_open_ratio",
+   "forehead_shape"
+  ],
+  "profile_metrics": [
+   "nose_profile_angle"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن",
+   "حجم طرف الأنف",
+   "لون العين"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 42,
+  "name": "القدرة على الإقناع",
+  "frontal_metrics": [
+   "brow_tilt",
+   "eye_open_ratio",
+   "jaw_width_ratio",
+   "lower_lip_ratio",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "to_questions": [],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 43,
+  "name": "الاهتمام بالتفاصيل",
+  "frontal_metrics": [
+   "brow_density",
+   "eye_open_ratio",
+   "eye_spacing_ratio",
+   "forehead_lines",
+   "forehead_shape",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [
+   "nose_profile_angle"
+  ],
+  "derivable_element": [],
+  "to_questions": [],
+  "n_face": 7,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 44,
+  "name": "رؤية الصورة الكبيرة",
+  "frontal_metrics": [
+   "eye_open_ratio",
+   "eye_spacing_ratio",
+   "face_aspect_ratio",
+   "forehead_width_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه خشبي"
+  ],
+  "to_questions": [
+   "الأذن",
+   "مؤخرة الرأس"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 45,
+  "name": "التكيف",
+  "frontal_metrics": [
+   "brow_arch",
+   "eye_spacing_ratio",
+   "face_aspect_ratio",
+   "forehead_shape",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 46,
+  "name": "التفاؤل",
+  "frontal_metrics": [
+   "eye_tilt_ratio",
+   "forehead_width_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "to_questions": [
+   "طول الحاجب"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 47,
+  "name": "النقد ورؤية السلبيات",
+  "frontal_metrics": [
+   "brow_tilt",
+   "eye_open_ratio",
+   "eye_tilt_ratio",
+   "forehead_width_ratio",
+   "nose_tip_drop_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه معدني"
+  ],
+  "to_questions": [],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 48,
+  "name": "الحساسية",
+  "frontal_metrics": [
+   "brow_arch",
+   "brow_density",
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه معدني"
+  ],
+  "to_questions": [
+   "بياض العين",
+   "بياض/قزحية العين",
+   "تحت العين"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 49,
+  "name": "الحاجة للأمان",
+  "frontal_metrics": [
+   "eye_open_ratio",
+   "forehead_shape",
+   "mouth_width_ratio",
+   "nostril_width_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "to_questions": [
+   "الأذن",
+   "الجفن"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 50,
+  "name": "حب الحرية",
+  "frontal_metrics": [
+   "eye_spacing_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "to_questions": [
+   "الأذن",
+   "خط الشعر",
+   "شحمة الأذن"
+  ],
+  "n_face": 2,
+  "verdict_before": "جزئي",
+  "verdict_after": "جزئي"
+ },
+ {
+  "num": 51,
+  "name": "حب السيطرة",
+  "frontal_metrics": [
+   "brow_inner_distance",
+   "brow_tilt",
+   "chin_projection_ratio",
+   "eye_open_ratio",
+   "jaw_width_ratio"
+  ],
+  "profile_metrics": [
+   "chin_sagittal_projection",
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 7,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 52,
+  "name": "اللباقة",
+  "frontal_metrics": [
+   "brow_arch",
+   "eye_warmth_proxy",
+   "face_aspect_ratio",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 5,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 53,
+  "name": "القدرة على الاستماع",
+  "frontal_metrics": [
+   "brow_arch",
+   "eye_open_ratio",
+   "eye_tilt_ratio",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 54,
+  "name": "الدعم وخدمة الآخرين",
+  "frontal_metrics": [
+   "brow_tilt",
+   "eye_tilt_ratio",
+   "upper_lip_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [
+   "وجه مائي"
+  ],
+  "to_questions": [
+   "الأذن",
+   "الجفن"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 55,
+  "name": "الاستمتاع بالعائلة",
+  "frontal_metrics": [
+   "face_aspect_ratio",
+   "forehead_shape",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن",
+   "شحمة الأذن",
+   "طول الحاجب",
+   "لون العين"
+  ],
+  "n_face": 3,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 56,
+  "name": "القدرة على إنجاز الأهداف",
+  "frontal_metrics": [
+   "brow_tilt",
+   "chin_projection_ratio",
+   "eye_spacing_ratio",
+   "face_squareness",
+   "forehead_width_ratio",
+   "nose_length_ratio"
+  ],
+  "profile_metrics": [
+   "chin_sagittal_projection"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 7,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 57,
+  "name": "تحمل الضغط",
+  "frontal_metrics": [
+   "brow_density",
+   "chin_projection_ratio",
+   "jaw_width_ratio"
+  ],
+  "profile_metrics": [
+   "brow_ridge_projection",
+   "chin_sagittal_projection",
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 6,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 58,
+  "name": "التوازن بين العقل والعاطفة",
+  "frontal_metrics": [
+   "brow_arch",
+   "chin_projection_ratio",
+   "eye_open_ratio",
+   "face_aspect_ratio",
+   "forehead_shape",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 7,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 59,
+  "name": "الصدق العملي",
+  "frontal_metrics": [
+   "brow_tilt",
+   "chin_projection_ratio",
+   "mouth_width_ratio"
+  ],
+  "profile_metrics": [
+   "nose_bridge_convexity"
+  ],
+  "derivable_element": [],
+  "to_questions": [
+   "الأذن"
+  ],
+  "n_face": 4,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ },
+ {
+  "num": 60,
+  "name": "الغيرة",
+  "frontal_metrics": [
+   "brow_eye_distance_ratio",
+   "brow_inner_distance",
+   "brow_tilt",
+   "eye_open_ratio",
+   "eye_tilt_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "profile_metrics": [],
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "to_questions": [],
+  "n_face": 7,
+  "verdict_before": "قوي",
+  "verdict_after": "قوي"
+ }
+]

@@ -1,0 +1,45 @@
+📊 Summary:
+- Total pages processed: 353
+- Total faces detected: 333
+- Total labeled samples: 282
+- Effective thresholds found: 33
+
+📈 Thresholds:
+- أسلوب التعبير اللفظي (upper_lip_ratio): full_upper_lip avg=0.0445 (n=2), thin_upper_lip avg=0.0173 (n=2), diff=0.0272, threshold=0.0309, ✅ Effective, confidence=medium
+- استخدام التعبيرات الوجهية (face_height): deep_nasolabial avg=247.1017 (n=2), no_nasolabial avg=233.4467 (n=2), diff=13.6550, threshold=240.2742, ✅ Effective, confidence=high
+- الأمانة والروحانية (face_height): broken_lines avg=259.2605 (n=2), continuous_lines avg=165.6609 (n=2), diff=93.5996, threshold=212.4607, ✅ Effective, confidence=high
+- الأنشطة البدنية أو الذهنية (lower_face_ratio): long_lower_face avg=0.3735 (n=2), short_lower_face avg=0.3402 (n=2), diff=0.0333, threshold=0.3569, ✅ Effective, confidence=medium
+- الاجتماعية والاستقلالية (face_height): long avg=227.4994 (n=3), short avg=212.7379 (n=2), diff=14.7615, threshold=220.1187, ✅ Effective, confidence=high
+- الاعتماد على النفس (nose_tip_projection_ratio): narrow_attached avg=0.0101 (n=1), wide_detached avg=0.0122 (n=1), diff=0.0021, threshold=0.0112, ⚠ Needs more data, confidence=insufficient
+- الاندماج الاجتماعي (brow_eye_distance_ratio): close_low avg=0.0983 (n=3), far_high avg=0.1381 (n=3), diff=0.0398, threshold=0.1182, ✅ Effective, confidence=medium
+- الاهتمامات الفكرية (face_width): flat avg=212.5500 (n=3), rounded avg=230.1399 (n=3), diff=17.5900, threshold=221.3449, ✅ Effective, confidence=high
+- التجديد أو المحافظة (widening_ratio): oval avg=0.8600 (n=3), square avg=0.8648 (n=3), diff=0.0048, threshold=0.8624, ⚠ Needs more data, confidence=insufficient
+- التعبير عن العاطفة (eye_open_ratio): large_pupil avg=0.3503 (n=3), small_pupil avg=0.2768 (n=3), diff=0.0735, threshold=0.3136, ✅ Effective, confidence=high
+- التفاؤل والتشاؤم (forehead_height): corners_down avg=112.9364 (n=2), corners_up avg=83.6271 (n=2), diff=29.3092, threshold=98.2818, ✅ Effective, confidence=high
+- التفصيل والإجمال (face_height): thick avg=282.2814 (n=3), thin avg=430.0992 (n=1), diff=147.8178, threshold=356.1903, ✅ Effective, confidence=high
+- الثقة بالنفس الطبيعية (face_aspect_ratio): thin_face avg=0.6830 (n=2), wide_face avg=0.9391 (n=2), diff=0.2560, threshold=0.8110, ✅ Effective, confidence=high
+- الجدل والمشاكسة (jaw_width_ratio): narrow_long_chin avg=0.8177 (n=2), wide_square_chin avg=0.8157 (n=2), diff=0.0021, threshold=0.8167, ⚠ Needs more data, confidence=insufficient
+- الجدية والحماسة (forehead_height): deep_set avg=67.7337 (n=3), protruding avg=92.5091 (n=3), diff=24.7754, threshold=80.1214, ✅ Effective, confidence=high
+- السماحة والتركيز (eye_spacing_ratio): narrow_spacing avg=0.2262 (n=3), wide_spacing avg=0.2697 (n=3), diff=0.0435, threshold=0.2480, ✅ Effective, confidence=medium
+- الشك والثقة (nose_tip_drop_ratio): tip_down avg=0.0423 (n=1), tip_up avg=0.0418 (n=1), diff=0.0004, threshold=0.0421, ⚠ Needs more data, confidence=insufficient
+- الصبر أو طول البال (widening_ratio): narrows_upward avg=0.8312 (n=3), widens_upward avg=0.8561 (n=3), diff=0.0248, threshold=0.8437, ✅ Effective, confidence=medium
+- الصلابة أو الحساسية (forehead_top_width): coarse_curly avg=140.6205 (n=2), soft_fine avg=160.3430 (n=2), diff=19.7224, threshold=150.4817, ✅ Effective, confidence=high
+- الطموح والمرح (nose_length_ratio): long avg=0.2679 (n=1), short avg=0.2791 (n=1), diff=0.0112, threshold=0.2735, ✅ Effective, confidence=low
+- العطاء التلقائي أو الانتقائي (lower_lip_ratio): full_lower_lip avg=0.0655 (n=2), thin_lower_lip avg=0.0204 (n=2), diff=0.0452, threshold=0.0430, ✅ Effective, confidence=medium
+- الفاعلية (profile_height_width_ratio): crown_higher avg=1.4417 (n=2), forehead_higher avg=1.3963 (n=1), diff=0.0454, threshold=1.4190, ✅ Effective, confidence=medium
+- الفظاظة أو الحدة (face_aspect_ratio): heavy_soft_features avg=0.9905 (n=2), sharp_taut_features avg=0.7895 (n=2), diff=0.2011, threshold=0.8900, ✅ Effective, confidence=high
+- اللباقة أو الصراحة المباشرة (face_height): groove avg=274.3257 (n=4), smooth_side avg=248.6786 (n=4), diff=25.6471, threshold=261.5021, ✅ Effective, confidence=high
+- المثابرة والتماسك (chin_projection_ratio): protruding_chin avg=0.0893 (n=2), receding_chin avg=0.1893 (n=2), diff=0.1000, threshold=0.1393, ✅ Effective, confidence=high
+- المدى الفكري (forehead_ratio): high avg=0.4011 (n=3), short avg=0.2973 (n=3), diff=0.1038, threshold=0.3492, ✅ Effective, confidence=high
+- المرونة الفكرية (face_width): sharp_angle avg=66.2486 (n=2), smooth_transition avg=130.5720 (n=3), diff=64.3234, threshold=98.4103, ✅ Effective, confidence=high
+- المعارضة التلقائية (face_height): rounded_chin avg=249.3968 (n=2), triangular_chin avg=358.6978 (n=1), diff=109.3010, threshold=304.0473, ✅ Effective, confidence=high
+- الميل إلى التحليل (eye_open_ratio): covered_upper_lid avg=0.2693 (n=3), visible_upper_lid avg=0.3747 (n=3), diff=0.1054, threshold=0.3220, ✅ Effective, confidence=high
+- الميل إلى النقد (eye_tilt_ratio): outer_higher avg=0.0189 (n=3), outer_lower avg=-0.0047 (n=3), diff=0.0236, threshold=0.0071, ✅ Effective, confidence=medium
+- الميول التقدمية (back_fullness_ratio): expands_to_back avg=0.9046 (n=1), narrows_to_back avg=0.9981 (n=1), diff=0.0935, threshold=0.9514, ✅ Effective, confidence=high
+- الميول التنافسية (ear_zone_expansion_ratio): narrows_above_ears avg=1.1829 (n=1), widens_above_ears avg=0.9527 (n=1), diff=0.2302, threshold=1.0678, ✅ Effective, confidence=high
+- الميول السلطوية (jaw_width_ratio): narrow_jaw avg=0.8114 (n=2), wide_jaw avg=0.8489 (n=2), diff=0.0375, threshold=0.8301, ✅ Effective, confidence=medium
+- النشاط البدني أو الذهني (philtrum_ratio): long_philtrum avg=0.1295 (n=2), short_philtrum avg=0.0843 (n=2), diff=0.0452, threshold=0.1069, ✅ Effective, confidence=medium
+- النفعية والاكتساب (face_height): close_to_head avg=236.6198 (n=1), far_from_head avg=252.9882 (n=1), diff=16.3683, threshold=244.8040, ✅ Effective, confidence=high
+- جاذبية العين (face_height): dull avg=381.4851 (n=3), sparkling avg=303.5259 (n=3), diff=77.9592, threshold=342.5055, ✅ Effective, confidence=high
+- حب المغامرة (face_height): flat avg=223.2768 (n=2), prominent_full avg=265.4115 (n=2), diff=42.1347, threshold=244.3442, ✅ Effective, confidence=high
+- كتمان الأسرار أو البوح بها (mouth_height_ratio): full_lips avg=0.0241 (n=2), thin_lips avg=0.0183 (n=2), diff=0.0058, threshold=0.0212, ⚠ Needs more data, confidence=insufficient

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - Cinematic UI: BATCH 7</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cine-peach': '#FFEACE', 'cine-white': '#FFFEFF', 'cine-pink': '#FEDEFB',
+                        'cine-gold': '#FECA83', 'cine-green': '#2B4C41', 'cine-green-light': '#4A6B60',
+                    },
+                    fontFamily: { soft: ['"Tajawal"', 'sans-serif'], display: ['"Readex Pro"', 'sans-serif'] },
+                    boxShadow: { 'glass': '0 8px 32px 0 rgba(43, 76, 65, 0.15)', 'glow': '0 0 20px rgba(254, 202, 131, 0.4)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: linear-gradient(135deg, #FFEACE 0%, #FEDEFB 50%, #E6EFEA 100%); font-family: 'Tajawal', sans-serif; min-height: 100vh; color: #2B4C41; padding: 40px 20px; }
+        .immersive-card { width: 390px; height: 844px; border-radius: 44px; position: relative; overflow: hidden; box-shadow: 0 40px 80px rgba(43, 76, 65, 0.25), inset 0 0 0 6px #FFFEFF; background: linear-gradient(180deg, #FFFEFF 0%, #FFEACE 50%, #FEDEFB 100%); flex-shrink: 0; display: flex; flex-direction: column; }
+        .glass-panel { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 32px; box-shadow: var(--glass); }
+        .btn-primary { width: 100%; padding: 16px; border-radius: 99px; background: linear-gradient(135deg, #FECA83 0%, #FEDEFB 100%); color: #2B4C41; font-weight: 700; font-size: 1.125rem; box-shadow: var(--glow); transition: transform 0.3s ease; border: 1px solid #FFFEFF; }
+        
+        /* Bottom Nav */
+        .bottom-nav { background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.5); border-radius: 40px 40px 0 0; }
+        
+        /* Blurred Match Card */
+        .match-card { background: white; border-radius: 24px; padding: 12px; display: flex; gap: 16px; align-items: center; box-shadow: 0 4px 15px rgba(43,76,65,0.05); cursor: pointer; transition: transform 0.2s; }
+        .match-card:hover { transform: translateY(-2px); }
+        .match-avatar { width: 70px; height: 70px; border-radius: 20px; background-size: cover; background-position: center; filter: blur(8px); position: relative; overflow: hidden; border: 2px solid #FECA83; }
+        .match-avatar::after { content: '🔒'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.5rem; filter: blur(0); }
+
+    </style>
+</head>
+<body>
+    <div class="text-center mb-8 max-w-4xl mx-auto"><h1 class="text-4xl font-bold font-display text-cine-green">Tawafuq — BATCH 7: Free Tier</h1></div>
+    <div class="flex gap-8 overflow-x-auto pb-10 px-4">
+
+        <!-- SCREEN 1: Free Tier Dashboard (Home) -->
+        <div class="immersive-card relative">
+            <div class="p-6 pt-12 flex-1 overflow-y-auto pb-24">
+                <!-- Header -->
+                <div class="flex justify-between items-center mb-8">
+                    <div>
+                        <h2 class="text-2xl font-bold font-display">صباح الخير، أحمد</h2>
+                        <p class="text-sm opacity-70 font-bold">باقة الحساب المجاني</p>
+                    </div>
+                    <div class="w-12 h-12 rounded-full border-2 border-cine-gold bg-white overflow-hidden p-1 shadow-sm"><img src="https://ui-avatars.com/api/?name=Ahmed&background=FFEACE&color=2B4C41" class="w-full h-full rounded-full"></div>
+                </div>
+
+                <!-- Stats Panel -->
+                <div class="glass-panel p-6 mb-8 flex gap-4 text-center">
+                    <div class="flex-1">
+                        <div class="text-3xl font-display font-bold text-cine-green mb-1">5</div>
+                        <div class="text-xs font-bold opacity-70">توافقات جديدة</div>
+                    </div>
+                    <div class="w-px bg-cine-green/20"></div>
+                    <div class="flex-1">
+                        <div class="text-3xl font-display font-bold text-cine-green mb-1" dir="ltr">0</div>
+                        <div class="text-xs font-bold opacity-70">رسائل مقروءة</div>
+                    </div>
+                </div>
+
+                <!-- Call to action for paid -->
+                <div class="rounded-3xl bg-cine-green text-white p-6 mb-8 relative overflow-hidden shadow-xl">
+                    <div class="absolute right-0 top-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                    <h3 class="text-xl font-bold mb-2">افتح هويات التوافقات</h3>
+                    <p class="text-sm opacity-80 mb-4 leading-relaxed">اكتشف الأسماء والصور وابدأ المحادثات عبر الترقية إلى الباقة الأساسية.</p>
+                    <button class="bg-cine-gold text-cine-green font-bold px-6 py-2 rounded-full text-sm hover:scale-105 transition-transform">ترقية الحساب الآن</button>
+                </div>
+
+                <!-- Matches List (Blurred) -->
+                <h3 class="font-bold text-lg mb-4">أحدث التوافقات المحتملة</h3>
+                <div class="flex flex-col gap-3">
+                    <div class="match-card">
+                        <div class="match-avatar" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop');"></div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-lg filter blur-[4px]">سارة، 24</h4>
+                            <p class="text-sm opacity-70 filter blur-[3px]">مهندسة، الرياض</p>
+                            <div class="mt-2 inline-block bg-cine-peach/50 text-cine-green px-2 py-0.5 rounded text-xs font-bold border border-cine-gold/50" dir="ltr">88% Match</div>
+                        </div>
+                    </div>
+                    <div class="match-card">
+                        <div class="match-avatar" style="background-image: url('https://images.unsplash.com/photo-1620052581237-5d36e8e895ec?q=80&w=200&auto=format&fit=crop');"></div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-lg filter blur-[4px]">نورة، 26</h4>
+                            <p class="text-sm opacity-70 filter blur-[3px]">طبيبة، جدة</p>
+                            <div class="mt-2 inline-block bg-cine-peach/50 text-cine-green px-2 py-0.5 rounded text-xs font-bold border border-cine-gold/50" dir="ltr">82% Match</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Nav -->
+            <div class="absolute bottom-0 left-0 right-0 h-20 bottom-nav flex justify-around items-center px-6">
+                <button class="flex flex-col items-center text-cine-green"><span class="text-2xl">🧭</span><span class="text-[10px] font-bold mt-1">الرئيسية</span></button>
+                <button class="flex flex-col items-center text-cine-green/50 hover:text-cine-green transition-colors"><span class="text-2xl relative">💬<span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span></span><span class="text-[10px] font-bold mt-1">الرسائل</span></button>
+                <button class="flex flex-col items-center text-cine-green/50 hover:text-cine-green transition-colors"><span class="text-2xl">👤</span><span class="text-[10px] font-bold mt-1">حسابي</span></button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: Premium Lock Popup (Overlay) -->
+        <div class="immersive-card justify-center items-center relative">
+            <!-- Background is blurred Home screen -->
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOTAiIGhlaWdodD0iODQ0IiBmaWxsPSIjRjZGMkU2Ii8+')] bg-cover opacity-50 blur-md"></div>
+            <div class="absolute inset-0 bg-cine-green/60 backdrop-blur-sm z-10"></div>
+            
+            <div class="relative z-20 glass-panel p-6 m-6 w-full max-w-[340px] text-center bg-white/90">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cine-gold to-yellow-600 mx-auto mb-4 flex items-center justify-center text-2xl shadow-glow text-white">🔒</div>
+                <h3 class="text-2xl font-bold font-display mb-2 text-cine-green">هوية مخفية</h3>
+                <p class="text-sm font-medium opacity-80 mb-6 leading-relaxed">في الباقة المجانية، يمكنك فقط رؤية نسبة التوافق. اشترك الآن لرؤية الصور والأسماء والتفاصيل الكاملة لهذه الشريكة المحتملة.</p>
+                
+                <button class="btn-primary mb-3">عرض الباقات والأسعار</button>
+                <button class="w-full py-3 font-bold opacity-60 hover:opacity-100">العودة للرئيسية</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

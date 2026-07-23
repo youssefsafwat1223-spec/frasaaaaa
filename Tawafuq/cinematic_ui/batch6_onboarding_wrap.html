@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - Cinematic UI: BATCH 6</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cine-peach': '#FFEACE',
+                        'cine-white': '#FFFEFF',
+                        'cine-pink': '#FEDEFB',
+                        'cine-gold': '#FECA83',
+                        'cine-green': '#2B4C41',
+                    },
+                    fontFamily: { soft: ['"Tajawal"', 'sans-serif'], display: ['"Readex Pro"', 'sans-serif'] },
+                    boxShadow: { 'glass': '0 8px 32px 0 rgba(43, 76, 65, 0.15)', 'glow': '0 0 20px rgba(254, 202, 131, 0.4)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: linear-gradient(135deg, #FFEACE 0%, #FEDEFB 50%, #E6EFEA 100%); font-family: 'Tajawal', sans-serif; min-height: 100vh; color: #2B4C41; padding: 40px 20px; }
+        .immersive-card { width: 390px; height: 844px; border-radius: 44px; position: relative; overflow: hidden; box-shadow: 0 40px 80px rgba(43, 76, 65, 0.25), inset 0 0 0 6px #FFFEFF; background: linear-gradient(180deg, #FFFEFF 0%, #FFEACE 50%, #FEDEFB 100%); flex-shrink: 0; display: flex; flex-direction: column; }
+        .glass-panel { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 32px; box-shadow: var(--glass); }
+        .btn-primary { width: 100%; padding: 16px; border-radius: 99px; background: linear-gradient(135deg, #FECA83 0%, #FEDEFB 100%); color: #2B4C41; font-weight: 700; font-size: 1.125rem; box-shadow: var(--glow); transition: transform 0.3s ease; border: 1px solid #FFFEFF; }
+        .fluid-bg-animated { position: absolute; inset: -50%; background: conic-gradient(from 0deg, #FFEACE, #FEDEFB, #E6EFEA, #FFEACE); animation: spin-bg 15s linear infinite; z-index: 0; filter: blur(60px); opacity: 0.9; }
+        @keyframes spin-bg { 100% { transform: rotate(360deg); } }
+        .star { position: absolute; background: white; border-radius: 50%; animation: twinkle 3s infinite alternate; }
+        @keyframes twinkle { 0% { opacity: 0.3; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 10px white; } }
+    </style>
+</head>
+<body>
+    <div class="text-center mb-8 max-w-4xl mx-auto"><h1 class="text-4xl font-bold font-display text-cine-green">Tawafuq — BATCH 6: Onboarding Wrap</h1></div>
+    <div class="flex gap-8 overflow-x-auto pb-10 px-4">
+
+        <!-- SCREEN 1: Ethics Pledge -->
+        <div class="immersive-card p-6 pt-12 relative">
+            <div class="flex items-center mb-6"><h2 class="flex-1 text-center font-bold text-xl">ميثاق تَوَافُق</h2></div>
+            <div class="flex-1 flex flex-col relative z-10">
+                <div class="glass-panel p-8 mb-auto text-center flex flex-col items-center">
+                    <div class="w-20 h-20 rounded-full border-2 border-cine-gold flex items-center justify-center mb-6 text-3xl shadow-glow bg-white/40">📜</div>
+                    <h3 class="text-2xl font-bold font-display mb-4">التزام الجدية</h3>
+                    <p class="opacity-80 leading-relaxed font-medium mb-6 text-sm text-right">
+                        تَوَافُق ليس مجرد تطبيق تواصل، بل هو مجتمع حصري مصمم للمهتمين بالزواج الجاد بناءً على أسس علمية ونفسية. 
+                        <br><br>
+                        باستمرارك، أنت تتعهد بـ:
+                    </p>
+                    <ul class="text-right text-sm font-bold flex flex-col gap-3 w-full">
+                        <li class="flex gap-3"><span class="text-cine-green">✓</span> الصدق التام في المعلومات والمقاصد.</li>
+                        <li class="flex gap-3"><span class="text-cine-green">✓</span> الاحترام المتبادل لجميع الأعضاء.</li>
+                        <li class="flex gap-3"><span class="text-cine-green">✓</span> الحفاظ على الخصوصية والسرية.</li>
+                    </ul>
+                </div>
+                
+                <div class="flex items-center gap-3 mb-6 bg-white/40 p-4 rounded-2xl border border-white/50 cursor-pointer">
+                    <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-cine-green focus:ring-cine-green" checked>
+                    <span class="text-sm font-bold">أقر وأوافق على ميثاق تَوَافُق وشروط الاستخدام.</span>
+                </div>
+                <button class="btn-primary mb-4">أوافق، دعنا نبدأ</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: Loading / Building Profile -->
+        <div class="immersive-card justify-center items-center relative">
+            <div class="fluid-bg-animated"></div>
+            <div class="relative z-10 flex flex-col items-center text-center p-6 w-full">
+                <div class="w-32 h-32 relative flex items-center justify-center mb-8">
+                    <!-- Spinning Rings -->
+                    <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-cine-gold border-r-cine-peach animate-spin" style="animation-duration: 2s;"></div>
+                    <div class="absolute inset-2 rounded-full border-4 border-transparent border-b-cine-green border-l-cine-pink animate-spin" style="animation-duration: 1.5s; animation-direction: reverse;"></div>
+                    <span class="text-4xl">⚙️</span>
+                </div>
+                <h2 class="text-3xl font-bold font-display mb-2 text-cine-green">جاري بناء ملفك...</h2>
+                <p class="opacity-80 font-medium">نقوم الآن بدمج نتائج الفراسة مع اختبارات الشخصية لإنشاء خوارزمية التوافق الخاصة بك.</p>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: Final Celebration -->
+        <div class="immersive-card justify-center items-center relative">
+            <div class="fluid-bg-animated"></div>
+            <div class="star w-2 h-2 top-20 right-20"></div>
+            <div class="star w-3 h-3 top-40 left-10" style="animation-delay: 1s;"></div>
+            
+            <div class="relative z-10 flex flex-col items-center p-6 text-center w-full h-full">
+                <div class="mt-auto mb-10 w-full">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-cine-peach to-cine-pink shadow-glow flex items-center justify-center mx-auto mb-8 border-4 border-white text-5xl">🎉</div>
+                    <h2 class="text-4xl font-bold font-display mb-4 text-cine-green drop-shadow-sm">اكتمل الملف!</h2>
+                    <p class="text-lg opacity-90 leading-relaxed font-medium">
+                        مرحباً بك في عالم تَوَافُق. لقد قمنا بتجهيز أول مجموعة من التوافقات المحتملة بناءً على ملفك.
+                    </p>
+                </div>
+                
+                <div class="mt-auto w-full mb-8">
+                    <button class="btn-primary">استكشف التوافقات</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

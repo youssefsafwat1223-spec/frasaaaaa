@@ -1,0 +1,1436 @@
+{
+ "summary": {
+  "bank_total": 951,
+  "weak_cut_candidates": 501,
+  "core_setcover_size": 257,
+  "traits_to_cover": 566,
+  "merge_groups": 0,
+  "merge_questions_collapsible": 0,
+  "match_total": 73,
+  "match_dims": 65,
+  "innovate_spots": 106
+ },
+ "core_setcover_ids": [
+  "q_0168",
+  "q_0487",
+  "q_0356",
+  "q_0191",
+  "q_0086",
+  "q_0343",
+  "q_0117",
+  "q_0452",
+  "q_0461",
+  "q_0151",
+  "q_0425",
+  "q_0539",
+  "q_0489",
+  "q_0216",
+  "q_0446",
+  "q_0027",
+  "q_0815",
+  "q_0400",
+  "q_0330",
+  "q_0669",
+  "q_0603",
+  "q_0549",
+  "q_0298",
+  "q_0474",
+  "q_0664",
+  "q_0063",
+  "q_0029",
+  "q_0041",
+  "q_0069",
+  "q_0532",
+  "q_0579",
+  "q_0122",
+  "q_0129",
+  "q_0327",
+  "q_0241",
+  "q_0565",
+  "q_0464",
+  "q_0878",
+  "q_0492",
+  "q_0494",
+  "q_0517",
+  "q_0717",
+  "q_0593",
+  "q_0067",
+  "q_0277",
+  "q_0728",
+  "q_0180",
+  "q_0557",
+  "q_0408",
+  "q_0445",
+  "q_0504",
+  "q_0197",
+  "q_0621",
+  "q_0324",
+  "q_0546",
+  "q_0420",
+  "q_0615",
+  "q_0395",
+  "q_0685",
+  "q_0018",
+  "q_0193",
+  "q_0378",
+  "q_0457",
+  "q_0095",
+  "q_0113",
+  "q_0559",
+  "q_0133",
+  "q_0577",
+  "q_0213",
+  "q_0360",
+  "q_0280",
+  "q_0689",
+  "q_0515",
+  "q_0584",
+  "q_0770",
+  "q_0529",
+  "q_0569",
+  "q_0713",
+  "q_0675",
+  "q_0804",
+  "q_0011",
+  "q_0107",
+  "q_0084",
+  "q_0257",
+  "q_0393",
+  "q_0024",
+  "q_0056",
+  "q_0085",
+  "q_0046",
+  "q_0109",
+  "q_0072",
+  "q_0114",
+  "q_0368",
+  "q_0743",
+  "q_0578",
+  "q_0587",
+  "q_0765",
+  "q_0265",
+  "q_0601",
+  "q_0434",
+  "q_0424",
+  "q_0582",
+  "q_0536",
+  "q_0663",
+  "q_0797",
+  "q_0558",
+  "q_0842",
+  "q_0614",
+  "q_0658",
+  "q_0825",
+  "q_0008",
+  "q_0016",
+  "q_0021",
+  "q_0050",
+  "q_0033",
+  "q_0155",
+  "q_0078",
+  "q_0236",
+  "q_0076",
+  "q_0088",
+  "q_0163",
+  "q_0099",
+  "q_0525",
+  "q_0248",
+  "q_0162",
+  "q_0144",
+  "q_0436",
+  "q_0447",
+  "q_0185",
+  "q_0210",
+  "q_0234",
+  "q_0228",
+  "q_0287",
+  "q_0323",
+  "q_0443",
+  "q_0865",
+  "q_0519",
+  "q_0556",
+  "q_0703",
+  "q_0775",
+  "q_0836",
+  "q_0818",
+  "q_0807",
+  "q_0877",
+  "q_0699",
+  "q_0731",
+  "q_0860",
+  "q_0903",
+  "q_0828",
+  "q_0355",
+  "q_0397",
+  "q_0535",
+  "q_0103",
+  "q_0127",
+  "q_0169",
+  "q_0283",
+  "q_0307",
+  "q_0190",
+  "q_0149",
+  "q_0195",
+  "q_0403",
+  "q_0502",
+  "q_0641",
+  "q_0511",
+  "q_0653",
+  "q_0145",
+  "q_0281",
+  "q_0451",
+  "q_0833",
+  "q_0610",
+  "q_0712",
+  "q_0590",
+  "q_0682",
+  "q_0453",
+  "q_0839",
+  "q_0547",
+  "q_0542",
+  "q_0612",
+  "q_0493",
+  "q_0499",
+  "q_0006",
+  "q_0262",
+  "q_0015",
+  "q_0282",
+  "q_0093",
+  "q_0219",
+  "q_0044",
+  "q_0048",
+  "q_0053",
+  "q_0477",
+  "q_0246",
+  "q_0097",
+  "q_0925",
+  "q_0309",
+  "q_0138",
+  "q_0896",
+  "q_0286",
+  "q_0315",
+  "q_0634",
+  "q_0910",
+  "q_0864",
+  "q_0172",
+  "q_0670",
+  "q_0406",
+  "q_0214",
+  "q_0224",
+  "q_0385",
+  "q_0261",
+  "q_0267",
+  "q_0304",
+  "q_0538",
+  "q_0334",
+  "q_0376",
+  "q_0575",
+  "q_0469",
+  "q_0417",
+  "q_0677",
+  "q_0428",
+  "q_0680",
+  "q_0779",
+  "q_0480",
+  "q_0766",
+  "q_0933",
+  "q_0619",
+  "q_0588",
+  "q_0693",
+  "q_0729",
+  "q_0826",
+  "q_0742",
+  "q_0748",
+  "q_0736",
+  "q_0859",
+  "q_0001",
+  "q_0002",
+  "q_0003",
+  "q_0004",
+  "q_0035",
+  "q_0174",
+  "q_0237",
+  "q_0251",
+  "q_0270",
+  "q_0292",
+  "q_0295",
+  "q_0363",
+  "q_0370",
+  "q_0372",
+  "q_0379",
+  "q_0386",
+  "q_0429",
+  "q_0432",
+  "q_0437",
+  "q_0704",
+  "q_0721",
+  "q_0794",
+  "q_0871",
+  "q_0915",
+  "q_0919"
+ ],
+ "top20_information": [
+  {
+   "id": "q_0168",
+   "text_ar": "ينطبق عليّ: تُراقب أكثر مما تُعينّ",
+   "n_traits": 8,
+   "weight_sum": 1.0,
+   "source_count": 8,
+   "category_origin": "non_image_behavioral",
+   "info": 4.194
+  },
+  {
+   "id": "q_0487",
+   "text_ar": "ينطبق عليّ: تتجنب المواجهة",
+   "n_traits": 8,
+   "weight_sum": 1.0,
+   "source_count": 8,
+   "category_origin": "non_image_behavioral",
+   "info": 4.194
+  },
+  {
+   "id": "q_0086",
+   "text_ar": "ينطبق عليّ: لا تنظر مباشرة",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "non_image_behavioral",
+   "info": 3.745
+  },
+  {
+   "id": "q_0117",
+   "text_ar": "ينطبق عليّ: تهرب عند المدح",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "non_image_behavioral",
+   "info": 3.745
+  },
+  {
+   "id": "q_0151",
+   "text_ar": "ينطبق عليّ: يتردد",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "verbal",
+   "info": 3.745
+  },
+  {
+   "id": "q_0191",
+   "text_ar": "ينطبق عليّ: تبحث عن ردّة فعل الطرف الآخر",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "non_image_behavioral",
+   "info": 3.745
+  },
+  {
+   "id": "q_0216",
+   "text_ar": "ينطبق عليّ: يغيّر الموضوع بشكل",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "ambiguous",
+   "info": 3.745
+  },
+  {
+   "id": "q_0343",
+   "text_ar": "ينطبق عليّ: يعلق على التفاصيل",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "non_image_behavioral",
+   "info": 3.745
+  },
+  {
+   "id": "q_0356",
+   "text_ar": "ينطبق عليّ: تراقب التفاصيل",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "non_image_behavioral",
+   "info": 3.745
+  },
+  {
+   "id": "q_0425",
+   "text_ar": "ينطبق عليّ: تنتظر رد فعل",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "non_image_behavioral",
+   "info": 3.745
+  },
+  {
+   "id": "q_0452",
+   "text_ar": "ينطبق عليّ: مشدود دائمًا",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "non_image_behavioral",
+   "info": 3.745
+  },
+  {
+   "id": "q_0461",
+   "text_ar": "أكرر مقولات مثل: “أنا عادي بس”",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "verbal",
+   "info": 3.745
+  },
+  {
+   "id": "q_0489",
+   "text_ar": "ينطبق عليّ: تبحث عن رضا الآخر",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "non_image_behavioral",
+   "info": 3.745
+  },
+  {
+   "id": "q_0539",
+   "text_ar": "أكرر مقولات مثل: “يمكن يتغيّر”",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "verbal",
+   "info": 3.745
+  },
+  {
+   "id": "q_0549",
+   "text_ar": "أكرر مقولات مثل: “ما أحب أفرح بزيادة”",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "verbal",
+   "info": 3.745
+  },
+  {
+   "id": "q_0593",
+   "text_ar": "ينطبق عليّ: يردد: “ما كان قصدي”",
+   "n_traits": 6,
+   "weight_sum": 1.002,
+   "source_count": 6,
+   "category_origin": "verbal",
+   "info": 3.745
+  },
+  {
+   "id": "q_0011",
+   "text_ar": "ينطبق عليّ: مشدودة دائمًا",
+   "n_traits": 5,
+   "weight_sum": 1.0,
+   "source_count": 5,
+   "category_origin": "non_image_behavioral",
+   "info": 3.466
+  },
+  {
+   "id": "q_0027",
+   "text_ar": "ينطبق عليّ: توتر في عضلات الفك",
+   "n_traits": 5,
+   "weight_sum": 1.0,
+   "source_count": 5,
+   "category_origin": "ambiguous",
+   "info": 3.466
+  },
+  {
+   "id": "q_0298",
+   "text_ar": "ينطبق عليّ: ابتسامة سريعة مائلة",
+   "n_traits": 5,
+   "weight_sum": 1.0,
+   "source_count": 5,
+   "category_origin": "non_image_behavioral",
+   "info": 3.466
+  },
+  {
+   "id": "q_0330",
+   "text_ar": "أكرر مقولات مثل: “بعد ما أسوي كذا”…",
+   "n_traits": 5,
+   "weight_sum": 1.0,
+   "source_count": 5,
+   "category_origin": "verbal",
+   "info": 3.466
+  }
+ ],
+ "weak_sample": [
+  {
+   "id": "q_0001",
+   "text_ar": "ينطبق عليّ: بروز بسيط في عظمة الخد",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "ambiguous",
+   "info": 1.693
+  },
+  {
+   "id": "q_0002",
+   "text_ar": "ينطبق عليّ: عيون مستديرة بنظرة حالمة",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0003",
+   "text_ar": "ينطبق عليّ: بريق العين ضعيف أو حادّ دون دفء",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "ambiguous",
+   "info": 1.693
+  },
+  {
+   "id": "q_0004",
+   "text_ar": "ينطبق عليّ: لامعتان بحركة سريعة",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0005",
+   "text_ar": "ينطبق عليّ: خطوط سريعة في الجبهة",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0007",
+   "text_ar": "ينطبق عليّ: عيون ثابتة النظرة",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "ambiguous",
+   "info": 1.693
+  },
+  {
+   "id": "q_0009",
+   "text_ar": "ينطبق عليّ: حركة حاجب مفاجئة عند الذكر أو المقارنة",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0010",
+   "text_ar": "ينطبق عليّ: وجنة مشدودة أو خفيفة الاحمرار",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "ambiguous",
+   "info": 1.693
+  },
+  {
+   "id": "q_0014",
+   "text_ar": "ينطبق عليّ: توازن بي العينين والفم عند الحديث",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0022",
+   "text_ar": "ينطبق عليّ: ميلان بسيط للرأس للأسفل",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "ambiguous",
+   "info": 1.693
+  },
+  {
+   "id": "q_0025",
+   "text_ar": "ينطبق عليّ: مشتتة عند الحديث الشخ يض",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0028",
+   "text_ar": "ينطبق عليّ: مشتعلة رغم الصمت",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0031",
+   "text_ar": "ينطبق عليّ: انفراج بسيط في الشفاه عند ذكر نجاح الآخرين",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "ambiguous",
+   "info": 1.693
+  },
+  {
+   "id": "q_0032",
+   "text_ar": "ينطبق عليّ: تعابير وجه لحظية غير متوافقة مع الكلام",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0034",
+   "text_ar": "ينطبق عليّ: تنفّس منتظم يدل على هدف داخلي",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0035",
+   "text_ar": "ينطبق عليّ: رفّة عين خفيفة قبل الإجابة",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0036",
+   "text_ar": "ينطبق عليّ: ميلان الفم لحظة التفكير",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0037",
+   "text_ar": "ينطبق عليّ: تنفس متقطع أثناء القرارات",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0038",
+   "text_ar": "ينطبق عليّ: حركة رأس مترددة بي الأعلى والأسفل",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "verbal",
+   "info": 1.693
+  },
+  {
+   "id": "q_0039",
+   "text_ar": "ينطبق عليّ: ثابتتان بلا تفاعل سريع",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0042",
+   "text_ar": "ينطبق عليّ: ابتسامة تبدأ من الداخل للخارج",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0043",
+   "text_ar": "ينطبق عليّ: سريعة الالتقاط للحركات",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0045",
+   "text_ar": "ينطبق عليّ: رأس يميل باتجاه الآخر أثناء الاستماع",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "posture_body",
+   "info": 1.693
+  },
+  {
+   "id": "q_0047",
+   "text_ar": "ينطبق عليّ: متغيّرة بشكل حسب الموقف",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  },
+  {
+   "id": "q_0051",
+   "text_ar": "ينطبق عليّ: عضلات فك مشدودة",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "ambiguous",
+   "info": 1.693
+  },
+  {
+   "id": "q_0052",
+   "text_ar": "ينطبق عليّ: مستقيم وثابت",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "ambiguous",
+   "info": 1.693
+  },
+  {
+   "id": "q_0054",
+   "text_ar": "ينطبق عليّ: ابتسامة تظهر بسهولة دون تكلف",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "posture_body",
+   "info": 1.693
+  },
+  {
+   "id": "q_0055",
+   "text_ar": "ينطبق عليّ: رأس مرفوع بثبات دون تعالٍ",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "ambiguous",
+   "info": 1.693
+  },
+  {
+   "id": "q_0057",
+   "text_ar": "ينطبق عليّ: مطم ئ .ي الحواف",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "ambiguous",
+   "info": 1.693
+  },
+  {
+   "id": "q_0058",
+   "text_ar": "ينطبق عليّ: تناغم بي الجبهة والحاجبين دون ضاع",
+   "n_traits": 1,
+   "weight_sum": 1.0,
+   "source_count": 1,
+   "category_origin": "non_image_behavioral",
+   "info": 1.693
+  }
+ ],
+ "merge_groups_sample": [],
+ "match_dim_counts": {
+  "الهوية": 6,
+  "الهوية — الميلاد والعمر": 1,
+  "الهوية — تفضيل الجنسيات": 1,
+  "الهوية — الأصول": 1,
+  "الهوية — الطول والوزن": 1,
+  "الهوية — البنية": 1,
+  "الدين": 1,
+  "الدين — التزام": 1,
+  "الدين — المذهب": 1,
+  "الدين — توقعات": 1,
+  "الدين — اللباس (إناث)": 1,
+  "الدين — تفضيل اللباس (ذكور)": 1,
+  "الدين — سلوك": 1,
+  "الدين — نمط الحياة": 1,
+  "الصلاة — التزام": 1,
+  "الصلاة — جماعة": 1,
+  "الصلاة — كاشف الفجر": 1,
+  "الصلاة — الفجر": 1,
+  "الدين — حفظ القرآن": 1,
+  "الدين — حفظ الكتاب": 1,
+  "الدين — مرجعية القرار": 1,
+  "الدين — قيمة": 1,
+  "القرارات": 2,
+  "القرارات — تعدد": 1,
+  "القرارات — قبول التعدد": 1,
+  "الصحة — الفحص": 1,
+  "الصحة — مزمنة": 1,
+  "الصحة — إعاقة": 1,
+  "الصحة — نفسية": 1,
+  "الصحة — تقبّل": 1,
+  "BigFive — انفتاح (معكوس)": 1,
+  "BigFive — ضمير": 1,
+  "BigFive — انبساط (معكوس)": 1,
+  "BigFive — توافق": 1,
+  "BigFive — اتزان": 1,
+  "التعلق": 3,
+  "Gottman — 4 Horsemen": 1,
+  "الصراع — إعادة تأطير": 1,
+  "الصراع — مبادرة الصلح": 1,
+  "التواصل — استجابة": 1,
+  "المال": 1,
+  "الكرم": 1,
+  "المال — هيكل": 1,
+  "النظافة": 1,
+  "الأهل — سكن": 1,
+  "الأهل — تدخّل": 1,
+  "الأهل — زيارات": 1,
+  "لغة الحب": 1,
+  "الحميمية": 1,
+  "الحميمية — علني": 1,
+  "التربية": 1,
+  "الأدوار — عمل الزوجة": 1,
+  "الترفيه": 1,
+  "الإيقاع": 1,
+  "الخطوط الحمراء": 1,
+  "كاشف — نرجسية": 1,
+  "كاشف — هشاشة الأنا": 1,
+  "كاشف — تسلّط/غيرة ⚠": 1,
+  "كاشف — أمانة": 1,
+  "كاشف — أدب": 1,
+  "كاشف — تعاطف": 1,
+  "كاشف — عدوانية": 1,
+  "كاشف — استحقاق": 1,
+  "كاشف — تحكّم": 1,
+  "كاشف — مكيافيلية": 1
+ },
+ "match_merge_candidates": {
+  "الهوية": 6,
+  "التعلق": 3
+ },
+ "innovate_spots": [
+  {
+   "trait": "sabti_008",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_049",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_174",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_213",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_148",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_019",
+   "total_q": 4,
+   "weak_q": 4,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_249",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_261",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_023",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_026",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_027",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_029",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_062",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_033",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_039",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_570",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_079",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_169",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_480",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_055",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_056",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_131",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_140",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_068",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_069",
+   "total_q": 4,
+   "weak_q": 4,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_283",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_078",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_082",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_153",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_088",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_586",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_089",
+   "total_q": 4,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_123",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_126",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_139",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_130",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_134",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_136",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_161",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_137",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_138",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_145",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_563",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_149",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_150",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_154",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_242",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_156",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_162",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_179",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_167",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_168",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_173",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_278",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_185",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_193",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_189",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_190",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_195",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_199",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_203",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_205",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_214",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_221",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_240",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_225",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_385",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_565",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_234",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_238",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_272",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_241",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_247",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_543",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_258",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_265",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_553",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_273",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_277",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_485",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_429",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_299",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_576",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_556",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_356",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_534",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_532",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_395",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_455",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_531",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_394",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_465",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_404",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_419",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_413",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_416",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_421",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_439",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_461",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_468",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_504",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_482",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_528",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_514",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_522",
+   "total_q": 3,
+   "weak_q": 3,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  },
+  {
+   "trait": "sabti_568",
+   "total_q": 3,
+   "weak_q": 2,
+   "suggestion": "replace weak Likert cluster with 1 forced-choice or situational item"
+  }
+ ]
+}

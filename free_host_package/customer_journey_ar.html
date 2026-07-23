@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة المستخدم - تطبيق توافق الفراسة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --surface-color: #1a2235;
+            --surface-color-hover: #232d46;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-green: #10b981;
+            --accent-yellow: #fbbf24;
+            --accent-red: #ef4444;
+            --accent-blue: #3b82f6;
+            --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15) 0%, rgba(11, 15, 25, 1) 70%);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Phase Header */
+        .phase-header {
+            margin: 60px 0 30px;
+            padding: 20px 30px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+        }
+
+        .phase-green { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+        .phase-yellow { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.2); color: var(--accent-yellow); }
+        .phase-red { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); color: var(--accent-red); }
+        .phase-blue { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); color: var(--accent-blue); }
+
+        /* Timeline / Cards */
+        .timeline {
+            position: relative;
+            padding-right: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 18px;
+            width: 4px;
+            background: var(--surface-color);
+            border-radius: 4px;
+        }
+
+        .screen-card {
+            position: relative;
+            background: var(--surface-color);
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.6s forwards;
+        }
+
+        .screen-card:hover {
+            transform: translateY(-5px);
+            background: var(--surface-color-hover);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: rgba(255,255,255,0.1);
+        }
+
+        .screen-card::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: -30px;
+            width: 20px;
+            height: 20px;
+            background: var(--bg-color);
+            border: 4px solid var(--accent-blue);
+            border-radius: 50%;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .phase-green + .timeline .screen-card::before { border-color: var(--accent-green); }
+        .phase-yellow + .timeline .screen-card::before { border-color: var(--accent-yellow); }
+        .phase-red + .timeline .screen-card::before { border-color: var(--accent-red); }
+
+        .screen-card:hover::before {
+            transform: scale(1.3);
+            box-shadow: 0 0 15px currentColor;
+        }
+
+        .screen-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 15px;
+        }
+
+        .screen-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .screen-badge {
+            background: rgba(255,255,255,0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .wireframe {
+            background: rgba(0,0,0,0.3);
+            border: 1px dashed rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 20px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            direction: ltr; /* Monospace wireframes look better LTR, but content is RTL */
+            text-align: right;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .action-box {
+            background: rgba(255,255,255,0.03);
+            padding: 15px 20px;
+            border-radius: 12px;
+            border-right: 4px solid var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .action-icon {
+            font-size: 1.5rem;
+        }
+
+        .action-text strong {
+            display: block;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .action-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Paywall Highlight */
+        .paywall-card {
+            border: 2px solid var(--accent-red);
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.15);
+        }
+        .paywall-card::before { border-color: var(--accent-red) !important; }
+
+        /* Summary Table */
+        .summary-section {
+            margin-top: 80px;
+            background: var(--surface-color);
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .summary-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+        }
+
+        th, td {
+            padding: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        th {
+            background: rgba(255,255,255,0.02);
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        /* Core Idea Cards */
+        .core-ideas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .idea-card {
+            background: rgba(0,0,0,0.2);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .idea-card h3 {
+            color: var(--accent-yellow);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Utility classes for animation delays */
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .timeline::before { right: 10px; }
+            .timeline { padding-right: 25px; }
+            .screen-card::before { right: -21px; width: 14px; height: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>رحلة المستخدم خطوة بخطوة</h1>
+        <p>عرض مبسط ومفصل لتجربة العميل داخل تطبيق التوافق (شاشة بشاشة)، يوضح متى يكون الاستخدام مجانياً ومتى يظهر جدار الدفع.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Phase 1 -->
+        <div class="phase-header phase-green">
+            <span>🟢</span> المرحلة المجانية (أول استخدام)
+        </div>
+        
+        <div class="timeline">
+            
+            <div class="screen-card delay-1">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 1: Landing Page</div>
+                    <div class="screen-badge">مجاني</div>
+                </div>
+                <div class="wireframe">
+┌────────────────────────────────────┐
+│      تَوَافُق                      │
+│                                    │
+│  اكتشف توافقك الزواجي علمياً       │
+│  مبني على علم النفس + الفراسة      │
+│                                    │
+│  [ ابدأ مجاناً ]                   │
+└────────────────────────────────────┘
+                </div>
+                <div class="action-box">
+                    <div class="action-icon">👤</div>
+                    <div class="action-text">
+                        <strong>المستخدم يفعل:</strong>
+                        يضغط على زر "ابدأ مجاناً" لدخول التجربة.
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-card delay-2">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 2: التسجيل والتأكيد</div>
+                    <div class="screen-badge">مجاني</div>
+                </div>
+                <div class="wireframe">
+البريد → كلمة سر → رمز التفعيل (OTP) → توثيق الهوية (ID) → ✓
+                </div>
+                <div class="action-box">
+                    <div class="action-icon">👤</div>
+                    <div class="action-text">
+                        <strong>المستخدم يفعل:</strong>
+                        يُسجّل حساباً جديداً ويوثقه (يستغرق من 3 إلى 5 دقائق).
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-card delay-3">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 3-4: الاستبيان المبدئي</div>
+                    <div class="screen-badge">مجاني</div>
+                </div>
+                <div class="wireframe">
+┌────────────────────────────────────┐
+│  المرحلة 3/8: الشخصية              │
+│  ━━━━━━━━━━━━━━━━━━━━━━━           │
+│                                    │
+│  "أُفضّل الروتين المألوف"          │
+│                                    │
+│  أرفض ◯◯◯◉◯ أوافق                  │
+│                                    │
+│  السؤال 38 من 73                   │
+└────────────────────────────────────┘
+                </div>
+                <div class="action-box">
+                    <div class="action-icon">👤</div>
+                    <div class="action-text">
+                        <strong>المستخدم يفعل:</strong>
+                        يجيب على 73 سؤالاً لبناء الملف الشخصي (15-20 دقيقة).
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-card">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 5: تصوير الوجه (الفراسة)</div>
+                    <div class="screen-badge">مجاني</div>
+                </div>
+                <div class="wireframe">
+┌────────────────────────────────────┐
+│    📸 صوّر وجهك                    │
+│                                    │
+│  ⚠ الصورة تُعالَج في جهازك فقط     │
+│      ولا تُرسَل لأي سيرفر          │
+│                                    │
+│  [ التقاط صورة ]  [ رفع ملف ]      │
+└────────────────────────────────────┘
+                </div>
+                <div class="action-box" style="border-color: var(--accent-green);">
+                    <div class="action-icon">🤖</div>
+                    <div class="action-text">
+                        <strong>المستخدم والنظام:</strong>
+                        يلتقط المستخدم سيلفي. في ثانيتين، يستخرج النظام 38 قياساً من الوجه لربطها بالسمات.
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-card">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 6: اكتمال الملف والبحث</div>
+                    <div class="screen-badge">مجاني</div>
+                </div>
+                <div class="wireframe">
+┌────────────────────────────────────┐
+│         ✓ تم إنشاء ملفك            │
+│                                    │
+│  ملفك جاهز، النظام يبحث            │
+│  عن توافقات مناسبة لك...           │
+│                                    │
+│         ⏳ الانتظار...             │
+└────────────────────────────────────┘
+                </div>
+                <div class="action-box">
+                    <div class="action-icon">⏳</div>
+                    <div class="action-text">
+                        <strong>النظام يفعل:</strong>
+                        يغلق المستخدم التطبيق أو ينتظر ريثما يجد النظام تطابقات.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="phase-header phase-yellow">
+            <span>🟡</span> مرحلة الانتظار وإيجاد التطابقات
+        </div>
+
+        <div class="timeline">
+            
+            <div class="screen-card">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 7: الإشعار الأول 🔔</div>
+                    <div class="screen-badge">مجاني</div>
+                </div>
+                <div class="wireframe">
+┌────────────────────────────────────┐
+│  🔔  لقينا 3 توافقات قوية لك! ✨   │
+│                                    │
+│  [ اعرضها الآن ]                   │
+└────────────────────────────────────┘
+                </div>
+                <div class="action-box">
+                    <div class="action-icon">📱</div>
+                    <div class="action-text">
+                        <strong>المستخدم يفعل:</strong>
+                        يستقبل إشعاراً بعد ساعات أو أيام، ويتحمس ليفتحه.
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-card paywall-card">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 8: قائمة المطابقات المخفية</div>
+                    <div class="screen-badge" style="background: rgba(239, 68, 68, 0.2); color: #ef4444;">Paywall 🔒</div>
+                </div>
+                <div class="wireframe">
+┌────────────────────────────────────┐
+│     🔒 3 توافقات مخفية             │
+│                                    │
+│  ━━━━━━━━━━━━━━━━━━━━━━━           │
+│  ل. ر. — توافق 87%                 │
+│  🔒 الاسم والصورة مخفيان           │
+│                                    │
+│  س. أ. — توافق 81%                 │
+│  🔒                                │
+│                                    │
+│  ن. م. — توافق 78%                 │
+│  🔒                                │
+│                                    │
+│  ┌──────────────────────────────┐  │
+│  │  🔓 اشترك لفتح كل المطابقات  │  │
+│  └──────────────────────────────┘  │
+└────────────────────────────────────┘
+                </div>
+                <div class="action-box" style="border-color: var(--accent-red);">
+                    <div class="action-icon">💡</div>
+                    <div class="action-text">
+                        <strong>النية (الخطاف النفسي):</strong>
+                        يرى نسب توافق مشجعة جداً بدون الأسماء، مما يولد الفضول والدافع للاشتراك.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="phase-header phase-red">
+            <span>🔴</span> لحظة القرار (الاشتراك والدفع)
+        </div>
+
+        <div class="timeline">
+            
+            <div class="screen-card">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 9: صفحة الباقات</div>
+                    <div class="screen-badge" style="background: rgba(255,255,255,0.1);">مفترق طرق</div>
+                </div>
+                <div class="wireframe">
+┌────────────────────────────────────────┐
+│  من نسبة توافق بسيطة إلى               │
+│  قراءة كاملة لشخصيتك                   │
+│                                        │
+│  ┌────────┐  ┌────────┐  ┌────────┐  │
+│  │ Basic  │  │Advanced│  │Premium │  │
+│  │  79 ج  │  │ 149 ج  │  │ 249 ج  │  │
+│  │        │  │ ⭐شعبي  │  │        │  │
+│  │ 30-45س │  │ 50-80س │  │ 80-100س│  │
+│  │ 155سمة │  │ 287سمة │  │ 317سمة │  │
+│  │        │  │        │  │        │  │
+│  │[اختر]  │  │[اختر]  │  │[اختر]  │  │
+│  └────────┘  └────────┘  └────────┘  │
+└────────────────────────────────────────┘
+                </div>
+                <div class="action-box">
+                    <div class="action-icon">🛒</div>
+                    <div class="action-text">
+                        <strong>المستخدم يفعل:</strong>
+                        يختار باقة (مثلاً الباقة المتوسطة Advanced) ليفتح النتائج ويستكمل التحليل.
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-card">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 10-11: الدفع ونجاح الاشتراك</div>
+                    <div class="screen-badge" style="background: rgba(255,255,255,0.1);">عملية الدفع</div>
+                </div>
+                <div class="wireframe">
+┌────────────────────────────────────┐
+│           ✓ تم بنجاح 🎉            │
+│                                    │
+│  أهلاً بك في Advanced              │
+│                                    │
+│  الخطوة التالية:                   │
+│  أكمل أسئلة الشخصية (50-80 سؤال)   │
+│  لنبني تقريرك الكامل               │
+│                                    │
+│  [ ابدأ أسئلة الشخصية ]            │
+│   أو [ اعرض المطابقات أولاً ]      │
+└────────────────────────────────────┘
+                </div>
+                <div class="action-box" style="border-color: var(--accent-green);">
+                    <div class="action-icon">💳</div>
+                    <div class="action-text">
+                        <strong>المستخدم يفعل:</strong>
+                        يتمم الدفع عبر البطاقة أو Apple Pay، ويختار استكمال الملف كخطوة تالية للحصول على القيمة الكاملة.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="phase-header phase-blue">
+            <span>🔵</span> المرحلة المدفوعة (التجربة الكاملة)
+        </div>
+
+        <div class="timeline">
+            
+            <div class="screen-card">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 12-13: التحليل والتقرير الشخصي</div>
+                    <div class="screen-badge" style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">مشترك ✅</div>
+                </div>
+                <div class="wireframe">
+┌──────────────────────────────────────┐
+│  📊 تقرير شخصيتك                     │
+│                                      │
+│  أبرز 7 سمات (ثقة عالية):            │
+│  ✓ الكرم          [████████░░] 85%   │
+│  ✓ الصبر          [███████░░░] 78%   │
+│  ✓ الطموح المتزن  [███████░░░] 75%   │
+│                                      │
+│  ━━━ نمط شخصيتك ━━━                  │
+│  • تعلق آمن                          │
+│  • سلامة نفسية ممتازة                │
+│                                      │
+│  [ شوف المطابقات بناءً على تحليلك ]  │
+└──────────────────────────────────────┘
+                </div>
+                <div class="action-box">
+                    <div class="action-icon">📋</div>
+                    <div class="action-text">
+                        <strong>المستخدم يفعل:</strong>
+                        يجيب على أسئلة التعمق ثم يقرأ تقرير شخصيته المبهر، مما يعزز ثقته بالمنصة قبل رؤية المطابقات.
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-card">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 14-15: قائمة المطابقات المفتوحة والتفاصيل</div>
+                    <div class="screen-badge" style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">مشترك ✅</div>
+                </div>
+                <div class="wireframe">
+┌──────────────────────────────────────┐
+│  لمياء ر. — توافق 87%                │
+│  ━━━━━━━━━━━━━━━━━━━━━━━           │
+│  المحاور الـ 8:                      │
+│  ▪ الدين          [█████████░] 92%   │
+│  ▪ الشخصية        [████████░░] 80%   │
+│  ▪ نمط التعلق     [█████████░] 95%   │
+│                                      │
+│  ━━━ سمات مشتركة ━━━                 │
+│  • الكرم  • الصبر  • التواضع         │
+│                                      │
+│  [ ابعت طلب تعارف ]                  │
+└──────────────────────────────────────┘
+                </div>
+                <div class="action-box">
+                    <div class="action-icon">❤️</div>
+                    <div class="action-text">
+                        <strong>المستخدم يفعل:</strong>
+                        يستكشف حسابات المتوافقين معه بكل وضوح، ويبعث طلب تعارف لمن يراه مناسباً.
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-card">
+                <div class="screen-header">
+                    <div class="screen-title">الشاشة 16-17: الاستلام، القبول، والشات</div>
+                    <div class="screen-badge">تفاعل الطرفين</div>
+                </div>
+                <div class="wireframe">
+┌──────────────────────────────────────┐
+│  أحمد ←→ لمياء                       │
+│  ━━━━━━━━━━━━━━━━━━━━━━━           │
+│                                      │
+│  أحمد: السلام عليكم...               │
+│  لمياء: وعليكم السلام...            │
+│                                      │
+│  ⚠ لمياء (مجانية): 8 رسائل متبقية    │
+│  من 10 مجانية                        │
+│                                      │
+│  [ اكتب رسالة... ]                   │
+└──────────────────────────────────────┘
+                </div>
+                <div class="action-box">
+                    <div class="action-icon">💬</div>
+                    <div class="action-text">
+                        <strong>الديناميكية هنا:</strong>
+                        أحمد (المشترك) يرسل بلا حدود. لمياء (الطرف المجاني) تستقبل الطلب وتقبله مجاناً، لكن لديها 10 رسائل مجانية فقط، بعدها يطلب منها النظام الاشتراك لتستكمل الحديث.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Summary section -->
+        <div class="summary-section">
+            <h2>الخلاصة الجوهرية</h2>
+            
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الشاشة</th>
+                            <th>الوصول</th>
+                            <th>ماذا يفعل المستخدم؟</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-2: الهبوط والتسجيل</td>
+                            <td><span class="screen-badge">✅ مجاني</span></td>
+                            <td>يسجل الدخول ويوثق الحساب</td>
+                        </tr>
+                        <tr>
+                            <td>3-6: الاستبيان وصورة الوجه</td>
+                            <td><span class="screen-badge">✅ مجاني</span></td>
+                            <td>يكمل 73 سؤال، يرفع صورة وينتظر</td>
+                        </tr>
+                        <tr>
+                            <td>7-8: إشعار المطابقات والقائمة</td>
+                            <td><span class="screen-badge" style="color:var(--accent-red)">🔒 محجوب</span></td>
+                            <td>يفتح التطبيق ويصطدم بجدار الدفع (Paywall)</td>
+                        </tr>
+                        <tr>
+                            <td>9-10: الباقات والدفع</td>
+                            <td><span class="screen-badge" style="color:var(--accent-yellow)">💳 دفع</span></td>
+                            <td>يختار باقة التوافق ويدفع</td>
+                        </tr>
+                        <tr>
+                            <td>11-13: الاستبيان العميق والتقرير</td>
+                            <td><span class="screen-badge" style="color:var(--accent-blue)">⭐ مشترك</span></td>
+                            <td>يكمل بناء شخصيته ويقرأ تقريره التفصيلي</td>
+                        </tr>
+                        <tr>
+                            <td>14-17: المطابقات والشات</td>
+                            <td><span class="screen-badge" style="color:var(--accent-blue)">⭐ مشترك</span></td>
+                            <td>يتصفح بحرية، يرسل طلبات ويتواصل بلا قيود</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="core-ideas">
+                <div class="idea-card">
+                    <h3><span>1</span> التجربة المجانية الكاملة كطُعم</h3>
+                    <p>المستخدم يبني ملفاً كاملاً ويتلقى إشعاراً بالتوافقات ليتأكد من عمل النظام، لكن هوياتهم تظل مخفية.</p>
+                </div>
+                <div class="idea-card">
+                    <h3><span>2</span> جدار الدفع (Paywall) وقت الذروة</h3>
+                    <p>لحظة إخفاء الأسماء والصور في القائمة هي أعلى لحظة فضول ودافع للدفع.</p>
+                </div>
+                <div class="idea-card">
+                    <h3><span>3</span> حلقة النمو (Virality/Lock)</h3>
+                    <p>الطرف المجاني يستطيع الاستلام والرد المحدود، مما يجعله يشعر بأهمية الشخص الآخر، ليضطر بعدها للدفع لاستكمال المحادثة.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Simple Intersection Observer for animation triggering
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll('.screen-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
+</body>
+</html>

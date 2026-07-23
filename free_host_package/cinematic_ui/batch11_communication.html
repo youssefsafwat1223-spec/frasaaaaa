@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - Cinematic UI: BATCH 11 (Smart Chat)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'cine-peach': '#FFEACE', 'cine-white': '#FFFEFF', 'cine-pink': '#FEDEFB', 'cine-gold': '#FECA83', 'cine-green': '#2B4C41' },
+                    fontFamily: { soft: ['"Tajawal"', 'sans-serif'], display: ['"Readex Pro"', 'sans-serif'] },
+                    boxShadow: { 'glass': '0 8px 32px 0 rgba(43, 76, 65, 0.15)', 'glow': '0 0 20px rgba(254, 202, 131, 0.4)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: linear-gradient(135deg, #FFEACE 0%, #FEDEFB 50%, #E6EFEA 100%); font-family: 'Tajawal', sans-serif; min-height: 100vh; color: #2B4C41; padding: 40px 20px; }
+        .immersive-card { width: 390px; height: 844px; border-radius: 44px; position: relative; overflow: hidden; box-shadow: 0 40px 80px rgba(43, 76, 65, 0.25), inset 0 0 0 6px #FFFEFF; background: linear-gradient(180deg, #FFFEFF 0%, #FFEACE 50%, #FEDEFB 100%); flex-shrink: 0; display: flex; flex-direction: column; }
+        .glass-panel { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 32px; box-shadow: var(--glass); }
+        
+        .chat-bubble-me { background: linear-gradient(135deg, #FECA83, #FEDEFB); border-radius: 20px 20px 4px 20px; padding: 12px 16px; max-width: 80%; align-self: flex-end; box-shadow: 0 4px 15px rgba(254,202,131,0.2); border: 1px solid white; }
+        .chat-bubble-them { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border-radius: 20px 20px 20px 4px; padding: 12px 16px; max-width: 80%; align-self: flex-start; box-shadow: 0 4px 15px rgba(43,76,65,0.05); border: 1px solid white; }
+        .chat-input-area { background: rgba(255,255,255,0.8); backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.5); padding: 16px; padding-bottom: 32px; border-radius: 40px 40px 0 0; }
+        
+        /* Ice Breakers Scroll */
+        .ice-breakers-scroll::-webkit-scrollbar { display: none; }
+        .ice-breaker-chip { border: 1px solid #FECA83; background: white; color: #2B4C41; font-size: 0.75rem; font-weight: bold; padding: 6px 12px; border-radius: 99px; white-space: nowrap; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 5px rgba(254,202,131,0.2); }
+        .ice-breaker-chip:hover { background: #FECA83; color: white; }
+
+        /* Smart Tips */
+        .smart-tip { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); border: 1px dashed #FECA83; border-radius: 16px; padding: 10px; text-align: center; font-size: 0.75rem; font-weight: bold; color: #4A6B60; margin: 8px 0; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        
+        /* Warning Bubble */
+        .warning-bubble { background: #FEE2E2; border: 1px solid #FCA5A5; border-radius: 12px; padding: 10px; font-size: 0.75rem; font-weight: bold; color: #991B1B; margin: 8px 0; display: flex; align-items: center; gap: 8px; align-self: center; width: 90%; }
+    </style>
+</head>
+<body>
+    <div class="text-center mb-8 max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold font-display text-cine-green">Tawafuq — BATCH 11: Smart Communication</h1>
+        <p class="text-lg opacity-80 mt-2 font-medium">Ice Breakers, Conversation Tips & Red Flag Alerts</p>
+    </div>
+    <div class="flex gap-8 overflow-x-auto pb-10 px-4">
+
+        <!-- SCREEN 1: Messages Inbox -->
+        <div class="immersive-card relative">
+            <div class="p-6 pt-12 flex-1 overflow-y-auto pb-24">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-bold font-display">الرسائل</h2>
+                    <div class="bg-white/40 px-3 py-1 rounded-full text-xs font-bold border border-white/50">3 رسائل جديدة</div>
+                </div>
+
+                <div class="relative mb-6">
+                    <input type="text" placeholder="ابحث في المحادثات..." class="w-full bg-white/50 border border-white rounded-full px-4 py-3 pl-10 focus:outline-none focus:border-cine-gold">
+                    <svg class="w-5 h-5 absolute left-4 top-3.5 text-cine-green/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <div class="glass-panel p-4 flex gap-4 items-center cursor-pointer hover:scale-[1.02] transition-transform">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1620052581237-5d36e8e895ec?q=80&w=100&auto=format&fit=crop" class="w-14 h-14 rounded-full border-2 border-cine-gold object-cover">
+                            <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center mb-1">
+                                <h4 class="font-bold">لمياء</h4>
+                                <span class="text-xs opacity-60 font-bold" dir="ltr">10:42 AM</span>
+                            </div>
+                            <p class="text-sm font-bold text-cine-green w-48 truncate">أهلاً بك، قرأت تقرير التوافق و...</p>
+                        </div>
+                        <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-0 left-0 right-0 h-20 bg-white/70 backdrop-blur-md flex justify-around items-center px-6 rounded-t-[40px] border-t border-white/50">
+                <button class="flex flex-col items-center text-cine-green/50 hover:text-cine-green transition-colors"><span class="text-2xl">🧭</span><span class="text-[10px] font-bold mt-1">الرئيسية</span></button>
+                <button class="flex flex-col items-center text-cine-green"><span class="text-2xl relative">💬</span><span class="text-[10px] font-bold mt-1">الرسائل</span></button>
+                <button class="flex flex-col items-center text-cine-green/50 hover:text-cine-green transition-colors"><span class="text-2xl">👤</span><span class="text-[10px] font-bold mt-1">حسابي</span></button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: Chat with Guidance & Ice Breakers -->
+        <div class="immersive-card relative">
+            <!-- Header -->
+            <div class="bg-white/80 backdrop-blur-md p-4 pt-12 flex justify-between items-center border-b border-white/50 z-20 absolute top-0 left-0 right-0 shadow-sm">
+                <button class="w-10 h-10 rounded-full bg-cine-green/5 flex items-center justify-center"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                <div class="flex items-center gap-3">
+                    <div class="text-right">
+                        <h4 class="font-bold">لمياء</h4>
+                        <p class="text-[10px] text-cine-gold font-bold bg-cine-green px-2 py-0.5 rounded-full inline-block mt-0.5">88% توافق</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1620052581237-5d36e8e895ec?q=80&w=100&auto=format&fit=crop" class="w-10 h-10 rounded-full object-cover border border-cine-gold">
+                </div>
+                <button class="w-10 h-10 rounded-full bg-cine-green/5 flex items-center justify-center"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" /></svg></button>
+            </div>
+
+            <div class="flex-1 flex flex-col p-4 pt-28 pb-32 overflow-y-auto gap-4 z-10">
+                <!-- Smart Tip Level 2 (Conversation Tips) -->
+                <div class="smart-tip">
+                    <span class="text-lg">💡</span>
+                    <span>الوقت مناسب تتكلموا عن القيم العائلية المشتركة</span>
+                </div>
+                
+                <div class="chat-bubble-them">
+                    <p class="text-sm font-medium leading-relaxed">أهلاً بك، قرأت تقرير التوافق ووجدت نقاط تشابه مثيرة للاهتمام في طموحاتنا.</p>
+                    <span class="text-[10px] opacity-60 block text-left mt-1" dir="ltr">10:42 AM</span>
+                </div>
+                
+                <div class="chat-bubble-me">
+                    <p class="text-sm font-medium leading-relaxed">أهلاً لمياء، نعم لاحظت ذلك أيضاً. التوافق في أسلوب الحوار كان من أعلى النسب.</p>
+                    <div class="flex justify-end gap-1 items-center mt-1">
+                        <span class="text-[10px] opacity-60" dir="ltr">10:45 AM</span>
+                        <svg class="w-3 h-3 text-cine-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input Area with Ice Breakers -->
+            <div class="absolute bottom-0 left-0 right-0 z-20 flex flex-col">
+                <!-- Smart Ice Breakers (Level 1) -->
+                <div class="flex gap-2 overflow-x-auto ice-breakers-scroll px-4 pb-2">
+                    <div class="ice-breaker-chip">✨ إيه الحاجة اللي بتقربك من ربنا أكتر؟</div>
+                    <div class="ice-breaker-chip">✨ بتفضلي يومك المثالي يبقى إزاي؟</div>
+                    <div class="ice-breaker-chip">✨ إيه آخر كتاب قريتيه وأثر فيك؟</div>
+                </div>
+
+                <div class="chat-input-area flex items-end gap-2">
+                    <button class="w-10 h-10 rounded-full bg-cine-green/5 flex items-center justify-center shrink-0 mb-1"><span class="text-xl">📎</span></button>
+                    <div class="flex-1 bg-white border border-white/50 rounded-2xl min-h-[44px] flex items-center px-4 shadow-inner">
+                        <input type="text" placeholder="اكتب رسالة..." class="w-full bg-transparent focus:outline-none text-sm py-3">
+                    </div>
+                    <button class="w-12 h-12 rounded-full bg-gradient-to-br from-cine-gold to-cine-peach flex items-center justify-center shrink-0 mb-0.5 shadow-glow border border-white">
+                        <svg class="w-5 h-5 text-cine-green transform -rotate-45 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: Moderation & Red Flags -->
+        <div class="immersive-card relative">
+            <div class="bg-white/80 backdrop-blur-md p-4 pt-12 flex justify-between items-center border-b border-white/50 z-20 absolute top-0 left-0 right-0 shadow-sm">
+                <button class="w-10 h-10 rounded-full bg-cine-green/5 flex items-center justify-center"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                <div class="flex items-center gap-3">
+                    <div class="text-right"><h4 class="font-bold">مستخدم مجهول</h4></div>
+                    <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-xl border border-gray-300">👤</div>
+                </div>
+                <button class="w-10 h-10 rounded-full bg-cine-green/5 flex items-center justify-center"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" /></svg></button>
+            </div>
+
+            <div class="flex-1 flex flex-col p-4 pt-28 pb-32 overflow-y-auto gap-4 z-10">
+                <div class="chat-bubble-them">
+                    <p class="text-sm font-medium leading-relaxed">أهلاً بك، ممكن نتعرف أكتر؟ ده رقمي 0512345678</p>
+                    <span class="text-[10px] opacity-60 block text-left mt-1" dir="ltr">11:05 AM</span>
+                </div>
+
+                <!-- Red Flag Alert (Level 3) -->
+                <div class="warning-bubble">
+                    <span class="text-lg">⚠️</span>
+                    <div class="flex-1">
+                        <span class="block font-bold mb-1">تنبيه حماية</span>
+                        <span class="text-xs font-normal opacity-90 leading-relaxed">انتبه — لا تشارك بياناتك الشخصية أو رقم هاتفك في هذه المرحلة المبكرة لضمان سلامتك. تم إخطار النظام.</span>
+                    </div>
+                </div>
+
+                <div class="chat-bubble-them opacity-50 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gray-200/80 backdrop-blur-[2px] flex items-center justify-center font-bold text-xs text-gray-600">
+                        [ رسالة محذوفة لمخالفتها ميثاق التواصل ]
+                    </div>
+                    <p class="text-sm font-medium leading-relaxed blur-sm">رسالة تحتوي على محتوى غير لائق</p>
+                </div>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0 z-20 flex flex-col">
+                <div class="chat-input-area flex items-end gap-2 bg-red-50/90 border-t border-red-200">
+                    <div class="flex-1 text-center py-2">
+                        <p class="text-xs font-bold text-red-600 mb-2">تم تقييد المحادثة للمراجعة</p>
+                        <div class="flex justify-center gap-2">
+                            <button class="bg-red-100 text-red-700 px-4 py-1.5 rounded-full text-xs font-bold border border-red-200">الإبلاغ عن المستخدم</button>
+                            <button class="bg-gray-200 text-gray-700 px-4 py-1.5 rounded-full text-xs font-bold border border-gray-300">حظر مباشر</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

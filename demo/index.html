@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تَوَافُق</title>
+  <link rel="stylesheet" href="./demo.css">
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <h1>تَوَافُق</h1>
+      <p class="muted small">اعرف شخصيتك ولاقي شريك متوافق — عن طريق علم الفِراسة + تحليل نفسي</p>
+      <div id="boot-status" class="muted small"></div>
+    </header>
+
+    <!-- ===== ① الترحيب والتسجيل ===== -->
+    <section class="screen active" id="screen-welcome">
+      <div class="card hero">
+        <h2>أهلاً بيك 👋</h2>
+        <p class="muted">في دقايق: نصوّر وجهك من 3 زوايا، نسألك أسئلة قصيرة عن اللي مش واضح من الصورة، ونطلّعلك لمحة عن شخصيتك — وكمان نشوف لو في حد متوافق معاك.</p>
+        <div class="form">
+          <label>الاسم
+            <input type="text" id="regName" placeholder="اسمك">
+          </label>
+          <label>النوع
+            <select id="regGender">
+              <option value="">اختر…</option>
+              <option value="male">ذكر</option>
+              <option value="female">أنثى</option>
+            </select>
+          </label>
+        </div>
+        <button class="primary" id="toPrep" disabled>يلا نبدأ</button>
+      </div>
+    </section>
+
+    <!-- ===== ②أ أسئلة التوافق الأساسية (73 سؤال / 8 مراحل) ===== -->
+    <section class="screen" id="screen-matchq">
+      <div class="card">
+        <p class="muted small">قبل ما نقرا وجهك، محتاجين الأساسيات اللي بتحدّد التوافق — الدين، القيم، والخطوط الحمراء. دي بنبدأ بيها لأن من غيرها مفيش ماتش.</p>
+        <div class="cat-progress" id="mqProgress"></div>
+        <h2 id="mqTitle">—</h2>
+        <div class="questions" id="mqList"></div>
+        <div class="row spread">
+          <button id="mqPrev" disabled>السابق</button>
+          <span class="muted small" id="mqCount" dir="ltr">0 / 0</span>
+          <button class="primary" id="mqNext">التالي</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ② تجهيز التصوير ===== -->
+    <section class="screen" id="screen-prep">
+      <div class="card">
+        <h2>تجهيز قبل التصوير</h2>
+        <p class="muted small">جودة القراءة بتعتمد على الصورة — ظبّط دول الأول:</p>
+        <ul class="prepList">
+          <li><span class="ic">١</span><span><b>شيل النضّارة</b> — بتعمل وهج وتخفي شكل العين.</span></li>
+          <li><span class="ic">٢</span><span><b>ارفع الشعر عن الجبهة</b> — عشان خط الشعر وقمة الأرملة.</span></li>
+          <li><span class="ic">٣</span><span><b>الضوء قدّامك مش وراك</b> — إضاءة أمامية بدون ظل جانبي.</span></li>
+          <li><span class="ic">٤</span><span><b>تعبير محايد</b> — بُق مقفول، عيون مفتوحة طبيعي.</span></li>
+          <li><span class="ic">٥</span><span><b>الكاميرا في مستوى العين</b> وثبّت إيدك.</span></li>
+        </ul>
+        <button class="primary" id="toCapture">جاهز — شغّل الكاميرا</button>
+      </div>
+    </section>
+
+    <!-- ===== ③ تحليل الوجه (3 زوايا) ===== -->
+    <section class="screen" id="screen-capture">
+      <div class="card">
+        <h2>قراءة الوجه — 3 زوايا</h2>
+        <div class="steps">
+          <div class="chip active" data-k="front">١) أمامية <img class="thumb" data-t="front"></div>
+          <div class="chip" data-k="left">٢) لِف لليمين <img class="thumb" data-t="left"></div>
+          <div class="chip" data-k="right">٣) لِف لليسار <img class="thumb" data-t="right"></div>
+        </div>
+        <div class="videoBox">
+          <video id="vid" playsinline muted></video>
+          <div class="ring" id="ring"></div>
+          <div class="hud" id="hud">جارٍ التحميل…</div>
+          <div class="target" id="target">—</div>
+        </div>
+        <div class="row">
+          <button id="manualBtn" disabled>التقاط يدوي</button>
+          <button id="resetBtn" disabled>إعادة</button>
+          <button class="primary" id="analyzeBtn" disabled>تحليل ودمج</button>
+        </div>
+        <p class="muted small" id="captureNote">التطبيق بيلتقط تلقائيًا لمّا الزاوية والإضاءة يبقوا صح.</p>
+      </div>
+    </section>
+
+    <!-- ===== ④ الأسئلة المختصرة (مقسّمة كاتيجوري) ===== -->
+    <section class="screen" id="screen-questions">
+      <div class="card">
+        <div class="adaptive-banner" id="adaptiveBanner"></div>
+        <div class="cat-progress" id="catProgress"></div>
+        <h2 id="catTitle">—</h2>
+        <div class="questions" id="questionList"></div>
+        <div class="row spread">
+          <button id="prevCat" disabled>السابق</button>
+          <span class="muted small" id="qProgress" dir="ltr">0 / 0</span>
+          <button class="primary" id="nextCat">التالي</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ⑤ اللمحة المجانية + التوافق + الخدمات ===== -->
+    <section class="screen" id="screen-glimpse">
+      <div class="card">
+        <h2>لمحة عن شخصيتك <span class="muted small">(مجاني)</span></h2>
+        <div id="glimpsePanel"></div>
+      </div>
+
+      <div class="card teaser" id="matchTeaser"></div>
+
+      <div class="card">
+        <h2>كمّل رحلتك</h2>
+        <p class="muted small">اختر الخدمة اللي تناسبك:</p>
+        <div class="services">
+          <button class="service" data-svc="matching">
+            <strong>Matching 💞</strong>
+            <small>شوف الماتش وتواصل معاه</small>
+          </button>
+          <button class="service" data-svc="full">
+            <strong>تحليل شخصية كامل 🧠</strong>
+            <small>جاوب كل الأسئلة → تقرير دقيق للـ60 صفة</small>
+          </button>
+          <button class="service" data-svc="session">
+            <strong>جلسة مع أ. هادي 🎙️</strong>
+            <small>حجز ميتنج مباشر</small>
+          </button>
+        </div>
+      </div>
+
+      <div class="card hidden" id="servicePanel"></div>
+      <button class="secondary" id="restart">إعادة التشغيل من الأول</button>
+    </section>
+  </div>
+
+  <script type="module" src="./face.js"></script>
+  <script type="module" src="./segment.js"></script>
+  <script src="./scoring.js?v=3"></script>
+  <script type="module" src="./demo.js"></script>
+</body>
+</html>

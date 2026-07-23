@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - Redesign Batches 1, 2 & 3</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        /* New Navy & White Core */
+                        navy: '#0B112A',       /* Deep trustworthy blue (Awaser style) */
+                        'navy-light': '#1A2345',
+                        paper: '#F8FAFC',      /* Very soft cool gray/white */
+                        white: '#FFFFFF',
+                        
+                        /* New Vibrant Accents (Habii & Maleka style) */
+                        primary: '#7C3AED',    /* Royal Purple */
+                        'primary-light': '#8B5CF6',
+                        secondary: '#DB2777',  /* Vibrant Magenta */
+                        indigo: '#6366F1',
+                        
+                        /* Text & UI */
+                        slate: '#1E293B',      /* Dark text on light */
+                        muted: '#94A3B8',      /* Muted text */
+                        line: '#E2E8F0',
+                        'line-dark': '#334155',
+                    },
+                    fontFamily: {
+                        naskh: ['"Noto Naskh Arabic"', 'serif'],
+                        sans: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+                        display: ['"DM Serif Display"', 'serif']
+                    },
+                    backgroundImage: {
+                        'gradient-brand': 'linear-gradient(135deg, #7C3AED 0%, #DB2777 100%)',
+                        'gradient-glass': 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%)'
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px -10px rgba(11, 17, 42, 0.1)',
+                        'glow': '0 0 25px rgba(124, 58, 237, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #e2e8f0; padding: 40px; }
+        
+        .app-canvas {
+            width: 390px;
+            height: 844px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.2), inset 0 0 0 5px #cbd5e1;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Themes */
+        .theme-dark { background-color: #0B112A; color: #FFFFFF; }
+        .theme-light { background-color: #F8FAFC; color: #1E293B; }
+        
+        /* Ribbon Background (Awaser Inspired) */
+        .ribbon {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            background: linear-gradient(135deg, rgba(124,58,237,0.15) 0%, rgba(219,39,119,0.15) 100%);
+            animation: morph 15s ease-in-out infinite alternate;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        @keyframes morph {
+            0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: rotate(0deg); }
+            100% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; transform: rotate(45deg); }
+        }
+
+        /* Forms & Inputs */
+        .input-light {
+            width: 100%; background: #FFFFFF; border: 2px solid #E2E8F0; border-radius: 16px;
+            padding: 16px; color: #1E293B; transition: 0.3s;
+        }
+        .input-light:focus { outline: none; border-color: #7C3AED; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.1); }
+        
+        .input-dark {
+            width: 100%; background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.1); border-radius: 16px;
+            padding: 16px; color: #FFFFFF; transition: 0.3s;
+        }
+        .input-dark:focus { outline: none; border-color: #7C3AED; background: rgba(255,255,255,0.1); }
+
+        /* Custom Radio */
+        .likert-radio:checked + div {
+            background-image: linear-gradient(135deg, #7C3AED 0%, #DB2777 100%);
+            border-color: transparent;
+            box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate">
+
+    <div class="mb-8 max-w-4xl">
+        <h1 class="text-3xl font-bold mb-2 text-slate">Tawafuq Redesign: Vibrant & Trustworthy</h1>
+        <p class="text-slate opacity-80 leading-relaxed">
+            استبدلنا الألوان القديمة (الأسود والذهبي) بلوحة ألوان مستوحاة مباشرة من (أواصر، ملكة، و Habii). <br>
+            استخدمنا <strong>الكحلي العميق (Deep Navy)</strong> للثقة والأمان، مع تدرجات <strong>البنفسجي والوردي (Purple/Magenta)</strong> للحيوية والفخامة العصرية، و <strong>الأبيض الناصع</strong> للوضوح التام في نماذج الأسئلة.
+        </p>
+    </div>
+
+    <div class="flex gap-8 overflow-x-auto pb-10 items-center">
+
+        <!-- SCREEN 1: Splash -->
+        <div class="app-canvas theme-dark justify-center items-center">
+            <div class="ribbon" style="top: -200px; right: -200px;"></div>
+            <div class="ribbon" style="bottom: -200px; left: -200px; animation-delay: -5s; opacity: 0.5"></div>
+            
+            <div class="relative z-10 flex flex-col items-center">
+                <!-- Brand Emblem -->
+                <div class="w-20 h-20 rounded-full bg-gradient-brand p-[2px] mb-6 shadow-glow">
+                    <div class="w-full h-full bg-navy rounded-full flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <h1 class="font-naskh text-6xl text-white font-bold tracking-wider mb-2">تَوَافُق</h1>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: Landing Page -->
+        <div class="app-canvas theme-dark px-6 pb-12 justify-end">
+            <div class="ribbon" style="top: -100px; right: -300px; opacity: 0.8;"></div>
+            
+            <div class="relative z-10 w-full flex flex-col gap-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-[rgba(255,255,255,0.1)] backdrop-blur text-primary-light text-xs font-bold rounded-full mb-4 border border-[rgba(255,255,255,0.1)]">تطبيق الزواج الأول علمياً</span>
+                    <h2 class="font-naskh text-4xl text-white font-bold leading-tight mb-4">هُنا تُبنى<br>الأواصر الحقيقية</h2>
+                    <p class="text-muted text-lg leading-relaxed">
+                        نصلك بشريك حياتك عبر تحليل عميق للشخصية والفراسة، في بيئة آمنة وموثوقة.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-4 mt-4">
+                    <button class="w-full bg-gradient-brand text-white font-bold text-lg py-4 rounded-2xl shadow-glow transition-all">
+                        إنشاء حساب جديد
+                    </button>
+                    <button class="w-full bg-transparent border-2 border-[rgba(255,255,255,0.2)] text-white hover:bg-[rgba(255,255,255,0.05)] font-semibold text-lg py-4 rounded-2xl transition-all">
+                        تسجيل الدخول
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: Registration (Light Theme - Maleka inspired) -->
+        <div class="app-canvas theme-light">
+            <div class="flex items-center p-6 bg-white border-b border-line shadow-sm relative z-10">
+                <button class="w-10 h-10 rounded-full bg-paper flex items-center justify-center text-slate border border-line">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <h2 class="flex-1 text-center font-bold text-lg mr-10 text-slate">إنشاء حساب</h2>
+            </div>
+
+            <div class="flex-1 px-6 py-8 overflow-y-auto bg-paper">
+                <div class="mb-8 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 text-primary text-2xl">👋</div>
+                    <h3 class="font-naskh text-3xl font-bold mb-2 text-navy">أهلاً بك في تَوَافُق</h3>
+                    <p class="text-muted">أدخل بياناتك لتبدأ رحلة البحث عن شريكك.</p>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <div>
+                        <label class="block text-sm font-bold text-slate mb-2">البريد الإلكتروني</label>
+                        <input type="email" placeholder="name@example.com" class="input-light text-left" dir="ltr">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-bold text-slate mb-2">كلمة المرور</label>
+                        <input type="password" placeholder="••••••••" class="input-light text-left" dir="ltr">
+                    </div>
+
+                    <div class="mt-2">
+                        <label class="block text-sm font-bold text-slate mb-3">الجنس</label>
+                        <div class="flex gap-4">
+                            <label class="flex-1 relative">
+                                <input type="radio" name="gender2" class="peer sr-only" checked>
+                                <div class="w-full py-5 rounded-2xl border-2 border-line bg-white text-center cursor-pointer peer-checked:border-primary peer-checked:bg-primary/5 transition-all shadow-sm">
+                                    <span class="block text-3xl mb-2">👨🏻</span>
+                                    <span class="font-bold text-navy">ذكر</span>
+                                </div>
+                            </label>
+                            <label class="flex-1 relative">
+                                <input type="radio" name="gender2" class="peer sr-only">
+                                <div class="w-full py-5 rounded-2xl border-2 border-line bg-white text-center cursor-pointer peer-checked:border-secondary peer-checked:bg-secondary/5 transition-all shadow-sm">
+                                    <span class="block text-3xl mb-2">👩🏻</span>
+                                    <span class="font-bold text-navy">أنثى</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 bg-white border-t border-line">
+                <button class="w-full bg-gradient-brand text-white font-bold text-lg py-4 rounded-2xl shadow-glow">متابعة</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 4: Verification Intro (Dark Theme Floating Cards - Awaser inspired) -->
+        <div class="app-canvas theme-dark">
+            <div class="absolute inset-0 bg-navy"></div>
+            <div class="ribbon" style="top: -300px; left: -100px; opacity: 0.3;"></div>
+
+            <div class="relative z-10 p-6 flex flex-col h-full">
+                <div class="mt-12 mb-8 text-center">
+                    <div class="inline-flex p-4 rounded-full bg-white/10 backdrop-blur border border-white/20 mb-6">
+                        <span class="text-4xl">🛡️</span>
+                    </div>
+                    <h2 class="font-naskh text-3xl font-bold mb-3 text-white">بيئة آمنة 100%</h2>
+                    <p class="text-white/70 text-lg">
+                        نضمن لك الجدية والأمان عبر توثيق الحسابات بهوية وطنية وصورة مباشرة.
+                    </p>
+                </div>
+                
+                <!-- Floating white cards on dark background -->
+                <div class="flex flex-col gap-4 mt-4">
+                    <div class="bg-white rounded-[24px] p-5 flex items-center gap-5 shadow-premium">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-xl">🪪</div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-navy text-lg">الهوية الوطنية</h4>
+                            <p class="text-sm text-slate/60">لن تُحفظ ولن تظهر لأحد.</p>
+                        </div>
+                        <div class="text-primary">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-[24px] p-5 flex items-center gap-5 shadow-premium opacity-50">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-xl">🤳</div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-navy text-lg">التحقق بالوجه</h4>
+                            <p class="text-sm text-slate/60">لمطابقة صورتك مع الهوية.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto pt-6">
+                    <button class="w-full bg-white text-navy font-bold text-lg py-4 rounded-2xl hover:bg-paper transition-all">
+                        ابدأ التوثيق
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 5: Onboarding Profile (Clean Grid Tags - Maleka inspired) -->
+        <div class="app-canvas theme-light bg-white">
+            <div class="p-6 border-b border-line flex justify-between items-center">
+                <button class="w-10 h-10 rounded-full bg-paper flex items-center justify-center text-slate border border-line">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <div class="w-32 h-1.5 bg-line rounded-full overflow-hidden">
+                    <div class="h-full bg-primary w-1/3"></div>
+                </div>
+            </div>
+
+            <div class="flex-1 px-6 py-8 overflow-y-auto">
+                <h2 class="font-naskh text-3xl font-bold mb-6 text-navy">البيانات الشخصية</h2>
+
+                <div class="flex flex-col items-center mb-8">
+                    <div class="relative">
+                        <div class="w-28 h-28 rounded-full bg-paper border-2 border-dashed border-primary/50 flex items-center justify-center overflow-hidden">
+                            <span class="text-3xl">👤</span>
+                        </div>
+                        <button class="absolute bottom-0 right-0 w-8 h-8 rounded-full bg-gradient-brand text-white flex items-center justify-center shadow-lg border-2 border-white">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <div>
+                        <label class="block text-sm font-bold text-slate mb-2">الاسم (كما سيظهر)</label>
+                        <input type="text" placeholder="مثال: أحمد" class="input-light">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate mb-2">العمر</label>
+                            <input type="number" placeholder="28" class="input-light text-center" dir="ltr">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate mb-2">المدينة</label>
+                            <select class="input-light appearance-none text-center">
+                                <option>الرياض</option>
+                                <option>جدة</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-bold text-slate mb-2">القبيلة / العائلة (اختياري)</label>
+                        <input type="text" placeholder="مثال: القحطاني" class="input-light">
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 bg-white border-t border-line">
+                <button class="w-full bg-navy text-white font-bold text-lg py-4 rounded-2xl">حفظ ومتابعة</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 6: Likert Question (Habii Quiz Style) -->
+        <div class="app-canvas theme-light bg-paper">
+            <!-- Header Progress -->
+            <div class="p-6 bg-white border-b border-line">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">القيم والمبادئ</div>
+                    <span class="text-sm font-bold text-slate font-display" dir="ltr">4 / 10</span>
+                </div>
+                <!-- Clean segmented progress bar -->
+                <div class="flex gap-1.5 w-full">
+                    <div class="h-1.5 flex-1 bg-primary rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-primary rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-primary rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-gradient-brand rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-line rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-line rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-line rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="flex-1 p-6 flex flex-col">
+                <!-- White Quiz Card on Paper bg -->
+                <div class="bg-white p-8 rounded-[32px] shadow-premium text-center flex-1 flex flex-col justify-center border border-line/50">
+                    <div class="w-16 h-16 bg-paper rounded-full flex items-center justify-center mx-auto mb-6 text-2xl border border-line">🤔</div>
+                    
+                    <h3 class="font-naskh text-2xl font-bold leading-relaxed mb-12 text-navy">
+                        "أُفضّل الروتين المألوف والاستقرار على تجربة أشياء جديدة ومجهولة"
+                    </h3>
+
+                    <!-- Likert Scale with Gradient -->
+                    <div class="flex justify-between items-center px-2 mt-4 relative">
+                        <div class="absolute top-1/2 left-4 right-4 h-1 bg-paper -z-10 -translate-y-1/2 rounded-full"></div>
+                        
+                        <label class="relative cursor-pointer flex flex-col items-center">
+                            <input type="radio" name="q4" class="likert-radio sr-only">
+                            <div class="w-8 h-8 rounded-full bg-white border-2 border-line transition-all duration-300"></div>
+                        </label>
+                        <label class="relative cursor-pointer flex flex-col items-center">
+                            <input type="radio" name="q4" class="likert-radio sr-only">
+                            <div class="w-6 h-6 rounded-full bg-white border-2 border-line transition-all duration-300"></div>
+                        </label>
+                        <label class="relative cursor-pointer flex flex-col items-center">
+                            <input type="radio" name="q4" class="likert-radio sr-only" checked>
+                            <div class="w-5 h-5 rounded-full bg-white border-2 border-line transition-all duration-300"></div>
+                        </label>
+                        <label class="relative cursor-pointer flex flex-col items-center">
+                            <input type="radio" name="q4" class="likert-radio sr-only">
+                            <div class="w-6 h-6 rounded-full bg-white border-2 border-line transition-all duration-300"></div>
+                        </label>
+                        <label class="relative cursor-pointer flex flex-col items-center">
+                            <input type="radio" name="q4" class="likert-radio sr-only">
+                            <div class="w-8 h-8 rounded-full bg-white border-2 border-line transition-all duration-300"></div>
+                        </label>
+                    </div>
+
+                    <div class="flex justify-between text-xs font-bold text-muted mt-6 px-1">
+                        <span>أرفض بشدة</span>
+                        <span>أوافق بشدة</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 bg-paper pt-0">
+                <button class="w-full bg-navy text-white font-bold text-lg py-4 rounded-2xl flex items-center justify-center gap-2 shadow-premium hover:bg-navy-light transition-all">
+                    التالي
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

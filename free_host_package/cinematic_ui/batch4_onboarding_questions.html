@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - BATCH 4: Onboarding Questions (Cinematic Fluid UI)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cine-peach': '#FFEACE',
+                        'cine-white': '#FFFEFF',
+                        'cine-pink': '#FEDEFB',
+                        'cine-gold': '#FECA83',
+                        'cine-green': '#2B4C41', 
+                        'cine-green-light': '#4A6B60',
+                    },
+                    fontFamily: {
+                        soft: ['"Tajawal"', 'sans-serif'],
+                        display: ['"Readex Pro"', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(43, 76, 65, 0.15)',
+                        'glow': '0 0 20px rgba(254, 202, 131, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #FFEACE 0%, #FEDEFB 50%, #E6EFEA 100%);
+            font-family: 'Tajawal', sans-serif;
+            min-height: 100vh;
+            color: #2B4C41;
+            padding: 40px 20px;
+        }
+
+        /* App Canvas */
+        .app-canvas {
+            width: 390px;
+            height: 844px;
+            border-radius: 44px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(43, 76, 65, 0.25), inset 0 0 0 6px #FFFEFF;
+            background: linear-gradient(180deg, #FFFEFF 0%, #FFEACE 50%, #FEDEFB 100%);
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 32px;
+            box-shadow: var(--glass);
+        }
+        
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .glass-btn.active {
+            background: linear-gradient(135deg, #FECA83, #FEDEFB);
+            border-color: #FFFEFF;
+            box-shadow: 0 8px 20px rgba(254, 202, 131, 0.3);
+            color: #2B4C41;
+            font-weight: 700;
+        }
+
+        /* Custom Progress Bars */
+        .cine-progress-track {
+            width: 100%; height: 8px;
+            background-color: rgba(43, 76, 65, 0.1);
+            border-radius: 10px; overflow: hidden;
+        }
+        .cine-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #FECA83, #FEDEFB);
+            border-radius: 10px; transition: width 0.5s ease;
+        }
+
+        /* Fluid Background Animation for Celebration */
+        .fluid-bg {
+            position: absolute; inset: -50%;
+            background: conic-gradient(from 0deg, #FFEACE, #FEDEFB, #E6EFEA, #FFEACE);
+            animation: spin-bg 10s linear infinite;
+            z-index: 0;
+            filter: blur(40px);
+            opacity: 0.8;
+        }
+        @keyframes spin-bg { 100% { transform: rotate(360deg); } }
+
+        /* Liquid Celebration Drop */
+        .liquid-drop-large {
+            width: 150px; height: 160px;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.8);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 20px 40px rgba(43,76,65,0.15);
+            position: relative; overflow: hidden;
+            animation: morph-drop 4s ease-in-out infinite alternate;
+        }
+        @keyframes morph-drop {
+            0% { border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; }
+            100% { border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%; }
+        }
+        .liquid-fill-full {
+            position: absolute; bottom: 0; left: 0; right: 0; height: 100%;
+            background: linear-gradient(to top, #FECA83, #FEDEFB);
+            z-index: -1; animation: fill-up 2s ease forwards;
+        }
+        @keyframes fill-up { 0% { height: 0%; } 100% { height: 100%; } }
+
+        /* Range Slider Styling */
+        input[type=range] {
+            -webkit-appearance: none; width: 100%; background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; height: 32px; width: 32px;
+            border-radius: 50%; background: #FFFEFF;
+            box-shadow: 0 4px 10px rgba(43,76,65,0.2);
+            cursor: pointer; margin-top: -12px;
+            border: 2px solid #FECA83;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%; height: 8px; cursor: pointer;
+            background: linear-gradient(90deg, #2B4C41 0%, #FECA83 50%, #FEDEFB 100%);
+            border-radius: 10px;
+        }
+
+        /* Stars */
+        .star { position: absolute; background: white; border-radius: 50%; animation: twinkle 2s infinite alternate; }
+        @keyframes twinkle { 0% { opacity: 0.3; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 10px white; } }
+    </style>
+</head>
+<body>
+
+    <div class="text-center mb-8 max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-2 font-display text-cine-green">Tawafuq — BATCH 4: Onboarding Questions</h1>
+        <p class="text-lg opacity-80">Applying the Cinematic Fluid UI to the 5 Question Types</p>
+    </div>
+
+    <!-- Scrollable Gallery -->
+    <div class="flex gap-8 overflow-x-auto pb-10 items-center px-4">
+
+        <!-- ============================================== -->
+        <!-- SCREEN 14: Likert 5-point -->
+        <!-- ============================================== -->
+        <div class="app-canvas p-6 pt-12">
+            <!-- Header Progress -->
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-sm font-bold bg-white/50 px-4 py-1 rounded-full backdrop-blur">القيم والمبادئ</span>
+                <span class="font-display font-bold">1/73</span>
+            </div>
+            <div class="cine-progress-track mb-12">
+                <div class="cine-progress-bar w-[5%]"></div>
+            </div>
+
+            <!-- Question Card (Glassmorphism) -->
+            <div class="glass-panel p-8 flex-1 flex flex-col justify-center text-center relative mb-8">
+                <!-- Decorative element -->
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-cine-peach to-cine-pink rounded-full blur-md opacity-60"></div>
+                
+                <h2 class="text-2xl font-bold leading-relaxed mb-10 text-cine-green">"أُفضّل الالتزام بخطط واضحة وثابتة بدلاً من العفوية في حياتي اليومية"</h2>
+
+                <!-- Likert Bubbles -->
+                <div class="flex justify-between items-center relative px-2">
+                    <div class="absolute top-1/2 left-4 right-4 h-1 bg-white/40 -translate-y-1/2 rounded-full -z-10"></div>
+                    
+                    <button class="w-12 h-12 rounded-full bg-white/80 border-2 border-transparent shadow-sm hover:scale-110 transition-transform flex items-center justify-center font-display text-xs">١</button>
+                    <button class="w-10 h-10 rounded-full bg-white/80 border-2 border-transparent shadow-sm hover:scale-110 transition-transform"></button>
+                    <button class="w-8 h-8 rounded-full bg-gradient-to-r from-cine-peach to-cine-pink shadow-glow border-2 border-white scale-125 transition-transform"></button>
+                    <button class="w-10 h-10 rounded-full bg-white/80 border-2 border-transparent shadow-sm hover:scale-110 transition-transform"></button>
+                    <button class="w-12 h-12 rounded-full bg-white/80 border-2 border-transparent shadow-sm hover:scale-110 transition-transform flex items-center justify-center font-display text-xs">٥</button>
+                </div>
+                
+                <div class="flex justify-between mt-4 text-xs font-bold opacity-60">
+                    <span>أرفض تماماً</span>
+                    <span>أوافق بشدة</span>
+                </div>
+            </div>
+
+            <!-- Action -->
+            <button class="w-full py-4 rounded-full bg-cine-green text-cine-white font-bold text-lg shadow-xl hover:bg-cine-green-light transition-colors">التالي</button>
+        </div>
+
+
+        <!-- ============================================== -->
+        <!-- SCREEN 15: Scenario (Multiple Choice) -->
+        <!-- ============================================== -->
+        <div class="app-canvas p-6 pt-12">
+            <!-- Header Progress -->
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-sm font-bold bg-white/50 px-4 py-1 rounded-full backdrop-blur">إدارة الخلافات</span>
+                <span class="font-display font-bold">12/73</span>
+            </div>
+            <div class="cine-progress-track mb-8">
+                <div class="cine-progress-bar w-[15%]"></div>
+            </div>
+
+            <div class="flex-1 flex flex-col">
+                <h2 class="text-2xl font-bold leading-relaxed mb-6">حدث خلاف مفاجئ بسبب سوء تفاهم مالي، ما هو رد فعلك الأول؟</h2>
+
+                <!-- Options -->
+                <div class="flex flex-col gap-4 mt-auto mb-8">
+                    <button class="glass-btn p-5 text-right font-medium leading-relaxed">
+                        أنسحب مؤقتاً لترتيب أفكاري وأتجنب النقاش وقت الغضب.
+                    </button>
+                    <button class="glass-btn active p-5 text-right leading-relaxed flex items-center justify-between">
+                        أبادر فوراً بفتح الموضوع لحله وعدم ترك تراكمات.
+                        <svg class="w-6 h-6 text-cine-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    </button>
+                    <button class="glass-btn p-5 text-right font-medium leading-relaxed">
+                        أنتظر حتى يهدأ الطرف الآخر وأتوقع منه أن يبادر بالاعتذار أو التوضيح.
+                    </button>
+                </div>
+            </div>
+
+            <!-- Action -->
+            <button class="w-full py-4 rounded-full bg-cine-green text-cine-white font-bold text-lg shadow-xl hover:bg-cine-green-light transition-colors">التالي</button>
+        </div>
+
+
+        <!-- ============================================== -->
+        <!-- SCREEN 16: Bipolar Slider -->
+        <!-- ============================================== -->
+        <div class="app-canvas p-6 pt-12">
+            <!-- Header Progress -->
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-sm font-bold bg-white/50 px-4 py-1 rounded-full backdrop-blur">نمط التفكير</span>
+                <span class="font-display font-bold">34/73</span>
+            </div>
+            <div class="cine-progress-track mb-16">
+                <div class="cine-progress-bar w-[45%]"></div>
+            </div>
+
+            <div class="flex-1 flex flex-col justify-center">
+                <h2 class="text-2xl font-bold text-center leading-relaxed mb-16">أين تجد نفسك بين هذين النقيضين في اتخاذ القرارات المصيرية؟</h2>
+
+                <!-- Slider Area -->
+                <div class="glass-panel p-8 pt-12 relative mb-12">
+                    <!-- Custom icons at ends -->
+                    <div class="absolute -top-6 right-6 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center text-xl border border-cine-gold">🧠</div>
+                    <div class="absolute -top-6 left-6 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center text-xl border border-cine-pink">❤️</div>
+
+                    <input type="range" min="1" max="100" value="70" class="w-full mt-4">
+                    
+                    <div class="flex justify-between mt-6 text-sm font-bold text-cine-green">
+                        <span>المنطق التحليلي</span>
+                        <span>الحدس العاطفي</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action -->
+            <button class="w-full py-4 rounded-full bg-cine-green text-cine-white font-bold text-lg shadow-xl hover:bg-cine-green-light transition-colors">التالي</button>
+        </div>
+
+
+        <!-- ============================================== -->
+        <!-- SCREEN 17: Multi-select with cap -->
+        <!-- ============================================== -->
+        <div class="app-canvas p-6 pt-12">
+            <!-- Header Progress -->
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-sm font-bold bg-white/50 px-4 py-1 rounded-full backdrop-blur">الاهتمامات الأساسية</span>
+                <span class="font-display font-bold">50/73</span>
+            </div>
+            <div class="cine-progress-track mb-8">
+                <div class="cine-progress-bar w-[70%]"></div>
+            </div>
+
+            <div class="flex-1 flex flex-col">
+                <h2 class="text-2xl font-bold leading-relaxed mb-2">ما هي أهم 3 قيم تبحث عنها في شريك حياتك؟</h2>
+                <p class="text-sm opacity-70 mb-8">اختر حتى 3 خيارات فقط.</p>
+
+                <!-- Tags Grid -->
+                <div class="flex flex-wrap gap-3">
+                    <button class="glass-btn px-6 py-3 font-medium">الاستقرار المالي</button>
+                    <button class="glass-btn active px-6 py-3">التدين والالتزام</button>
+                    <button class="glass-btn px-6 py-3 font-medium">الطموح المهني</button>
+                    <button class="glass-btn active px-6 py-3">الذكاء العاطفي</button>
+                    <button class="glass-btn px-6 py-3 font-medium">روح الدعابة</button>
+                    <button class="glass-btn px-6 py-3 font-medium">الاهتمام بالصحة</button>
+                    <button class="glass-btn px-6 py-3 font-medium">الهدوء والسكينة</button>
+                    <button class="glass-btn active px-6 py-3">حب العائلة</button>
+                    <button class="glass-btn px-6 py-3 font-medium">المغامرة والسفر</button>
+                </div>
+                
+                <div class="mt-8 text-center text-sm font-bold bg-white/40 py-2 rounded-full">
+                    تم اختيار 3 / 3
+                </div>
+            </div>
+
+            <!-- Action -->
+            <button class="w-full py-4 rounded-full bg-cine-green text-cine-white font-bold text-lg shadow-xl hover:bg-cine-green-light transition-colors">التالي</button>
+        </div>
+
+
+        <!-- ============================================== -->
+        <!-- SCREEN 18: Category Celebration -->
+        <!-- ============================================== -->
+        <div class="app-canvas justify-center items-center relative">
+            <div class="fluid-bg"></div>
+            
+            <!-- Stardust -->
+            <div class="star w-2 h-2 top-20 right-20"></div>
+            <div class="star w-3 h-3 top-40 left-10" style="animation-delay: 1s;"></div>
+            <div class="star w-1.5 h-1.5 bottom-40 right-10" style="animation-delay: 0.5s;"></div>
+            <div class="star w-2 h-2 top-1/2 left-1/4" style="animation-delay: 1.5s;"></div>
+
+            <div class="relative z-10 flex flex-col items-center p-6 text-center w-full">
+                <!-- Liquid Drop Celebration -->
+                <div class="liquid-drop-large mb-10">
+                    <div class="liquid-fill-full"></div>
+                    <span class="z-10 text-6xl drop-shadow-md">✨</span>
+                </div>
+
+                <h2 class="text-4xl font-bold mb-4 text-cine-green drop-shadow-sm font-display">اكتملت المرحلة!</h2>
+                <p class="text-lg font-medium opacity-80 leading-relaxed mb-12">
+                    لقد أنهيت أول 73 سؤالاً بنجاح. خوارزمياتنا الآن لديها صورة مبدئية ممتازة عن شخصيتك.
+                </p>
+
+                <!-- Next Phase Card -->
+                <div class="glass-panel w-full p-6 text-right relative overflow-hidden mb-8">
+                    <div class="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-cine-peach to-cine-pink"></div>
+                    <span class="text-sm font-bold opacity-60 mb-1 block">المرحلة القادمة</span>
+                    <h3 class="text-xl font-bold">تحليل الفراسة وملامح الوجه 🤳</h3>
+                </div>
+
+                <button class="w-full py-4 rounded-full bg-cine-green text-cine-white font-bold text-lg shadow-xl hover:bg-cine-green-light transition-colors">
+                    ابدأ تحليل الوجه
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

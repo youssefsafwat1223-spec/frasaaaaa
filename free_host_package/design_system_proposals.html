@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - Design System Proposals</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Arabic Fonts options -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Tajawal:wght@400;500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { background-color: #F1F5F9; padding: 40px 20px; font-family: 'IBM Plex Sans Arabic', sans-serif; }
+        
+        /* Font classes */
+        .font-naskh { font-family: 'Noto Naskh Arabic', serif; }
+        .font-cairo { font-family: 'Cairo', sans-serif; }
+        .font-ibm { font-family: 'IBM Plex Sans Arabic', sans-serif; }
+        .font-tajawal { font-family: 'Tajawal', sans-serif; }
+        .font-amiri { font-family: 'Amiri', serif; }
+
+        .proposal-card {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .proposal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+        }
+
+        .ds-bg { background-color: var(--bg-color); color: var(--text-color); }
+        .ds-surface { background-color: var(--surface-color); border: 1px solid var(--border-color); }
+        .ds-primary { background-color: var(--primary-color); color: var(--btn-text); }
+        .ds-secondary { background-color: var(--secondary-color); color: var(--bg-color); }
+        .ds-text-primary { color: var(--primary-color); }
+        
+        .color-dot { width: 30px; height: 30px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <div class="max-w-7xl mx-auto mb-12 text-center">
+        <h1 class="text-4xl font-bold mb-4 text-slate-800">مقترحات الهوية البصرية (Design Systems)</h1>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+            لقد قمت بتصميم 10 مقترحات مختلفة لأنظمة الألوان والخطوط لتطبيق "تَوَافُق". كل مقترح يعكس روحاً مختلفة (فخامة، عصرية، هدوء، شبابية). تصفحها واختر الرقم الذي يمثل رؤيتك للتطبيق.
+        </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Proposal 1: The Classic Royal -->
+        <div class="proposal-card flex flex-col" style="--bg-color: #0F172A; --surface-color: #1E293B; --primary-color: #D4AF37; --secondary-color: #F8FAFC; --text-color: #FFFFFF; --border-color: #334155; --btn-text: #0F172A;">
+            <div class="p-6 bg-slate-100 flex justify-between items-center border-b">
+                <h3 class="text-xl font-bold text-slate-800">1. الكلاسيكي الملكي (Classic Royal)</h3>
+                <div class="flex gap-2">
+                    <span class="color-dot" style="background: var(--bg-color)"></span>
+                    <span class="color-dot" style="background: var(--primary-color)"></span>
+                </div>
+            </div>
+            <div class="ds-bg p-8 flex-1 flex flex-col gap-6">
+                <div class="text-center">
+                    <h2 class="font-naskh text-3xl font-bold mb-2 ds-text-primary">تَوَافُق</h2>
+                    <p class="text-sm opacity-80 font-ibm">فخامة، ثقة، ورسمية تامة (كحلي وذهبي).</p>
+                </div>
+                <div class="ds-surface rounded-2xl p-4 mt-auto">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full ds-secondary flex items-center justify-center font-bold">👤</div>
+                        <div>
+                            <div class="font-bold font-ibm">أحمد محمد</div>
+                            <div class="text-xs opacity-70">توافق 85%</div>
+                        </div>
+                    </div>
+                    <button class="w-full ds-primary py-3 rounded-xl font-bold font-ibm">عرض الملف</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal 2: The Modern Romantic (Muzz Vibe) -->
+        <div class="proposal-card flex flex-col" style="--bg-color: #2D1B2E; --surface-color: #3D263E; --primary-color: #E11D48; --secondary-color: #FDA4AF; --text-color: #FFF0F2; --border-color: #553457; --btn-text: #FFFFFF;">
+            <div class="p-6 bg-slate-100 flex justify-between items-center border-b">
+                <h3 class="text-xl font-bold text-slate-800">2. الرومانسي العصري (Modern Romantic)</h3>
+                <div class="flex gap-2">
+                    <span class="color-dot" style="background: var(--bg-color)"></span>
+                    <span class="color-dot" style="background: var(--primary-color)"></span>
+                </div>
+            </div>
+            <div class="ds-bg p-8 flex-1 flex flex-col gap-6">
+                <div class="text-center">
+                    <h2 class="font-tajawal text-3xl font-bold mb-2 ds-text-primary">تَوَافُق</h2>
+                    <p class="text-sm opacity-80 font-cairo">دافئ، عصري، وعاطفي (عنابي وماجنتا).</p>
+                </div>
+                <div class="ds-surface rounded-2xl p-4 mt-auto">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full ds-secondary flex items-center justify-center font-bold">👩</div>
+                        <div>
+                            <div class="font-bold font-tajawal">سارة أحمد</div>
+                            <div class="text-xs opacity-70">توافق 88%</div>
+                        </div>
+                    </div>
+                    <button class="w-full ds-primary py-3 rounded-xl font-bold font-tajawal">عرض الملف</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal 3: The Trust Anchor -->
+        <div class="proposal-card flex flex-col" style="--bg-color: #111827; --surface-color: #1F2937; --primary-color: #0D9488; --secondary-color: #5EEAD4; --text-color: #F8FAFC; --border-color: #374151; --btn-text: #FFFFFF;">
+            <div class="p-6 bg-slate-100 flex justify-between items-center border-b">
+                <h3 class="text-xl font-bold text-slate-800">3. مرساة الثقة (Trust Anchor)</h3>
+                <div class="flex gap-2">
+                    <span class="color-dot" style="background: var(--bg-color)"></span>
+                    <span class="color-dot" style="background: var(--primary-color)"></span>
+                </div>
+            </div>
+            <div class="ds-bg p-8 flex-1 flex flex-col gap-6">
+                <div class="text-center">
+                    <h2 class="font-cairo text-3xl font-bold mb-2 ds-text-primary">تَوَافُق</h2>
+                    <p class="text-sm opacity-80 font-cairo">هدوء، أمان، وطابع إسلامي حديث (أسود وتركواز).</p>
+                </div>
+                <div class="ds-surface rounded-2xl p-4 mt-auto">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full ds-secondary flex items-center justify-center font-bold">👨🏻</div>
+                        <div>
+                            <div class="font-bold font-cairo">عمر خالد</div>
+                            <div class="text-xs opacity-70">توافق 92%</div>
+                        </div>
+                    </div>
+                    <button class="w-full ds-primary py-3 rounded-xl font-bold font-cairo">عرض الملف</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal 4: The Vibrant Youth (Habii Vibe) -->
+        <div class="proposal-card flex flex-col" style="--bg-color: #1E1B4B; --surface-color: #312E81; --primary-color: #F472B6; --secondary-color: #C084FC; --text-color: #FFFFFF; --border-color: #4338CA; --btn-text: #1E1B4B;">
+            <div class="p-6 bg-slate-100 flex justify-between items-center border-b">
+                <h3 class="text-xl font-bold text-slate-800">4. الشباب الحيوي (Vibrant Youth)</h3>
+                <div class="flex gap-2">
+                    <span class="color-dot" style="background: var(--bg-color)"></span>
+                    <span class="color-dot" style="background: var(--primary-color)"></span>
+                </div>
+            </div>
+            <div class="ds-bg p-8 flex-1 flex flex-col gap-6" style="background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);">
+                <div class="text-center">
+                    <h2 class="font-tajawal text-3xl font-bold mb-2 ds-text-primary">تَوَافُق</h2>
+                    <p class="text-sm opacity-80 font-tajawal">طاقة، شباب، وتفاعلي (نيلي ووردي فاقع).</p>
+                </div>
+                <div class="ds-surface rounded-2xl p-4 mt-auto">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full ds-secondary flex items-center justify-center font-bold">✨</div>
+                        <div>
+                            <div class="font-bold font-tajawal">ريم عبدالله</div>
+                            <div class="text-xs opacity-70">توافق 78%</div>
+                        </div>
+                    </div>
+                    <button class="w-full ds-primary py-3 rounded-full font-bold font-tajawal shadow-lg">عرض الملف</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal 5: The Serene Minimalist -->
+        <div class="proposal-card flex flex-col" style="--bg-color: #1C1C1C; --surface-color: #262626; --primary-color: #E5E0D8; --secondary-color: #525252; --text-color: #F5F5F5; --border-color: #333333; --btn-text: #1C1C1C;">
+            <div class="p-6 bg-slate-100 flex justify-between items-center border-b">
+                <h3 class="text-xl font-bold text-slate-800">5. المينيمالي الهادئ (Serene Minimalist)</h3>
+                <div class="flex gap-2">
+                    <span class="color-dot" style="background: var(--bg-color)"></span>
+                    <span class="color-dot" style="background: var(--primary-color)"></span>
+                </div>
+            </div>
+            <div class="ds-bg p-8 flex-1 flex flex-col gap-6">
+                <div class="text-center">
+                    <h2 class="font-amiri text-4xl font-bold mb-2 ds-text-primary">تَوَافُق</h2>
+                    <p class="text-sm opacity-80 font-ibm">نضج، هدوء، خالي من المشتتات (أسود وبيج رملي).</p>
+                </div>
+                <div class="ds-surface rounded-2xl p-4 mt-auto">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full ds-secondary flex items-center justify-center text-white font-bold">👤</div>
+                        <div>
+                            <div class="font-bold font-ibm">سلمان فهد</div>
+                            <div class="text-xs opacity-70">توافق 81%</div>
+                        </div>
+                    </div>
+                    <button class="w-full ds-primary py-3 rounded-xl font-bold font-ibm">عرض الملف</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal 6: The Velvet Night -->
+        <div class="proposal-card flex flex-col" style="--bg-color: #18182B; --surface-color: #23233B; --primary-color: #F59E0B; --secondary-color: #FEF3C7; --text-color: #FFFFFF; --border-color: #363653; --btn-text: #18182B;">
+            <div class="p-6 bg-slate-100 flex justify-between items-center border-b">
+                <h3 class="text-xl font-bold text-slate-800">6. الليل المخملي (Velvet Night)</h3>
+                <div class="flex gap-2">
+                    <span class="color-dot" style="background: var(--bg-color)"></span>
+                    <span class="color-dot" style="background: var(--primary-color)"></span>
+                </div>
+            </div>
+            <div class="ds-bg p-8 flex-1 flex flex-col gap-6">
+                <div class="text-center">
+                    <h2 class="font-naskh text-3xl font-bold mb-2 ds-text-primary">تَوَافُق</h2>
+                    <p class="text-sm opacity-80 font-cairo">غني، فخم، ومريح للعين (بنفسجي غامق جداً وكهرماني).</p>
+                </div>
+                <div class="ds-surface rounded-2xl p-4 mt-auto">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full ds-secondary flex items-center justify-center font-bold text-amber-900">👩🏼</div>
+                        <div>
+                            <div class="font-bold font-cairo">نوف سعد</div>
+                            <div class="text-xs opacity-70">توافق 95%</div>
+                        </div>
+                    </div>
+                    <button class="w-full ds-primary py-3 rounded-2xl font-bold font-cairo shadow-[0_4px_15px_rgba(245,158,11,0.3)]">عرض الملف</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal 7: The Soft Pastel (Maleka/Hawaya Vibe) -->
+        <div class="proposal-card flex flex-col" style="--bg-color: #FDFBF7; --surface-color: #FFFFFF; --primary-color: #8B5CF6; --secondary-color: #FBCFE8; --text-color: #1E293B; --border-color: #E2E8F0; --btn-text: #FFFFFF;">
+            <div class="p-6 bg-slate-100 flex justify-between items-center border-b">
+                <h3 class="text-xl font-bold text-slate-800">7. الباستيل الناعم (Soft Pastel)</h3>
+                <div class="flex gap-2">
+                    <span class="color-dot" style="background: var(--bg-color); border-color:#CBD5E1;"></span>
+                    <span class="color-dot" style="background: var(--primary-color)"></span>
+                </div>
+            </div>
+            <div class="ds-bg p-8 flex-1 flex flex-col gap-6">
+                <div class="text-center">
+                    <h2 class="font-tajawal text-3xl font-bold mb-2 ds-text-primary">تَوَافُق</h2>
+                    <p class="text-sm opacity-80 font-tajawal">لطيف، أنثوي/ناعم، ومريح (أبيض لؤلؤي، ليلكي، وردي).</p>
+                </div>
+                <div class="ds-surface rounded-3xl p-4 mt-auto shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full ds-secondary flex items-center justify-center font-bold text-pink-700">💍</div>
+                        <div>
+                            <div class="font-bold font-tajawal">هيفاء م.</div>
+                            <div class="text-xs opacity-70">توافق 82%</div>
+                        </div>
+                    </div>
+                    <button class="w-full ds-primary py-3 rounded-2xl font-bold font-tajawal">عرض الملف</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal 8: The Desert Horizon -->
+        <div class="proposal-card flex flex-col" style="--bg-color: #271A15; --surface-color: #382721; --primary-color: #D97757; --secondary-color: #FDE68A; --text-color: #FFF8F0; --border-color: #4A352D; --btn-text: #FFFFFF;">
+            <div class="p-6 bg-slate-100 flex justify-between items-center border-b">
+                <h3 class="text-xl font-bold text-slate-800">8. أفق الصحراء (Desert Horizon)</h3>
+                <div class="flex gap-2">
+                    <span class="color-dot" style="background: var(--bg-color)"></span>
+                    <span class="color-dot" style="background: var(--primary-color)"></span>
+                </div>
+            </div>
+            <div class="ds-bg p-8 flex-1 flex flex-col gap-6">
+                <div class="text-center">
+                    <h2 class="font-amiri text-4xl font-bold mb-2 ds-text-primary">تَوَافُق</h2>
+                    <p class="text-sm opacity-80 font-cairo">أصيل، تراثي دافئ، ومميز جداً (بني داكن وتيراكوتا).</p>
+                </div>
+                <div class="ds-surface rounded-xl p-4 mt-auto">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full ds-secondary flex items-center justify-center font-bold text-amber-900">👨</div>
+                        <div>
+                            <div class="font-bold font-cairo">بدر التميمي</div>
+                            <div class="text-xs opacity-70">توافق 76%</div>
+                        </div>
+                    </div>
+                    <button class="w-full ds-primary py-3 rounded-lg font-bold font-cairo">عرض الملف</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal 9: The Tech Forward -->
+        <div class="proposal-card flex flex-col" style="--bg-color: #0F172A; --surface-color: #1E293B; --primary-color: #06B6D4; --secondary-color: #E0F2FE; --text-color: #F8FAFC; --border-color: #334155; --btn-text: #0F172A;">
+            <div class="p-6 bg-slate-100 flex justify-between items-center border-b">
+                <h3 class="text-xl font-bold text-slate-800">9. التكنولوجيا الذكية (Tech Forward)</h3>
+                <div class="flex gap-2">
+                    <span class="color-dot" style="background: var(--bg-color)"></span>
+                    <span class="color-dot" style="background: var(--primary-color)"></span>
+                </div>
+            </div>
+            <div class="ds-bg p-8 flex-1 flex flex-col gap-6">
+                <div class="text-center">
+                    <h2 class="font-ibm text-3xl font-bold mb-2 ds-text-primary">تَوَافُق</h2>
+                    <p class="text-sm opacity-80 font-ibm">يركز على جانب "الذكاء الاصطناعي والفراسة" (رمادي داكن وسيان).</p>
+                </div>
+                <div class="ds-surface rounded-xl p-4 mt-auto border-l-4 border-l-[#06B6D4]">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full ds-secondary flex items-center justify-center font-bold text-cyan-800">🤖</div>
+                        <div>
+                            <div class="font-bold font-ibm">مطابقة ذكية</div>
+                            <div class="text-xs opacity-70">تم تحليل 317 سمة</div>
+                        </div>
+                    </div>
+                    <button class="w-full ds-primary py-3 rounded-lg font-bold font-ibm">عرض النتيجة</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal 10: The Pure Elegance -->
+        <div class="proposal-card flex flex-col" style="--bg-color: #000000; --surface-color: #111111; --primary-color: #FFFFFF; --secondary-color: #333333; --text-color: #FFFFF0; --border-color: #222222; --btn-text: #000000;">
+            <div class="p-6 bg-slate-100 flex justify-between items-center border-b">
+                <h3 class="text-xl font-bold text-slate-800">10. الأناقة المطلقة (Pure Elegance)</h3>
+                <div class="flex gap-2">
+                    <span class="color-dot" style="background: var(--bg-color)"></span>
+                    <span class="color-dot" style="background: var(--primary-color)"></span>
+                </div>
+            </div>
+            <div class="ds-bg p-8 flex-1 flex flex-col gap-6 border border-gray-800">
+                <div class="text-center">
+                    <h2 class="font-naskh text-4xl font-bold mb-2 ds-text-primary">تَوَافُق</h2>
+                    <p class="text-sm opacity-80 font-ibm">عالي الفخامة، يشبه علامات الأزياء العالمية (أسود نقي وأبيض).</p>
+                </div>
+                <div class="ds-surface rounded-none p-4 mt-auto">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full border border-white flex items-center justify-center font-bold text-white">VIP</div>
+                        <div>
+                            <div class="font-bold font-ibm tracking-wide">دعاء مصطفى</div>
+                            <div class="text-xs opacity-70">توافق حصري 98%</div>
+                        </div>
+                    </div>
+                    <button class="w-full ds-primary py-3 font-bold font-ibm uppercase tracking-widest border border-white">عرض الملف</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

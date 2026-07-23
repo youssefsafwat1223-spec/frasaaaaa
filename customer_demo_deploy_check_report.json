@@ -1,0 +1,61 @@
+{
+  "root": "D:\\english-platform\\frasa project\\تجربة_العميل",
+  "exists": true,
+  "files": [
+    {
+      "path": "capture.js",
+      "bytes": 6338
+    },
+    {
+      "path": "data_core.js",
+      "bytes": 12167
+    },
+    {
+      "path": "data_personality.js",
+      "bytes": 25694
+    },
+    {
+      "path": "face.html",
+      "bytes": 6337
+    },
+    {
+      "path": "face.js",
+      "bytes": 23520
+    },
+    {
+      "path": "full-app.js",
+      "bytes": 9604
+    },
+    {
+      "path": "full.html",
+      "bytes": 4710
+    },
+    {
+      "path": "index.html",
+      "bytes": 1995
+    },
+    {
+      "path": "models/face_landmarker.task",
+      "bytes": 3758596
+    },
+    {
+      "path": "models/selfie_multiclass_256x256.tflite",
+      "bytes": 16371837
+    },
+    {
+      "path": "netlify.toml",
+      "bytes": 220
+    },
+    {
+      "path": "segment.js",
+      "bytes": 3579
+    },
+    {
+      "path": "styles.css",
+      "bytes": 8737
+    }
+  ],
+  "missing_refs": [],
+  "warnings": [],
+  "errors": []
+}

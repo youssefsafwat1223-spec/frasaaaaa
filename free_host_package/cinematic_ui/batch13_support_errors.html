@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - Cinematic UI: BATCH 13</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'cine-peach': '#FFEACE', 'cine-white': '#FFFEFF', 'cine-pink': '#FEDEFB', 'cine-gold': '#FECA83', 'cine-green': '#2B4C41' },
+                    fontFamily: { soft: ['"Tajawal"', 'sans-serif'], display: ['"Readex Pro"', 'sans-serif'] },
+                    boxShadow: { 'glass': '0 8px 32px 0 rgba(43, 76, 65, 0.15)', 'glow': '0 0 20px rgba(254, 202, 131, 0.4)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: linear-gradient(135deg, #FFEACE 0%, #FEDEFB 50%, #E6EFEA 100%); font-family: 'Tajawal', sans-serif; min-height: 100vh; color: #2B4C41; padding: 40px 20px; }
+        .immersive-card { width: 390px; height: 844px; border-radius: 44px; position: relative; overflow: hidden; box-shadow: 0 40px 80px rgba(43, 76, 65, 0.25), inset 0 0 0 6px #FFFEFF; background: linear-gradient(180deg, #FFFEFF 0%, #FFEACE 50%, #FEDEFB 100%); flex-shrink: 0; display: flex; flex-direction: column; }
+        .glass-panel { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 32px; box-shadow: var(--glass); }
+        .btn-primary { width: 100%; padding: 16px; border-radius: 99px; background: linear-gradient(135deg, #FECA83 0%, #FEDEFB 100%); color: #2B4C41; font-weight: 700; font-size: 1.125rem; box-shadow: var(--glow); transition: transform 0.3s ease; border: 1px solid #FFFEFF; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="text-center mb-8 max-w-4xl mx-auto"><h1 class="text-4xl font-bold font-display text-cine-green">Tawafuq — BATCH 13: Support & Errors</h1></div>
+    <div class="flex gap-8 overflow-x-auto pb-10 px-4">
+
+        <!-- SCREEN 1: Empty State (No Matches Yet) -->
+        <div class="immersive-card justify-center items-center relative text-center p-6">
+            <div class="w-40 h-40 rounded-full bg-white/40 border border-white/60 mb-8 flex items-center justify-center relative shadow-glass">
+                <div class="absolute inset-0 rounded-full border-[6px] border-transparent border-t-cine-gold animate-spin" style="animation-duration: 3s;"></div>
+                <span class="text-6xl opacity-80 filter drop-shadow-md">🔍</span>
+            </div>
+            
+            <h2 class="text-3xl font-bold font-display mb-4">جاري البحث بذكاء...</h2>
+            <p class="text-base font-medium opacity-80 leading-relaxed mb-10 max-w-[280px] mx-auto">
+                خوارزمياتنا تعمل الآن على قراءة مئات الملفات ومطابقتها مع نتائج الفراسة الخاصة بك. سنرسل لك إشعاراً فور العثور على التوافق المثالي.
+            </p>
+            
+            <button class="btn-primary">تحديث الصفحة</button>
+        </div>
+
+        <!-- SCREEN 2: Network Error (404/Offline) -->
+        <div class="immersive-card justify-center items-center relative text-center p-6">
+            <div class="absolute inset-0 bg-red-500/5 blur-3xl z-0"></div>
+            <div class="w-32 h-32 rounded-full bg-red-100/50 border border-red-200/50 mb-8 flex items-center justify-center relative z-10">
+                <span class="text-5xl opacity-90">⚠️</span>
+            </div>
+            
+            <h2 class="text-3xl font-bold font-display mb-4 relative z-10 text-red-800">انقطع الاتصال</h2>
+            <p class="text-base font-medium opacity-80 leading-relaxed mb-10 max-w-[280px] mx-auto relative z-10">
+                يبدو أن هناك مشكلة في اتصالك بالإنترنت، أو أن خوادمنا تأخذ قسطاً قصيراً من الراحة.
+            </p>
+            
+            <button class="btn-primary relative z-10">إعادة المحاولة</button>
+            <button class="font-bold opacity-60 mt-4 relative z-10 text-sm border-b border-cine-green">التحقق من حالة الخوادم</button>
+        </div>
+
+        <!-- SCREEN 3: Help Center / Contact Support -->
+        <div class="immersive-card relative">
+            <div class="p-6 pt-12 flex-1 overflow-y-auto pb-8">
+                <div class="flex items-center mb-8">
+                    <button class="w-10 h-10 rounded-full bg-white/40 backdrop-blur flex items-center justify-center border border-white/50"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                    <h2 class="flex-1 text-center font-bold text-lg mr-10">الدعم الفني والمساعدة</h2>
+                </div>
+
+                <div class="glass-panel p-6 mb-6">
+                    <h3 class="font-bold text-lg mb-4">الأسئلة الشائعة</h3>
+                    
+                    <div class="flex flex-col gap-3">
+                        <div class="bg-white/50 p-4 rounded-xl flex justify-between items-center cursor-pointer">
+                            <h4 class="font-bold text-sm">كيف تعمل خوارزمية الفراسة؟</h4>
+                            <span class="opacity-50">+</span>
+                        </div>
+                        <div class="bg-white/50 p-4 rounded-xl flex justify-between items-center cursor-pointer">
+                            <h4 class="font-bold text-sm">كيف يمكنني إخفاء ملفي مؤقتاً؟</h4>
+                            <span class="opacity-50">+</span>
+                        </div>
+                        <div class="bg-white/50 p-4 rounded-xl flex justify-between items-center cursor-pointer">
+                            <h4 class="font-bold text-sm">هل صوري مرئية للجميع؟</h4>
+                            <span class="opacity-50">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 mb-auto text-center border-dashed border-2 border-cine-gold/50">
+                    <span class="text-3xl mb-3 block">💬</span>
+                    <h3 class="font-bold text-lg mb-2">لم تجد إجابتك؟</h3>
+                    <p class="text-sm opacity-80 font-medium mb-4">فريق خدمة العملاء متاح للرد على استفساراتك على مدار الساعة.</p>
+                    <button class="bg-cine-green text-white font-bold w-full py-3 rounded-full shadow-md text-sm">تحدث معنا الآن</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

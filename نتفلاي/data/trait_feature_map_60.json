@@ -1,0 +1,2397 @@
+[
+ {
+  "id": "hadi_01",
+  "name": "الكرم",
+  "matched_sabti": true,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.0,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "low",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nostril_width_ratio",
+    "direction": "high",
+    "weight": 1.32,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_02",
+  "name": "الثقة في الآخرين",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "low",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "face_aspect_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_03",
+  "name": "الصراحة والتعبير المباشر",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "low",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_04",
+  "name": "التعاطف",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "low",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_05",
+  "name": "الحنان العاطفي",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "face_aspect_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_06",
+  "name": "الرومانسية",
+  "matched_sabti": false,
+  "confidence": "medium",
+  "n_visual_features": 2,
+  "features": [
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_07",
+  "name": "الوفاء",
+  "matched_sabti": true,
+  "confidence": "medium",
+  "n_visual_features": 3,
+  "features": [
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.66,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "mid",
+    "weight": 1.1,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_08",
+  "name": "الاستقرار الأسري",
+  "matched_sabti": false,
+  "confidence": "low",
+  "n_visual_features": 1,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_09",
+  "name": "تحمل المسؤولية",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 7,
+  "features": [
+   {
+    "feature": "nose_length_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_density",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "jaw_width_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_projection_ratio",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_profile_projection",
+    "direction": "high",
+    "weight": 1.12,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "face_squareness",
+    "direction": "high",
+    "weight": 0.9,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_10",
+  "name": "الطموح",
+  "matched_sabti": true,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "nose_length_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "high",
+    "weight": 2.0,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_projection_ratio",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_11",
+  "name": "القيادة",
+  "matched_sabti": true,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "jaw_width_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_width_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.56,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "face_squareness",
+    "direction": "high",
+    "weight": 0.9,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_12",
+  "name": "الجرأة",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "brow_density",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "high",
+    "weight": 2.21,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_projection_ratio",
+    "direction": "high",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "high",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_profile_projection",
+    "direction": "high",
+    "weight": 1.02,
+    "confidence_source": "profile",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_13",
+  "name": "الاستقلالية",
+  "matched_sabti": false,
+  "confidence": "medium",
+  "n_visual_features": 3,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.32,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_lines",
+    "direction": "high",
+    "weight": 0.94,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_14",
+  "name": "الحكمة",
+  "matched_sabti": false,
+  "confidence": "medium",
+  "n_visual_features": 2,
+  "features": [
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.4,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "eye_depth",
+    "direction": "high",
+    "weight": 0.79,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_15",
+  "name": "التركيز العالي",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_density",
+    "direction": "low",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_lines",
+    "direction": "high",
+    "weight": 0.79,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_16",
+  "name": "التحليل والدقة",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.4,
+    "confidence_source": "profile",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_17",
+  "name": "التخطيط بعيد المدى",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "nose_length_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_projection_ratio",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "face_aspect_ratio",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_profile_projection",
+    "direction": "high",
+    "weight": 1.12,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "mid",
+    "weight": 1.0,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_18",
+  "name": "الانضباط",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "low",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.66,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_19",
+  "name": "العملية",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "nose_length_ratio",
+    "direction": "low",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_projection_ratio",
+    "direction": "high",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "face_squareness",
+    "direction": "high",
+    "weight": 1.17,
+    "confidence_source": "proxy",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "mid",
+    "weight": 1.1,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_profile_projection",
+    "direction": "high",
+    "weight": 1.02,
+    "confidence_source": "profile",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_20",
+  "name": "الإصرار",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 7,
+  "features": [
+   {
+    "feature": "jaw_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_projection_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_length_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_profile_projection",
+    "direction": "high",
+    "weight": 1.33,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "face_squareness",
+    "direction": "high",
+    "weight": 0.99,
+    "confidence_source": "proxy",
+    "hits": 1
+   },
+   {
+    "feature": "eye_depth",
+    "direction": "high",
+    "weight": 0.72,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_21",
+  "name": "الصبر",
+  "matched_sabti": true,
+  "confidence": "medium",
+  "n_visual_features": 3,
+  "features": [
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "mid",
+    "weight": 1.0,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_depth",
+    "direction": "high",
+    "weight": 0.79,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_22",
+  "name": "المرونة",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "low",
+    "weight": 1.99,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "low",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "mid",
+    "weight": 1.0,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_23",
+  "name": "التسامح",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "low",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "face_aspect_ratio",
+    "direction": "low",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_24",
+  "name": "الاجتماعية",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "low",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "face_aspect_ratio",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_25",
+  "name": "الانفتاح على التجارب",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 3,
+  "features": [
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "low",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_26",
+  "name": "الإبداع",
+  "matched_sabti": false,
+  "confidence": "low",
+  "n_visual_features": 1,
+  "features": [
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_27",
+  "name": "الخيال",
+  "matched_sabti": false,
+  "confidence": "medium",
+  "n_visual_features": 2,
+  "features": [
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_28",
+  "name": "الحس الفني",
+  "matched_sabti": false,
+  "confidence": "medium",
+  "n_visual_features": 2,
+  "features": [
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "low",
+    "weight": 1.32,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_29",
+  "name": "المثالية",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "low",
+    "weight": 1.56,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.4,
+    "confidence_source": "profile",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_30",
+  "name": "النظام",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.66,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_31",
+  "name": "الحذر",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "eye_open_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nostril_width_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_32",
+  "name": "التحفظ والخصوصية",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_depth",
+    "direction": "high",
+    "weight": 0.94,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_33",
+  "name": "السرية وحفظ الأسرار",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "high",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_depth",
+    "direction": "high",
+    "weight": 0.79,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_34",
+  "name": "العناد",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "jaw_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_inner_distance",
+    "direction": "low",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_projection_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "high",
+    "weight": 1.87,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "high",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_profile_projection",
+    "direction": "high",
+    "weight": 1.66,
+    "confidence_source": "profile",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_35",
+  "name": "العصبية وسرعة الاستثارة",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "brow_inner_distance",
+    "direction": "low",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "low",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_sharpness",
+    "direction": "low",
+    "weight": 1.4,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "lower_sclera",
+    "direction": "high",
+    "weight": 1.27,
+    "confidence_source": "profile",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_36",
+  "name": "الاندفاع",
+  "matched_sabti": true,
+  "confidence": "high",
+  "n_visual_features": 3,
+  "features": [
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "low",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_37",
+  "name": "حب المخاطرة",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "high",
+    "weight": 2.0,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_width_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nostril_width_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "high",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.2,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_38",
+  "name": "الحرص المالي",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nostril_width_ratio",
+    "direction": "low",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.27,
+    "confidence_source": "profile",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_39",
+  "name": "الإنفاق والتبذير",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.0,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "low",
+    "weight": 1.99,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "nose_width_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nostril_width_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_40",
+  "name": "حب الرفاهية والمتعة",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "lower_lip_ratio",
+    "direction": "high",
+    "weight": 2.0,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "face_aspect_ratio",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "cheek_fullness",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_41",
+  "name": "الفضول وحب المعرفة",
+  "matched_sabti": false,
+  "confidence": "medium",
+  "n_visual_features": 3,
+  "features": [
+   {
+    "feature": "brow_density",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_sharpness",
+    "direction": "low",
+    "weight": 1.27,
+    "confidence_source": "profile",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_42",
+  "name": "القدرة على الإقناع",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "lower_lip_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "jaw_width_ratio",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.32,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_43",
+  "name": "الاهتمام بالتفاصيل",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_density",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "low",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_sharpness",
+    "direction": "low",
+    "weight": 1.27,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_lines",
+    "direction": "high",
+    "weight": 0.79,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_44",
+  "name": "رؤية الصورة الكبيرة",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "face_aspect_ratio",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_45",
+  "name": "التكيف",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "low",
+    "weight": 1.68,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "mid",
+    "weight": 1.3,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_46",
+  "name": "التفاؤل",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 5,
+  "features": [
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.0,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "low",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "high",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_corner_tilt",
+    "direction": "high",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_47",
+  "name": "النقد ورؤية السلبيات",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_48",
+  "name": "الحساسية",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_density",
+    "direction": "low",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_sclera",
+    "direction": "high",
+    "weight": 1.4,
+    "confidence_source": "profile",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_49",
+  "name": "الحاجة للأمان",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 3,
+  "features": [
+   {
+    "feature": "eye_open_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nostril_width_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_50",
+  "name": "حب الحرية",
+  "matched_sabti": false,
+  "confidence": "medium",
+  "n_visual_features": 2,
+  "features": [
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "low",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "high",
+    "weight": 2.0,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_51",
+  "name": "حب السيطرة",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 7,
+  "features": [
+   {
+    "feature": "brow_inner_distance",
+    "direction": "low",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "high",
+    "weight": 2.21,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "jaw_width_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_projection_ratio",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.56,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_profile_projection",
+    "direction": "high",
+    "weight": 1.4,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "low",
+    "weight": 1.2,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_52",
+  "name": "اللباقة",
+  "matched_sabti": false,
+  "confidence": "medium",
+  "n_visual_features": 3,
+  "features": [
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "mid",
+    "weight": 1.3,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.27,
+    "confidence_source": "profile",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_53",
+  "name": "القدرة على الاستماع",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "low",
+    "weight": 2.0,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "mid",
+    "weight": 1.1,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_54",
+  "name": "الدعم وخدمة الآخرين",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "upper_lip_ratio",
+    "direction": "high",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "low",
+    "weight": 1.99,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "low",
+    "weight": 1.5,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_55",
+  "name": "الاستمتاع بالعائلة",
+  "matched_sabti": false,
+  "confidence": "medium",
+  "n_visual_features": 2,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "face_aspect_ratio",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_56",
+  "name": "القدرة على إنجاز الأهداف",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 7,
+  "features": [
+   {
+    "feature": "nose_length_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_spacing_ratio",
+    "direction": "low",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_projection_ratio",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "forehead_width_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_profile_projection",
+    "direction": "high",
+    "weight": 1.12,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "face_squareness",
+    "direction": "high",
+    "weight": 0.9,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_57",
+  "name": "تحمل الضغط",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "jaw_width_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "chin_projection_ratio",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_density",
+    "direction": "high",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.4,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "chin_profile_projection",
+    "direction": "high",
+    "weight": 1.33,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "eye_depth",
+    "direction": "high",
+    "weight": 0.78,
+    "confidence_source": "proxy",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_58",
+  "name": "التوازن بين العقل والعاطفة",
+  "matched_sabti": false,
+  "confidence": "high",
+  "n_visual_features": 4,
+  "features": [
+   {
+    "feature": "eye_open_ratio",
+    "direction": "high",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "high",
+    "weight": 2.34,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.66,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "mid",
+    "weight": 1.3,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_59",
+  "name": "الصدق العملي",
+  "matched_sabti": false,
+  "confidence": "medium",
+  "n_visual_features": 3,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 2.6,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_bridge_straightness",
+    "direction": "mid",
+    "weight": 1.66,
+    "confidence_source": "profile",
+    "hits": 1
+   },
+   {
+    "feature": "brow_arch",
+    "direction": "low",
+    "weight": 1.65,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ },
+ {
+  "id": "hadi_60",
+  "name": "الغيرة",
+  "matched_sabti": true,
+  "confidence": "high",
+  "n_visual_features": 6,
+  "features": [
+   {
+    "feature": "mouth_width_ratio",
+    "direction": "low",
+    "weight": 2.2,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "nose_tip_drop_ratio",
+    "direction": "high",
+    "weight": 1.98,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_tilt_ratio",
+    "direction": "high",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_eye_distance_ratio",
+    "direction": "low",
+    "weight": 1.95,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "brow_inner_distance",
+    "direction": "low",
+    "weight": 1.8,
+    "confidence_source": "direct",
+    "hits": 1
+   },
+   {
+    "feature": "eye_open_ratio",
+    "direction": "low",
+    "weight": 1.56,
+    "confidence_source": "direct",
+    "hits": 1
+   }
+  ]
+ }
+]

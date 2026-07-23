@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - Cinematic UI: BATCH 8</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'cine-peach': '#FFEACE', 'cine-white': '#FFFEFF', 'cine-pink': '#FEDEFB', 'cine-gold': '#FECA83', 'cine-green': '#2B4C41' },
+                    fontFamily: { soft: ['"Tajawal"', 'sans-serif'], display: ['"Readex Pro"', 'sans-serif'] },
+                    boxShadow: { 'glass': '0 8px 32px 0 rgba(43, 76, 65, 0.15)', 'glow': '0 0 20px rgba(254, 202, 131, 0.4)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: linear-gradient(135deg, #FFEACE 0%, #FEDEFB 50%, #E6EFEA 100%); font-family: 'Tajawal', sans-serif; min-height: 100vh; color: #2B4C41; padding: 40px 20px; }
+        .immersive-card { width: 390px; height: 844px; border-radius: 44px; position: relative; overflow: hidden; box-shadow: 0 40px 80px rgba(43, 76, 65, 0.25), inset 0 0 0 6px #FFFEFF; background: linear-gradient(180deg, #FFFEFF 0%, #FFEACE 50%, #FEDEFB 100%); flex-shrink: 0; display: flex; flex-direction: column; }
+        .glass-panel { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 32px; box-shadow: var(--glass); }
+        .btn-primary { width: 100%; padding: 16px; border-radius: 99px; background: linear-gradient(135deg, #FECA83 0%, #FEDEFB 100%); color: #2B4C41; font-weight: 700; text-align: center; font-size: 1.125rem; box-shadow: var(--glow); transition: transform 0.3s ease; border: 1px solid #FFFEFF; cursor: pointer; }
+        
+        .plan-card { transition: all 0.3s ease; cursor: pointer; }
+        .plan-card.active { transform: scale(1.02); background: white; border: 2px solid #FECA83; box-shadow: 0 10px 30px rgba(254, 202, 131, 0.3); }
+        .plan-card.inactive { opacity: 0.7; transform: scale(0.98); background: rgba(255,255,255,0.5); }
+    </style>
+</head>
+<body>
+    <div class="text-center mb-8 max-w-4xl mx-auto"><h1 class="text-4xl font-bold font-display text-cine-green">Tawafuq — BATCH 8: Paywall & Subscription</h1></div>
+    <div class="flex gap-8 overflow-x-auto pb-10 px-4">
+
+        <!-- SCREEN 1: Paywall Overview -->
+        <div class="immersive-card p-6 pt-12 relative">
+            <div class="flex justify-between items-center mb-8 relative z-10">
+                <button class="w-10 h-10 rounded-full bg-white/40 backdrop-blur flex items-center justify-center border border-white/50 text-xl">×</button>
+            </div>
+            
+            <div class="flex-1 flex flex-col relative z-10 overflow-y-auto pb-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold font-display mb-2">استثمر في شريك حياتك</h2>
+                    <p class="opacity-80 font-medium">اكتشف الصور والأسماء وافتح تقارير الفراسة الكاملة.</p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <!-- Advanced Plan (Recommended) -->
+                    <div class="plan-card active rounded-3xl p-6 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 left-0 bg-gradient-to-r from-cine-peach to-cine-pink text-center text-xs font-bold py-1">الأكثر شعبية</div>
+                        <div class="mt-4 flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold font-display">الباقة المتقدمة</h3>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-cine-green" dir="ltr">149 EGP</div>
+                                <div class="text-xs opacity-60">شهرياً</div>
+                            </div>
+                        </div>
+                        <ul class="text-sm font-medium flex flex-col gap-2">
+                            <li class="flex gap-2"><span>✨</span> كشف الصور والأسماء</li>
+                            <li class="flex gap-2"><span>✨</span> 287 سمة شخصية</li>
+                            <li class="flex gap-2"><span>✨</span> فحص الثالوث المظلم</li>
+                            <li class="flex gap-2"><span>✨</span> 30 رسالة مجانية شهرياً</li>
+                        </ul>
+                    </div>
+
+                    <!-- Basic Plan -->
+                    <div class="plan-card inactive rounded-3xl p-6 border border-white">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold font-display">الباقة الأساسية</h3>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-cine-green" dir="ltr">79 EGP</div>
+                                <div class="text-xs opacity-60">شهرياً</div>
+                            </div>
+                        </div>
+                        <ul class="text-sm font-medium flex flex-col gap-2 opacity-80">
+                            <li class="flex gap-2"><span>✨</span> كشف الصور والأسماء</li>
+                            <li class="flex gap-2"><span>✨</span> 155 سمة شخصية</li>
+                        </ul>
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="plan-card inactive rounded-3xl p-6 border border-white">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold font-display text-yellow-600">الباقة الملكية (VIP)</h3>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-yellow-600" dir="ltr">299 EGP</div>
+                                <div class="text-xs opacity-60">شهرياً</div>
+                            </div>
+                        </div>
+                        <p class="text-sm font-medium opacity-80">تحليل فراسة عميق + إخفاء الملف عن العامة + استشارات نفسية</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-auto pt-4 relative z-10 bg-gradient-to-t from-[#FFEACE] to-transparent">
+                <button class="btn-primary">المتابعة والدفع</button>
+                <p class="text-center text-xs opacity-60 mt-3 font-bold">يمكنك الإلغاء في أي وقت</p>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: Checkout / Payment -->
+        <div class="immersive-card p-6 pt-12 relative">
+            <div class="flex items-center mb-8 relative z-10">
+                <button class="w-10 h-10 rounded-full bg-white/40 backdrop-blur flex items-center justify-center border border-white/50"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                <h2 class="flex-1 text-center font-bold text-lg mr-10">الدفع الآمن</h2>
+            </div>
+
+            <div class="flex-1 flex flex-col relative z-10">
+                <div class="glass-panel p-6 mb-8 text-center bg-white/60">
+                    <h3 class="text-xl font-bold mb-1">الباقة المتقدمة</h3>
+                    <p class="text-3xl font-display font-bold text-cine-green mb-4" dir="ltr">149.00 EGP</p>
+                    <div class="flex justify-center gap-2">
+                        <span class="bg-white px-2 py-1 rounded shadow-sm text-xs font-bold">💳 فوري</span>
+                        <span class="bg-white px-2 py-1 rounded shadow-sm text-xs font-bold">📱 محفظة إلكترونية</span>
+                        <span class="bg-white px-2 py-1 rounded shadow-sm text-xs font-bold">💳 بطاقة ائتمان</span>
+                    </div>
+                </div>
+
+                <h3 class="font-bold mb-4 ml-2">تفاصيل البطاقة</h3>
+                <div class="glass-panel p-6 flex flex-col gap-4 mb-auto">
+                    <input type="text" placeholder="رقم البطاقة" class="w-full bg-white/50 border border-white rounded-xl px-4 py-3 focus:outline-none" dir="ltr">
+                    <div class="flex gap-4">
+                        <input type="text" placeholder="MM/YY" class="w-full bg-white/50 border border-white rounded-xl px-4 py-3 focus:outline-none text-center" dir="ltr">
+                        <input type="text" placeholder="CVC" class="w-full bg-white/50 border border-white rounded-xl px-4 py-3 focus:outline-none text-center" dir="ltr">
+                    </div>
+                    <input type="text" placeholder="الاسم على البطاقة" class="w-full bg-white/50 border border-white rounded-xl px-4 py-3 focus:outline-none text-left">
+                </div>
+
+                <button class="btn-primary mt-6 flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                    دفع آمن
+                </button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

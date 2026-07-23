@@ -1,0 +1,438 @@
+{
+  "day": 1,
+  "section_ar": "الجبهة واللحية والأظافر",
+  "source_hint": "دورة قراءة الوجه - اليوم الأول",
+  "traits": [
+    {
+      "id": "forehead_01",
+      "trait_ar": "المدى الفكري",
+      "trait_en": "intellectual_range",
+      "measurement_method": "يحدد من خلال النظر إلى ارتفاع الجبهة من بين العينين حتى منبت الشعر.",
+      "metric_hint": "forehead_ratio",
+      "states": [
+        {
+          "state_ar": "جبهة عالية",
+          "code": "high",
+          "indicates": "مفكر وعقلاني",
+          "personality_traits": [
+            "واسع الثقافة ويعتمد على التفكير العقلي في نواحي الحياة المختلفة.",
+            "يحب الأفكار والنظريات المجردة والتحليلات العميقة.",
+            "ينزع للتضايق من النقاشات السطحية وقد يميل إلى العزلة."
+          ],
+          "linked_trait": "cognitive_depth"
+        },
+        {
+          "state_ar": "جبهة قصيرة",
+          "code": "short",
+          "indicates": "عملي التفكير",
+          "personality_traits": [
+            "واقعي ويفضل المعلومات العامة والنقاشات المباشرة.",
+            "لا يحب الفرضيات المجردة ويركز على صغائر الأمور الأساسية.",
+            "لا يرتاح كثيرا للحوار الفكري العميق أو المجرد."
+          ],
+          "linked_trait": "practical_thinking"
+        }
+      ]
+    },
+    {
+      "id": "forehead_02",
+      "trait_ar": "التجديد أو المحافظة",
+      "trait_en": "renewal_vs_conservatism",
+      "measurement_method": "يحدد من خلال النظر إلى الجبهة هل تأخذ شكل المربع أو نصف الدائرة من منبت الشعر.",
+      "metric_hint": "widening_ratio",
+      "states": [
+        {
+          "state_ar": "جبهة مربعة",
+          "code": "square",
+          "indicates": "أكثر تجديدا وبناء",
+          "personality_traits": [
+            "يرحب بالتغيير والبدايات الجديدة ويكره الروتين.",
+            "يحب بدء المشاريع ويضع حماسا مرتفعا في بداياتها.",
+            "يميل للأعمال المهنية التي يعتبرها جزءا من هويته."
+          ],
+          "linked_trait": "renewal_drive"
+        },
+        {
+          "state_ar": "جبهة بيضاوية",
+          "code": "oval",
+          "indicates": "أكثر محافظة",
+          "personality_traits": [
+            "يحافظ على العلاقات الأسرية والاجتماعية والمقتنيات.",
+            "يميل للأعمال الاجتماعية والمنتظمة.",
+            "يحب الصيانة وإعادة الاستخدام ومقاومة التغيير السريع."
+          ],
+          "linked_trait": "conservatism"
+        }
+      ]
+    },
+    {
+      "id": "forehead_03",
+      "trait_ar": "الصبر أو طول البال",
+      "trait_en": "patience_span",
+      "measurement_method": "يحدد من خلال النظر هل تتسع الجبهة للأعلى أو تضيق.",
+      "metric_hint": "widening_ratio",
+      "states": [
+        {
+          "state_ar": "الجبهة تتسع للأعلى",
+          "code": "widens_upward",
+          "indicates": "صبر وطول بال",
+          "personality_traits": [
+            "يركز لفترة طويلة ويحافظ على الانهماك الذهني.",
+            "يتحمل الانتظار ويحافظ على الفكرة دون تشتت سريع.",
+            "لا يحب المقاطعة أثناء التركيز."
+          ],
+          "linked_trait": "sustained_attention"
+        },
+        {
+          "state_ar": "الجبهة تضيق إلى الأعلى",
+          "code": "narrows_upward",
+          "indicates": "قصر مدى الاهتمام",
+          "personality_traits": [
+            "قصير البال لحظيا ولا يحب الانتظار الطويل.",
+            "يريد الوصول للنتيجة بسرعة ويختصر الطريق.",
+            "مناسب للأعمال السريعة التي يحكمها عامل الوقت."
+          ],
+          "linked_trait": "short_attention_span"
+        }
+      ]
+    },
+    {
+      "id": "forehead_04",
+      "trait_ar": "أسلوب التفكير",
+      "trait_en": "thinking_style",
+      "measurement_method": "يحدد من خلال النظر إلى الجبهة هل تنحدر للخلف أو ترتفع عموديا.",
+      "metric_hint": "forehead_ratio",
+      "states": [
+        {
+          "state_ar": "جبهة مائلة للخلف",
+          "code": "sloped_back",
+          "indicates": "تفكير موضوعي سريع",
+          "personality_traits": [
+            "سريع التفكير والاستنتاج ورد الفعل اللحظي.",
+            "يستدعي الخبرة السابقة بسرعة وقت الأزمات.",
+            "قد يتعجل أحيانا قبل اكتمال المعلومات."
+          ],
+          "linked_trait": "fast_objective_reasoning"
+        },
+        {
+          "state_ar": "جبهة عمودية للأعلى",
+          "code": "vertical",
+          "indicates": "تفكير متسلسل وتتابعي",
+          "personality_traits": [
+            "يفضل المعالجة خطوة بخطوة وبترتيب منطقي واضح.",
+            "يحتاج وقتا كافيا قبل اتخاذ القرار.",
+            "لا يحب التغييرات المفاجئة ويميل للتخطيط المسبق."
+          ],
+          "linked_trait": "sequential_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "forehead_05",
+      "trait_ar": "الأصالة في التفكير",
+      "trait_en": "originality_in_thinking",
+      "measurement_method": "يحدد من خلال انحناء الجبهة إلى الأعلى في منتصفها.",
+      "metric_hint": "forehead_ratio",
+      "states": [
+        {
+          "state_ar": "جبهة ممتلئة ودائرية من أعلى المنتصف",
+          "code": "rounded_center",
+          "indicates": "تفكير إبداعي وأصيل",
+          "personality_traits": [
+            "يمتلك أصالة وإبداعا في طريقة التفكير.",
+            "قادر على توليد أفكار جديدة لم يسبق إليها.",
+            "قد ترتبط لدى النساء بحدس مرتفع بصورة استثنائية."
+          ],
+          "linked_trait": "originality"
+        }
+      ]
+    },
+    {
+      "id": "forehead_06",
+      "trait_ar": "ملكة الخيال",
+      "trait_en": "imagination_capacity",
+      "measurement_method": "يحدد من خلال النظر إلى بروز العظم أعلى جانبي الجبهة من شعر الحواجب.",
+      "metric_hint": "face_width",
+      "states": [
+        {
+          "state_ar": "بروزات أعلى جانبي الجبهة",
+          "code": "lateral_bossing",
+          "indicates": "ملكة الخيال",
+          "personality_traits": [
+            "قدرة عالية على التخيل وتكوين الصور الذهنية.",
+            "موهبة في توليد الأفكار الإبداعية والابتكار.",
+            "قد ينتج عن ارتفاع الخيال تصور سلبي أو متشائم أحيانا."
+          ],
+          "linked_trait": "imagination"
+        }
+      ]
+    },
+    {
+      "id": "forehead_07",
+      "trait_ar": "المرونة الفكرية",
+      "trait_en": "cognitive_flexibility",
+      "measurement_method": "يحدد من خلال النظر إلى التقاء الجبهة بأعلى الرأس: هل هو انسيابي أم يصنع زاوية حادة.",
+      "metric_hint": "forehead_ratio",
+      "states": [
+        {
+          "state_ar": "الجبهة تلتقي مع أعلى الرأس بانسيابية",
+          "code": "smooth_transition",
+          "indicates": "مرن الفكر",
+          "personality_traits": [
+            "منفتح العقل وسهل النقاش والتعامل.",
+            "قد يغير رأيه بسرعة مع المعطيات الجديدة.",
+            "قد يبدو أحيانا أقل تشبثا بمعتقداته."
+          ],
+          "linked_trait": "flexibility"
+        },
+        {
+          "state_ar": "الجبهة تصنع زاوية حادة مع أعلى الرأس",
+          "code": "sharp_angle",
+          "indicates": "ثابت الفكر",
+          "personality_traits": [
+            "حازم وثابت الفكر وصعب النقاش نسبيا.",
+            "لا يحب التغيير ويبدو مخلصا لآرائه.",
+            "قد لا يتقبل توجيهات الآخرين بسهولة."
+          ],
+          "linked_trait": "rigidity"
+        }
+      ]
+    },
+    {
+      "id": "forehead_08",
+      "trait_ar": "الاهتمامات الفكرية",
+      "trait_en": "cognitive_interests",
+      "measurement_method": "يحدد من خلال النظر إلى الجبهة أفقيا أو عموديا هل هي مسطحة أم دائرية.",
+      "metric_hint": "forehead_ratio",
+      "states": [
+        {
+          "state_ar": "جبهة مسطحة",
+          "code": "flat",
+          "indicates": "الاهتمام بالأشياء والمشاريع والمعلومات",
+          "personality_traits": [
+            "يفضل العمل مع المعلومات والتفاصيل والحقائق العلمية.",
+            "يرتاح للعمل الفردي والمشاريع المحددة.",
+            "يلائم أعمالا ميدانية أو تشغيلية ذات تركيز على الأشياء."
+          ],
+          "linked_trait": "thing_orientation"
+        },
+        {
+          "state_ar": "جبهة دائرية",
+          "code": "rounded",
+          "indicates": "الاهتمام بالأشخاص",
+          "personality_traits": [
+            "يفضل العمل مع الناس ويستأنس بوجودهم.",
+            "لا يحب التقييد بمهمة واحدة فقط لفترة طويلة.",
+            "يناسب أدوار خدمة العملاء والضيافة."
+          ],
+          "linked_trait": "people_orientation"
+        }
+      ]
+    },
+    {
+      "id": "forehead_09",
+      "trait_ar": "اللباقة أو الصراحة المباشرة",
+      "trait_en": "tact_vs_directness",
+      "measurement_method": "يحدد من خلال النظر إلى جانب الجبهة: هل بها أخدود عند نهاية الحاجب أم هي ملساء مستديرة.",
+      "metric_hint": "face_width",
+      "states": [
+        {
+          "state_ar": "أخدود بجانب الجبهة عند نهاية الحاجب",
+          "code": "groove",
+          "indicates": "أنيق ودبلوماسي",
+          "personality_traits": [
+            "لبق ويختار كلماته بعناية.",
+            "عميق التفكير ودبلوماسي وحذر.",
+            "متزن في تعامله مع المواقف المختلفة."
+          ],
+          "linked_trait": "tact"
+        },
+        {
+          "state_ar": "جانب الجبهة مستدير وأملس بدون أخاديد جانبية",
+          "code": "smooth_side",
+          "indicates": "مباشر وصريح",
+          "personality_traits": [
+            "يتحدث بما يفكر مباشرة.",
+            "قد يبدو غير لبق أو مائلا للهجوم.",
+            "قد يحرج الآخرين بصراحته أحيانا."
+          ],
+          "linked_trait": "directness"
+        }
+      ]
+    },
+    {
+      "id": "beard_01",
+      "trait_ar": "الطيبة",
+      "trait_en": "benevolence",
+      "measurement_method": "يحدد من خلال النظر إلى أسفل اللحية هل هي مقوسة أم لا.",
+      "metric_hint": "face_height",
+      "states": [
+        {
+          "state_ar": "لحية منحنية",
+          "code": "curved_beard",
+          "indicates": "الطيبة",
+          "personality_traits": [
+            "يميل لحب الأعمال الخيرية.",
+            "يساعد الناس ويتفانى في ذلك.",
+            "أقل ميلا للسيطرة والتحكم."
+          ],
+          "linked_trait": "kindness"
+        }
+      ]
+    },
+    {
+      "id": "beard_02",
+      "trait_ar": "الاستقلالية",
+      "trait_en": "independence",
+      "measurement_method": "يحدد من خلال النظر إلى أسفل اللحية هل هو مستقيم أم لا.",
+      "metric_hint": "face_width",
+      "states": [
+        {
+          "state_ar": "اللحية المستقيمة",
+          "code": "straight_beard",
+          "indicates": "الاستقلالية",
+          "personality_traits": [
+            "يحب الاستقلال والابتعاد النسبي عن الناس.",
+            "يفضل الأعمال الفردية.",
+            "يبدع عندما يعمل منفردا."
+          ],
+          "linked_trait": "independence"
+        }
+      ]
+    },
+    {
+      "id": "beard_03",
+      "trait_ar": "السيطرة",
+      "trait_en": "control_orientation",
+      "measurement_method": "يحدد من خلال النظر إلى جانبي اللحية هل هي مثلثة أم لا.",
+      "metric_hint": "face_width",
+      "states": [
+        {
+          "state_ar": "اللحية المثلثة",
+          "code": "triangular_beard",
+          "indicates": "السيطرة",
+          "personality_traits": [
+            "يميل للتحكم والسيطرة.",
+            "يمتلك مهارات قيادية لضبط الأمور.",
+            "يفضل الأعمال القيادية والإدارية."
+          ],
+          "linked_trait": "control"
+        }
+      ]
+    },
+    {
+      "id": "nails_01",
+      "trait_ar": "الحيوية / التحليلية",
+      "trait_en": "vitality_vs_analytical_style",
+      "measurement_method": "يحدد من خلال النظر إلى الظفر هل هو طويل عموديا أم عريض.",
+      "states": [
+        {
+          "state_ar": "الأظافر الطويلة عموديا",
+          "code": "long_vertical",
+          "indicates": "الحيوية",
+          "personality_traits": [
+            "شخصية حيوية واجتماعية ورومنسية ذات خيال خصب.",
+            "تميل للمثالية في كثير من الأمور.",
+            "تنتبه للتفاصيل الدقيقة."
+          ],
+          "linked_trait": "vitality"
+        },
+        {
+          "state_ar": "الأظافر العريضة",
+          "code": "wide",
+          "indicates": "التحليلية",
+          "personality_traits": [
+            "يحلل كثيرا ويفكر مرتين قبل التصرف.",
+            "قد يكون سريع الغضب وصريحا بقوة."
+          ],
+          "linked_trait": "analytical_style"
+        }
+      ]
+    },
+    {
+      "id": "nails_02",
+      "trait_ar": "المرح / الشجاعة",
+      "trait_en": "playfulness_vs_courage",
+      "measurement_method": "يحدد من خلال شكل الظفر: دائري/بيضاوي أم مربع.",
+      "states": [
+        {
+          "state_ar": "الأظافر الدائرية أو البيضاوية",
+          "code": "round_oval",
+          "indicates": "المرح",
+          "personality_traits": [
+            "يميل للاسترخاء والاستمتاع بالحياة بطريقته.",
+            "مستقل وعاطفي ويستثمر العاطفة في الإبداع."
+          ],
+          "linked_trait": "playfulness"
+        },
+        {
+          "state_ar": "الأظافر المربعة",
+          "code": "square",
+          "indicates": "الشجاعة",
+          "personality_traits": [
+            "شخصية قوية ومتواضعة في الوقت نفسه.",
+            "تتمتع بالشجاعة والثبات وأحيانا المرونة."
+          ],
+          "linked_trait": "courage"
+        }
+      ]
+    },
+    {
+      "id": "nails_03",
+      "trait_ar": "الذكاء والفطنة",
+      "trait_en": "sharp_intelligence",
+      "measurement_method": "يحدد من خلال زاوية المثلث في الظفر.",
+      "states": [
+        {
+          "state_ar": "الأظافر على شكل مثلث أو مثلث مقلوب",
+          "code": "triangular_nail",
+          "indicates": "الذكاء والحساسية",
+          "personality_traits": [
+            "يتطلع لأن يكون الأبرز في المجموعة.",
+            "يلاحظ التفاصيل الصغيرة التي لا يلاحظها الآخرون.",
+            "ذكاؤه حاد مع حساسية داخلية واضحة."
+          ],
+          "linked_trait": "sharp_intelligence"
+        }
+      ]
+    },
+    {
+      "id": "nails_04",
+      "trait_ar": "المشاعر",
+      "trait_en": "emotional_warmth",
+      "measurement_method": "يحدد من خلال كون الظفر على شكل ثمرة اللوز.",
+      "states": [
+        {
+          "state_ar": "الأظافر على شكل ثمرة اللوز",
+          "code": "almond",
+          "indicates": "المشاعر",
+          "personality_traits": [
+            "محب ومخلص وصادق.",
+            "محبوب ويعرف كيف يواجه المواقف الصعبة.",
+            "قد يغضب بسهولة إذا لم تسر الأمور كما يريد."
+          ],
+          "linked_trait": "emotional_warmth"
+        }
+      ]
+    },
+    {
+      "id": "nails_05",
+      "trait_ar": "الإصرار",
+      "trait_en": "determination",
+      "measurement_method": "يحدد من خلال كون الظفر على شكل سيف مدبب.",
+      "states": [
+        {
+          "state_ar": "الأظافر على شكل سيف",
+          "code": "sword",
+          "indicates": "الإصرار",
+          "personality_traits": [
+            "لديه هدف محدد يعمل من أجل تحقيقه.",
+            "لا يخشى المجهول.",
+            "لا يبرع كثيرا في العمل الجماعي إذا لم يواكب الآخرون إيقاعه."
+          ],
+          "linked_trait": "determination"
+        }
+      ]
+    }
+  ]
+}

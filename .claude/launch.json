@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "autoPort": false,
+  "configurations": [
+    {
+      "name": "demo",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8765"],
+      "port": 8765,
+      "cwd": "demo"
+    },
+    {
+      "name": "client",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["_preview_server.js"],
+      "port": 8791
+    }
+  ]
+}

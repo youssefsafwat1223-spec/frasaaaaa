@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Firasa Quick Test</title>
+  <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>اختبار الفراسة السريع</h1>
+        <p>كاميرا أو صورة مرفوعة + MediaPipe + thresholds_from_pdf.json</p>
+      </div>
+      <div class="actions">
+        <button id="startCameraBtn">فتح الكاميرا</button>
+        <button id="stopCameraBtn" class="secondary">إيقاف</button>
+        <label class="uploadBtn">
+          رفع صورة
+          <input id="fileInput" type="file" accept="image/*">
+        </label>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="viewer">
+        <div class="stage">
+          <video id="video" playsinline muted></video>
+          <canvas id="canvas"></canvas>
+        </div>
+        <div class="statusRow">
+          <span id="status">جاري التحميل...</span>
+          <span id="faceInfo">عدد الوجوه: 0</span>
+        </div>
+      </section>
+
+      <aside class="panel">
+        <section class="card">
+          <h2>الخلاصة</h2>
+          <div id="summary" class="summaryBox"></div>
+        </section>
+
+        <section class="card">
+          <h2>النتائج</h2>
+          <div id="results" class="results"></div>
+        </section>
+
+        <section class="card">
+          <h2>القياسات</h2>
+          <div id="metrics" class="metrics"></div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="./test.js"></script>
+</body>
+</html>

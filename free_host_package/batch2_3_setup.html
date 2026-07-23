@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - BATCH 2 & 3</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#FAFAF8',
+                        night: '#0F0F0E',
+                        surface: '#FFFFFF',
+                        'surface-dark': '#1A1C1A',
+                        gold: '#B8975A',
+                        forest: '#2C5F4A',
+                        charcoal: '#1A1A1A',
+                        fog: '#F0EDE8',
+                        muted: '#8A8883',
+                        line: '#E8E4DC',
+                        'line-dark': '#2A2A2A',
+                        rose: '#9B3A3A'
+                    },
+                    fontFamily: {
+                        naskh: ['"Noto Naskh Arabic"', 'serif'],
+                        sans: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+                        display: ['"DM Serif Display"', 'serif']
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'gold-glow': '0 0 20px rgba(184, 151, 90, 0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f3f4f6; padding: 40px; }
+        
+        .app-canvas {
+            width: 390px;
+            height: 844px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3), inset 0 0 0 4px #2A2A2A;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dark-theme { background-color: #0F0F0E; color: #F0EDE8; }
+        .light-theme { background-color: #FAFAF8; color: #1A1A1A; }
+
+        input:focus, textarea:focus { outline: none; border-color: #B8975A; box-shadow: 0 0 0 1px #B8975A; }
+        
+        /* Camera overlay cutouts */
+        .camera-overlay-id {
+            position: absolute; inset: 0; background: rgba(15,15,14,0.85);
+            -webkit-mask: linear-gradient(#fff, #fff) top/100% 30% no-repeat,
+                          linear-gradient(#fff, #fff) bottom/100% 40% no-repeat,
+                          linear-gradient(#fff, #fff) left/10% 100% no-repeat,
+                          linear-gradient(#fff, #fff) right/10% 100% no-repeat;
+        }
+        .camera-overlay-face {
+            position: absolute; inset: 0; background: rgba(15,15,14,0.85);
+            mask-image: radial-gradient(ellipse 120px 160px at center, transparent 95%, black 100%);
+            -webkit-mask-image: radial-gradient(ellipse 120px 160px at center, transparent 95%, black 100%);
+        }
+
+        /* Custom Likert Radio */
+        .likert-radio:checked + div {
+            background-color: #B8975A; border-color: #B8975A;
+            box-shadow: 0 0 0 4px rgba(184,151,90,0.2);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+    <div class="mb-8 max-w-4xl">
+        <h1 class="text-3xl font-bold mb-2">Tawafuq — BATCH 2 & 3</h1>
+        <p class="text-gray-600 mb-4">Incorporating principles from <strong>Awaser</strong> (floating cards on deep backgrounds), <strong>Habii</strong> (clean quiz containers), and <strong>Maleka</strong> (structured tags and highly readable light-mode profiles).</p>
+    </div>
+
+    <div class="flex gap-8 overflow-x-auto pb-10 items-center">
+
+        <!-- ============================================== -->
+        <!-- BATCH 2: IDENTITY VERIFICATION (DARK THEME) -->
+        <!-- ============================================== -->
+
+        <!-- SCREEN 7: Verification Intro -->
+        <div class="app-canvas dark-theme p-6 flex flex-col">
+            <div class="flex-1 flex flex-col justify-center items-center text-center mt-10">
+                <div class="w-24 h-24 rounded-full bg-[rgba(44,95,74,0.1)] border border-[rgba(44,95,74,0.3)] flex items-center justify-center mb-8">
+                    <svg class="w-12 h-12 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h2 class="font-naskh text-3xl font-bold mb-4 text-gold">مجتمع آمن وموثوق</h2>
+                <p class="text-muted text-lg leading-relaxed px-2">
+                    في تَوَافُق، الجدية هي الأساس. نطلب من جميع الأعضاء توثيق هوياتهم لضمان بيئة آمنة وحقيقية للجميع.
+                </p>
+                
+                <div class="mt-12 w-full flex flex-col gap-4 text-right">
+                    <div class="flex items-start gap-4 p-4 rounded-2xl bg-surface-dark border border-line-dark">
+                        <span class="text-2xl">🪪</span>
+                        <div>
+                            <h4 class="font-bold text-fog">تصوير الهوية الوطنية</h4>
+                            <p class="text-sm text-muted">لن يتم حفظ الصورة أو مشاركتها أبداً.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-2xl bg-surface-dark border border-line-dark">
+                        <span class="text-2xl">🤳</span>
+                        <div>
+                            <h4 class="font-bold text-fog">صورة شخصية (Selfie)</h4>
+                            <p class="text-sm text-muted">للتأكد من مطابقتك لصورة الهوية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-auto pt-6">
+                <button class="w-full bg-forest text-white font-bold text-lg py-4 rounded-2xl">ابدأ التوثيق الآن</button>
+            </div>
+        </div>
+
+
+        <!-- SCREEN 8: ID Document Upload -->
+        <div class="app-canvas dark-theme">
+            <!-- Simulated Camera Feed Background -->
+            <div class="absolute inset-0 bg-gray-800 bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')]"></div>
+            
+            <!-- Cutout Overlay -->
+            <div class="camera-overlay-id pointer-events-none"></div>
+
+            <!-- UI Elements -->
+            <div class="relative z-10 h-full flex flex-col">
+                <div class="p-6 pt-12 flex justify-between items-center">
+                    <button class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.1)] backdrop-blur flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <div class="bg-[rgba(0,0,0,0.5)] backdrop-blur px-4 py-1.5 rounded-full text-sm font-bold">الخطوة ١ من ٢</div>
+                </div>
+
+                <div class="flex-1 flex items-center justify-center pointer-events-none">
+                    <!-- Dashed Guide -->
+                    <div class="w-[80%] h-[30%] border-2 border-dashed border-gold rounded-xl"></div>
+                </div>
+
+                <div class="p-8 bg-surface-dark rounded-t-[40px] border-t border-line-dark flex flex-col items-center">
+                    <h3 class="font-bold text-xl mb-2">وجّه الكاميرا نحو الهوية</h3>
+                    <p class="text-muted text-center text-sm mb-6">تأكد من وضوح البيانات وأن الإضاءة جيدة خالية من الانعكاسات.</p>
+                    
+                    <button class="w-16 h-16 rounded-full border-4 border-gold bg-white mb-2"></button>
+                    <button class="text-sm text-gold font-medium mt-4">إدخال يدوي / رفع ملف</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SCREEN 9: Selfie Verification -->
+        <div class="app-canvas dark-theme">
+            <!-- Simulated Camera Feed Background -->
+            <div class="absolute inset-0 bg-gray-700"></div>
+            
+            <!-- Face Cutout Overlay -->
+            <div class="camera-overlay-face pointer-events-none"></div>
+
+            <!-- UI Elements -->
+            <div class="relative z-10 h-full flex flex-col">
+                <div class="p-6 pt-12 flex justify-between items-center">
+                    <button class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.1)] backdrop-blur flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <div class="bg-[rgba(0,0,0,0.5)] backdrop-blur px-4 py-1.5 rounded-full text-sm font-bold">الخطوة ٢ من ٢</div>
+                </div>
+
+                <div class="flex-1 flex flex-col items-center justify-center pointer-events-none">
+                    <!-- Face Guide Border -->
+                    <div class="w-[240px] h-[320px] border-2 border-gold rounded-[120px/160px] relative">
+                        <!-- Scanning line animation simulation -->
+                        <div class="absolute top-1/2 left-0 w-full h-[2px] bg-gold shadow-[0_0_15px_#B8975A]"></div>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-surface-dark rounded-t-[40px] border-t border-line-dark flex flex-col items-center">
+                    <div class="w-12 h-1 bg-line-dark rounded-full mb-6"></div>
+                    <h3 class="font-bold text-xl mb-2">حرك رأسك ببطء</h3>
+                    <p class="text-muted text-center text-sm mb-6">انظر مباشرة للكاميرا ثم التفت يميناً ويساراً.</p>
+                    
+                    <div class="w-full h-2 bg-line-dark rounded-full overflow-hidden mb-2">
+                        <div class="h-full bg-forest w-[65%]"></div>
+                    </div>
+                    <p class="text-xs text-forest font-bold">جاري الفحص... ٦٥٪</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- BATCH 3: ONBOARDING PROFILE (LIGHT THEME) -->
+        <!-- ============================================== -->
+
+        <!-- SCREEN 10: Profile Setup -->
+        <div class="app-canvas light-theme">
+            <!-- Header -->
+            <div class="p-6 border-b border-line bg-surface">
+                <div class="w-full h-1 bg-line rounded-full overflow-hidden mb-4">
+                    <div class="h-full bg-gold w-[10%]"></div>
+                </div>
+                <h2 class="font-naskh text-2xl font-bold">الملف الشخصي الأساسي</h2>
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 px-6 py-8 overflow-y-auto bg-paper">
+                <!-- Avatar Upload (Awaser inspired floating element) -->
+                <div class="flex flex-col items-center mb-10">
+                    <div class="relative">
+                        <div class="w-28 h-28 rounded-full bg-surface border-2 border-dashed border-muted flex items-center justify-center overflow-hidden">
+                            <span class="text-4xl text-line">👤</span>
+                        </div>
+                        <button class="absolute bottom-0 right-0 w-8 h-8 rounded-full bg-gold text-white flex items-center justify-center shadow-lg border-2 border-paper">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                        </button>
+                    </div>
+                    <p class="text-xs text-muted mt-3">يُفضل صورة واضحة الملامح بدون نظارات</p>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <div>
+                        <label class="block text-sm font-bold text-charcoal mb-2">الاسم الأول (يظهر للآخرين)</label>
+                        <input type="text" placeholder="مثال: أحمد" class="w-full bg-surface border border-line rounded-xl px-4 py-4 text-charcoal focus:border-gold transition-colors">
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="flex-1">
+                            <label class="block text-sm font-bold text-charcoal mb-2">العمر</label>
+                            <input type="number" placeholder="28" class="w-full bg-surface border border-line rounded-xl px-4 py-4 text-charcoal focus:border-gold transition-colors text-center" dir="ltr">
+                        </div>
+                        <div class="flex-[2]">
+                            <label class="block text-sm font-bold text-charcoal mb-2">المدينة</label>
+                            <select class="w-full bg-surface border border-line rounded-xl px-4 py-4 text-charcoal focus:border-gold transition-colors appearance-none">
+                                <option>الرياض</option>
+                                <option>جدة</option>
+                                <option>الدمام</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-charcoal mb-2">نبذة قصيرة</label>
+                        <textarea rows="3" placeholder="اكتب جملة بسيطة تعبر عنك..." class="w-full bg-surface border border-line rounded-xl px-4 py-4 text-charcoal focus:border-gold transition-colors resize-none"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 pt-0 mt-auto bg-paper">
+                <button class="w-full bg-charcoal text-white font-bold text-lg py-4 rounded-2xl">حفظ ومتابعة</button>
+            </div>
+        </div>
+
+
+        <!-- SCREEN 11: Questionnaire Overview (Habii Quiz Style Inspiration) -->
+        <div class="app-canvas light-theme">
+            <div class="p-6 bg-surface border-b border-line">
+                <button class="w-10 h-10 rounded-full bg-paper flex items-center justify-center text-charcoal mb-4 border border-line">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <h2 class="font-naskh text-3xl font-bold mb-2">استكشاف الشخصية</h2>
+                <p class="text-muted text-sm">أجب بشفافية، فالذكاء الاصطناعي يبحث عن التوافق وليس المثالية.</p>
+            </div>
+
+            <div class="flex-1 px-6 py-6 overflow-y-auto bg-paper">
+                <!-- Phases List (Maleka/Habii card style) -->
+                <div class="flex flex-col gap-4">
+                    
+                    <div class="bg-surface p-4 rounded-2xl border border-gold shadow-premium relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-2 h-full bg-gold"></div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-bold text-lg">١. القيم والمبادئ</h4>
+                            <span class="text-xs font-bold bg-[rgba(184,151,90,0.1)] text-gold px-3 py-1 rounded-full">الحالي</span>
+                        </div>
+                        <p class="text-sm text-muted mb-4">الدين، العائلة، وأولويات الحياة.</p>
+                        <div class="w-full h-1.5 bg-line rounded-full overflow-hidden">
+                            <div class="h-full bg-gold w-[30%]"></div>
+                        </div>
+                        <div class="text-left mt-1 text-xs text-muted font-display" dir="ltr">3 / 10</div>
+                    </div>
+
+                    <div class="bg-surface p-4 rounded-2xl border border-line opacity-70">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-bold text-lg text-muted">٢. نمط التعلق</h4>
+                            <span class="text-2xl">🔒</span>
+                        </div>
+                        <p class="text-sm text-muted">كيف تتعامل مع المشاعر والقرب.</p>
+                    </div>
+
+                    <div class="bg-surface p-4 rounded-2xl border border-line opacity-70">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-bold text-lg text-muted">٣. إدارة الخلافات</h4>
+                            <span class="text-2xl">🔒</span>
+                        </div>
+                        <p class="text-sm text-muted">أسلوبك عند الغضب والنقاش.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="p-6 pt-0 mt-auto bg-paper">
+                <button class="w-full bg-charcoal text-white font-bold text-lg py-4 rounded-2xl flex items-center justify-center gap-2">
+                    ابدأ الأسئلة
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- SCREEN 12: Likert Question (Preview of Batch 4) -->
+        <div class="app-canvas light-theme">
+            <!-- Header Progress -->
+            <div class="p-6 bg-paper">
+                <div class="flex justify-between text-xs text-muted font-bold mb-2">
+                    <span>القيم والمبادئ</span>
+                    <span class="font-display" dir="ltr">4 / 10</span>
+                </div>
+                <div class="flex gap-1 w-full">
+                    <div class="h-1.5 flex-1 bg-gold rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-gold rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-gold rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-gold rounded-full relative"><div class="absolute inset-0 bg-white opacity-50 rounded-full animate-pulse"></div></div>
+                    <div class="h-1.5 flex-1 bg-line rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-line rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-line rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-line rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-line rounded-full"></div>
+                    <div class="h-1.5 flex-1 bg-line rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="flex-1 px-6 py-10 flex flex-col">
+                <!-- Question Card -->
+                <div class="bg-surface p-8 rounded-[30px] border border-line shadow-premium text-center flex-1 flex flex-col justify-center">
+                    <h3 class="font-naskh text-2xl font-bold leading-relaxed mb-10 text-charcoal">
+                        "أُفضّل الروتين المألوف والاستقرار على تجربة أشياء جديدة ومجهولة"
+                    </h3>
+
+                    <!-- Likert Scale -->
+                    <div class="flex justify-between items-center px-2 mt-4 relative">
+                        <!-- Connecting Line -->
+                        <div class="absolute top-1/2 left-4 right-4 h-0.5 bg-line -z-10 -translate-y-1/2"></div>
+                        
+                        <label class="relative cursor-pointer flex flex-col items-center">
+                            <input type="radio" name="q4" class="likert-radio sr-only">
+                            <div class="w-8 h-8 rounded-full bg-paper border-2 border-line transition-all duration-200"></div>
+                        </label>
+                        <label class="relative cursor-pointer flex flex-col items-center">
+                            <input type="radio" name="q4" class="likert-radio sr-only">
+                            <div class="w-6 h-6 rounded-full bg-paper border-2 border-line transition-all duration-200"></div>
+                        </label>
+                        <label class="relative cursor-pointer flex flex-col items-center">
+                            <input type="radio" name="q4" class="likert-radio sr-only" checked>
+                            <div class="w-5 h-5 rounded-full bg-paper border-2 border-line transition-all duration-200"></div>
+                        </label>
+                        <label class="relative cursor-pointer flex flex-col items-center">
+                            <input type="radio" name="q4" class="likert-radio sr-only">
+                            <div class="w-6 h-6 rounded-full bg-paper border-2 border-line transition-all duration-200"></div>
+                        </label>
+                        <label class="relative cursor-pointer flex flex-col items-center">
+                            <input type="radio" name="q4" class="likert-radio sr-only">
+                            <div class="w-8 h-8 rounded-full bg-paper border-2 border-line transition-all duration-200"></div>
+                        </label>
+                    </div>
+
+                    <div class="flex justify-between text-xs font-bold text-muted mt-6">
+                        <span>أرفض بشدة</span>
+                        <span>أوافق بشدة</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 bg-paper">
+                <button class="w-full bg-charcoal text-white font-bold text-lg py-4 rounded-2xl flex items-center justify-center gap-2">
+                    التالي
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

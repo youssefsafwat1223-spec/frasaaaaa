@@ -1,0 +1,1105 @@
+[
+ {
+  "num": 1,
+  "name": "الكرم",
+  "measurable": [
+   "eye_open_ratio",
+   "eye_warmth_proxy",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "nostril_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "شحمة الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 2,
+  "name": "الثقة في الآخرين",
+  "measurable": [
+   "brow_arch",
+   "eye_open_ratio",
+   "face_aspect_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الجفن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 3,
+  "name": "الصراحة والتعبير المباشر",
+  "measurable": [
+   "brow_eye_distance_ratio",
+   "brow_tilt",
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الجفن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 4,
+  "name": "التعاطف",
+  "measurable": [
+   "brow_arch",
+   "eye_open_ratio",
+   "eye_tilt_ratio",
+   "eye_warmth_proxy",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [
+   "وجه مائي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "الجفن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 5,
+  "name": "الحنان العاطفي",
+  "measurable": [
+   "brow_arch",
+   "face_aspect_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [],
+  "unmeasurable": [
+   "تحت العين (تعذّر)",
+   "لون العين (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 6,
+  "name": "الرومانسية",
+  "measurable": [
+   "brow_arch",
+   "eye_warmth_proxy",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [
+   "وجه مائي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "تحت العين (تعذّر)",
+   "شحمة الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 7,
+  "name": "الوفاء",
+  "measurable": [
+   "brow_eye_distance_ratio",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 2,
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "unmeasurable": [
+   "استقامة جسر الأنف / Profile (تعذّر)",
+   "الأذن (تعذّر)",
+   "طول الحاجب (لا يوجد قياس)"
+  ],
+  "verdict": "جزئي"
+ },
+ {
+  "num": 8,
+  "name": "الاستقرار الأسري",
+  "measurable": [
+   "forehead_shape",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 2,
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "شحمة الأذن (تعذّر)",
+   "طول الحاجب (لا يوجد قياس)",
+   "لون العين (تعذّر)"
+  ],
+  "verdict": "جزئي"
+ },
+ {
+  "num": 9,
+  "name": "تحمل المسؤولية",
+  "measurable": [
+   "brow_density",
+   "chin_projection_ratio",
+   "face_squareness",
+   "forehead_width_ratio",
+   "jaw_width_ratio",
+   "nose_length_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 10,
+  "name": "الطموح",
+  "measurable": [
+   "brow_tilt",
+   "chin_projection_ratio",
+   "eye_tilt_ratio",
+   "forehead_width_ratio",
+   "nose_length_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [
+   "وجه خشبي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 11,
+  "name": "القيادة",
+  "measurable": [
+   "brow_tilt",
+   "face_squareness",
+   "forehead_width_ratio",
+   "jaw_width_ratio",
+   "nose_width_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "مؤخرة الرأس (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 12,
+  "name": "الجرأة",
+  "measurable": [
+   "brow_density",
+   "chin_projection_ratio",
+   "eye_tilt_ratio",
+   "forehead_width_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "جانب الأنف / Profile (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 13,
+  "name": "الاستقلالية",
+  "measurable": [
+   "brow_tilt",
+   "forehead_lines",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [
+   "وجه خشبي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "شحمة الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 14,
+  "name": "الحكمة",
+  "measurable": [
+   "chin_projection_ratio",
+   "forehead_shape"
+  ],
+  "n_measurable": 2,
+  "derivable_element": [],
+  "unmeasurable": [
+   "استقامة جسر الأنف / Profile (تعذّر)",
+   "الأذن (تعذّر)",
+   "شحمة الأذن (تعذّر)",
+   "عمق العين / 3D (تعذّر)"
+  ],
+  "verdict": "جزئي"
+ },
+ {
+  "num": 15,
+  "name": "التركيز العالي",
+  "measurable": [
+   "brow_density",
+   "eye_open_ratio",
+   "eye_spacing_ratio",
+   "forehead_lines",
+   "forehead_shape"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الجفن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 16,
+  "name": "التحليل والدقة",
+  "measurable": [
+   "brow_tilt",
+   "eye_spacing_ratio",
+   "forehead_shape",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [],
+  "unmeasurable": [
+   "استقامة جسر الأنف / Profile (تعذّر)",
+   "تحت العين (تعذّر)",
+   "لون العين (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 17,
+  "name": "التخطيط بعيد المدى",
+  "measurable": [
+   "chin_projection_ratio",
+   "face_aspect_ratio",
+   "forehead_shape",
+   "mouth_width_ratio",
+   "nose_length_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "شحمة الأذن (تعذّر)",
+   "طول الحاجب (لا يوجد قياس)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 18,
+  "name": "الانضباط",
+  "measurable": [
+   "brow_tilt",
+   "forehead_width_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "جانب الأنف (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 19,
+  "name": "العملية",
+  "measurable": [
+   "chin_projection_ratio",
+   "eye_open_ratio",
+   "face_squareness",
+   "forehead_shape",
+   "mouth_width_ratio",
+   "nose_length_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 20,
+  "name": "الإصرار",
+  "measurable": [
+   "brow_tilt",
+   "chin_projection_ratio",
+   "face_squareness",
+   "jaw_width_ratio",
+   "nose_length_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "عمق العين / 3D (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 21,
+  "name": "الصبر",
+  "measurable": [
+   "brow_eye_distance_ratio",
+   "chin_projection_ratio",
+   "forehead_shape",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "عمق العين / 3D (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 22,
+  "name": "المرونة",
+  "measurable": [
+   "brow_arch",
+   "eye_spacing_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه مائي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "جانب الأنف (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 23,
+  "name": "التسامح",
+  "measurable": [
+   "brow_arch",
+   "eye_spacing_ratio",
+   "eye_tilt_ratio",
+   "face_aspect_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 24,
+  "name": "الاجتماعية",
+  "measurable": [
+   "brow_tilt",
+   "eye_open_ratio",
+   "face_aspect_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 25,
+  "name": "الانفتاح على التجارب",
+  "measurable": [
+   "brow_tilt",
+   "eye_open_ratio",
+   "forehead_shape",
+   "nose_tip_drop_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "الشعر / خط الشعر (تعذّر)",
+   "خط الشعر (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 26,
+  "name": "الإبداع",
+  "measurable": [
+   "eye_spacing_ratio",
+   "forehead_shape"
+  ],
+  "n_measurable": 2,
+  "derivable_element": [
+   "وجه خشبي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "طول الحاجب (لا يوجد قياس)",
+   "لون العين (تعذّر)"
+  ],
+  "verdict": "جزئي"
+ },
+ {
+  "num": 27,
+  "name": "الخيال",
+  "measurable": [
+   "brow_arch",
+   "eye_spacing_ratio",
+   "eye_warmth_proxy",
+   "forehead_shape"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه مائي"
+  ],
+  "unmeasurable": [
+   "الشامات (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 28,
+  "name": "الحس الفني",
+  "measurable": [
+   "brow_arch",
+   "eye_warmth_proxy",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [
+   "وجه معدني"
+  ],
+  "unmeasurable": [
+   "الشعر / خط الشعر (تعذّر)",
+   "خط الشعر (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 29,
+  "name": "المثالية",
+  "measurable": [
+   "brow_eye_distance_ratio",
+   "eye_tilt_ratio",
+   "forehead_shape",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه معدني"
+  ],
+  "unmeasurable": [
+   "استقامة جسر الأنف / Profile (تعذّر)",
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 30,
+  "name": "النظام",
+  "measurable": [
+   "brow_tilt",
+   "forehead_width_ratio",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "unmeasurable": [
+   "استقامة جسر الأنف / Profile (تعذّر)",
+   "الأذن (تعذّر)",
+   "الجفن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 31,
+  "name": "الحذر",
+  "measurable": [
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "nostril_width_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه معدني"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "تحت العين (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 32,
+  "name": "التحفظ والخصوصية",
+  "measurable": [
+   "brow_eye_distance_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "الجفن (تعذّر)",
+   "عمق العين / 3D (تعذّر)",
+   "لون العين (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 33,
+  "name": "السرية وحفظ الأسرار",
+  "measurable": [
+   "brow_eye_distance_ratio",
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الجفن (تعذّر)",
+   "عمق العين / 3D (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 34,
+  "name": "العناد",
+  "measurable": [
+   "brow_inner_distance",
+   "chin_projection_ratio",
+   "forehead_shape",
+   "jaw_width_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "جانب الأنف / Profile (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 35,
+  "name": "العصبية وسرعة الاستثارة",
+  "measurable": [
+   "brow_inner_distance",
+   "brow_tilt",
+   "eye_open_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "unmeasurable": [
+   "بياض العين (تعذّر)",
+   "بياض/قزحية العين (تعذّر)",
+   "حدّة الأنف جانبية (تعذّر)",
+   "طول الحاجب (لا يوجد قياس)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 36,
+  "name": "الاندفاع",
+  "measurable": [
+   "brow_tilt",
+   "eye_open_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "شحمة الأذن (تعذّر)",
+   "طول الحاجب (لا يوجد قياس)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 37,
+  "name": "حب المخاطرة",
+  "measurable": [
+   "brow_tilt",
+   "eye_tilt_ratio",
+   "forehead_width_ratio",
+   "nose_width_ratio",
+   "nostril_width_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 38,
+  "name": "الحرص المالي",
+  "measurable": [
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio",
+   "nostril_width_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [],
+  "unmeasurable": [
+   "استقامة جسر الأنف / Profile (تعذّر)",
+   "الأذن (تعذّر)",
+   "شحمة الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 39,
+  "name": "الإنفاق والتبذير",
+  "measurable": [
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "nose_width_ratio",
+   "nostril_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "جانب الأنف (تعذّر)",
+   "حجم طرف الأنف (تعذّر)",
+   "شحمة الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 40,
+  "name": "حب الرفاهية والمتعة",
+  "measurable": [
+   "cheek_fullness",
+   "face_aspect_ratio",
+   "lower_lip_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "حجم طرف الأنف (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 41,
+  "name": "الفضول وحب المعرفة",
+  "measurable": [
+   "brow_density",
+   "eye_open_ratio",
+   "forehead_shape"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "حجم طرف الأنف (تعذّر)",
+   "حدّة الأنف جانبية (تعذّر)",
+   "حدّة طرف الأنف (تعذّر)",
+   "لون العين (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 42,
+  "name": "القدرة على الإقناع",
+  "measurable": [
+   "brow_tilt",
+   "eye_open_ratio",
+   "jaw_width_ratio",
+   "lower_lip_ratio",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "unmeasurable": [],
+  "verdict": "قوي"
+ },
+ {
+  "num": 43,
+  "name": "الاهتمام بالتفاصيل",
+  "measurable": [
+   "brow_density",
+   "eye_open_ratio",
+   "eye_spacing_ratio",
+   "forehead_lines",
+   "forehead_shape",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [],
+  "unmeasurable": [
+   "حدّة الأنف جانبية (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 44,
+  "name": "رؤية الصورة الكبيرة",
+  "measurable": [
+   "eye_open_ratio",
+   "eye_spacing_ratio",
+   "face_aspect_ratio",
+   "forehead_width_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه خشبي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "مؤخرة الرأس (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 45,
+  "name": "التكيف",
+  "measurable": [
+   "brow_arch",
+   "eye_spacing_ratio",
+   "face_aspect_ratio",
+   "forehead_shape",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "جانب الأنف (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 46,
+  "name": "التفاؤل",
+  "measurable": [
+   "eye_tilt_ratio",
+   "forehead_width_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "unmeasurable": [
+   "طول الحاجب (لا يوجد قياس)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 47,
+  "name": "النقد ورؤية السلبيات",
+  "measurable": [
+   "brow_tilt",
+   "eye_open_ratio",
+   "eye_tilt_ratio",
+   "forehead_width_ratio",
+   "nose_tip_drop_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [
+   "وجه معدني"
+  ],
+  "unmeasurable": [],
+  "verdict": "قوي"
+ },
+ {
+  "num": 48,
+  "name": "الحساسية",
+  "measurable": [
+   "brow_arch",
+   "brow_density",
+   "eye_open_ratio",
+   "mouth_width_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [
+   "وجه معدني"
+  ],
+  "unmeasurable": [
+   "بياض العين (تعذّر)",
+   "بياض/قزحية العين (تعذّر)",
+   "تحت العين (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 49,
+  "name": "الحاجة للأمان",
+  "measurable": [
+   "eye_open_ratio",
+   "forehead_shape",
+   "mouth_width_ratio",
+   "nostril_width_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "الجفن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 50,
+  "name": "حب الحرية",
+  "measurable": [
+   "eye_spacing_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "n_measurable": 2,
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "خط الشعر (تعذّر)",
+   "شحمة الأذن (تعذّر)"
+  ],
+  "verdict": "جزئي"
+ },
+ {
+  "num": 51,
+  "name": "حب السيطرة",
+  "measurable": [
+   "brow_inner_distance",
+   "brow_tilt",
+   "chin_projection_ratio",
+   "eye_open_ratio",
+   "jaw_width_ratio"
+  ],
+  "n_measurable": 5,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "جانب الأنف / Profile (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 52,
+  "name": "اللباقة",
+  "measurable": [
+   "brow_arch",
+   "eye_warmth_proxy",
+   "face_aspect_ratio",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [],
+  "unmeasurable": [
+   "استقامة جسر الأنف / Profile (تعذّر)",
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 53,
+  "name": "القدرة على الاستماع",
+  "measurable": [
+   "brow_arch",
+   "eye_open_ratio",
+   "eye_tilt_ratio",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 4,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 54,
+  "name": "الدعم وخدمة الآخرين",
+  "measurable": [
+   "brow_tilt",
+   "eye_tilt_ratio",
+   "upper_lip_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [
+   "وجه مائي"
+  ],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "الجفن (تعذّر)",
+   "جانب الأنف (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 55,
+  "name": "الاستمتاع بالعائلة",
+  "measurable": [
+   "face_aspect_ratio",
+   "forehead_shape",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)",
+   "شحمة الأذن (تعذّر)",
+   "طول الحاجب (لا يوجد قياس)",
+   "لون العين (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 56,
+  "name": "القدرة على إنجاز الأهداف",
+  "measurable": [
+   "brow_tilt",
+   "chin_projection_ratio",
+   "eye_spacing_ratio",
+   "face_squareness",
+   "forehead_width_ratio",
+   "nose_length_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [],
+  "unmeasurable": [
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 57,
+  "name": "تحمل الضغط",
+  "measurable": [
+   "brow_density",
+   "chin_projection_ratio",
+   "jaw_width_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [
+   "وجه أرضي"
+  ],
+  "unmeasurable": [
+   "استقامة جسر الأنف / Profile (تعذّر)",
+   "الأذن (تعذّر)",
+   "عمق العين / 3D (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 58,
+  "name": "التوازن بين العقل والعاطفة",
+  "measurable": [
+   "brow_arch",
+   "chin_projection_ratio",
+   "eye_open_ratio",
+   "face_aspect_ratio",
+   "forehead_shape",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 6,
+  "derivable_element": [],
+  "unmeasurable": [
+   "استقامة جسر الأنف / Profile (تعذّر)",
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 59,
+  "name": "الصدق العملي",
+  "measurable": [
+   "brow_tilt",
+   "chin_projection_ratio",
+   "mouth_width_ratio"
+  ],
+  "n_measurable": 3,
+  "derivable_element": [],
+  "unmeasurable": [
+   "استقامة جسر الأنف / Profile (تعذّر)",
+   "الأذن (تعذّر)"
+  ],
+  "verdict": "قوي"
+ },
+ {
+  "num": 60,
+  "name": "الغيرة",
+  "measurable": [
+   "brow_eye_distance_ratio",
+   "brow_inner_distance",
+   "brow_tilt",
+   "eye_open_ratio",
+   "eye_tilt_ratio",
+   "mouth_width_ratio",
+   "nose_tip_drop_ratio"
+  ],
+  "n_measurable": 7,
+  "derivable_element": [
+   "وجه ناري"
+  ],
+  "unmeasurable": [],
+  "verdict": "قوي"
+ }
+]

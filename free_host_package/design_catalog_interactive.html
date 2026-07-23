@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawafuq - 11 Design Systems Mega Catalog</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Base / Default Setup */
+        :root {
+            /* Fallbacks */
+            --font-ar: 'Cairo', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+        body { font-family: var(--font-ar); transition: background-color 0.4s ease; margin: 0; padding: 0; }
+        .en-text { font-family: var(--font-en); }
+
+        /* ==================================================== */
+        /* 11 THEMES CSS VARIABLES ENGINE                       */
+        /* ==================================================== */
+
+        /* 1. Modern Medical Clean */
+        [data-theme="medical"] {
+            --font-ar: 'Tajawal', sans-serif; --font-en: 'Inter', sans-serif;
+            --bg-body: #F0F9FF; --bg-card: #FFFFFF;
+            --text-main: #0F172A; --text-muted: #64748B;
+            --accent-1: #0284C7; --accent-2: #38BDF8;
+            --accent-bg: #E0F2FE;
+            --radius-card: 8px; --radius-btn: 4px; --radius-element: 4px;
+            --shadow-card: 0 1px 3px rgba(0,0,0,0.1);
+            --border-card: 1px solid #E2E8F0;
+            --spacing-inner: 16px;
+            --btn-transform: translateY(0);
+        }
+
+        /* 2. Premium Dark */
+        [data-theme="premium-dark"] {
+            --font-ar: 'Cairo', sans-serif; --font-en: 'Inter', sans-serif;
+            --bg-body: #0F172A; --bg-card: #1E293B;
+            --text-main: #FFFFFF; --text-muted: #94A3B8;
+            --accent-1: #D4AF37; --accent-2: #FBBF24;
+            --accent-bg: rgba(212, 175, 55, 0.1);
+            --radius-card: 16px; --radius-btn: 12px; --radius-element: 8px;
+            --shadow-card: 0 10px 25px rgba(0,0,0,0.5);
+            --border-card: 1px solid rgba(212, 175, 55, 0.2);
+            --spacing-inner: 24px;
+            --btn-transform: translateY(-2px);
+        }
+
+        /* 3. Soft Friendly */
+        [data-theme="soft-friendly"] {
+            --font-ar: 'Tajawal', sans-serif; --font-en: 'Roboto', sans-serif;
+            --bg-body: #FAF5FF; --bg-card: #FFFFFF;
+            --text-main: #4C1D95; --text-muted: #8B5CF6;
+            --accent-1: #D946EF; --accent-2: #F472B6;
+            --accent-bg: #FDF4FF;
+            --radius-card: 32px; --radius-btn: 99px; --radius-element: 99px;
+            --shadow-card: 0 15px 30px rgba(217, 70, 239, 0.15);
+            --border-card: none;
+            --spacing-inner: 32px;
+            --btn-transform: scale(1.02);
+        }
+
+        /* 4. Minimal White */
+        [data-theme="minimal-white"] {
+            --font-ar: 'Cairo', sans-serif; --font-en: 'Inter', sans-serif;
+            --bg-body: #FFFFFF; --bg-card: #FFFFFF;
+            --text-main: #000000; --text-muted: #525252;
+            --accent-1: #000000; --accent-2: #404040;
+            --accent-bg: #F5F5F5;
+            --radius-card: 0px; --radius-btn: 0px; --radius-element: 0px;
+            --shadow-card: none;
+            --border-card: 2px solid #000000;
+            --spacing-inner: 24px;
+            --btn-transform: translateY(0);
+        }
+
+        /* 5. Futuristic AI */
+        [data-theme="futuristic"] {
+            --font-ar: 'Tajawal', sans-serif; --font-en: 'Roboto', sans-serif;
+            --bg-body: #020617; --bg-card: rgba(15, 23, 42, 0.8);
+            --text-main: #E2E8F0; --text-muted: #94A3B8;
+            --accent-1: #06B6D4; --accent-2: #8B5CF6;
+            --accent-bg: rgba(6, 182, 212, 0.1);
+            --radius-card: 12px; --radius-btn: 6px; --radius-element: 4px;
+            --shadow-card: 0 0 20px rgba(6, 182, 212, 0.2);
+            --border-card: 1px solid #06B6D4;
+            --spacing-inner: 20px;
+            --btn-transform: translateY(0);
+        }
+
+        /* 6. Luxury Gold */
+        [data-theme="luxury"] {
+            --font-ar: 'Cairo', sans-serif; --font-en: 'Inter', sans-serif;
+            --bg-body: #111827; --bg-card: #1F2937;
+            --text-main: #FDFBF7; --text-muted: #D1D5DB;
+            --accent-1: #B8975A; --accent-2: #E5E0D8;
+            --accent-bg: #27272A;
+            --radius-card: 8px; --radius-btn: 0px; --radius-element: 0px;
+            --shadow-card: 0 20px 40px rgba(0,0,0,0.6);
+            --border-card: 1px solid #B8975A;
+            --spacing-inner: 28px;
+            --btn-transform: translateY(0);
+        }
+
+        /* 7. Youthful Gradient */
+        [data-theme="youthful"] {
+            --font-ar: 'Tajawal', sans-serif; --font-en: 'Inter', sans-serif;
+            --bg-body: #FFEDD5; --bg-card: rgba(255, 255, 255, 0.9);
+            --text-main: #1F2937; --text-muted: #6B7280;
+            --accent-1: #F97316; --accent-2: #EC4899;
+            --accent-bg: #FFE4E6;
+            --radius-card: 24px; --radius-btn: 16px; --radius-element: 12px;
+            --shadow-card: 0 10px 25px rgba(249, 115, 22, 0.2);
+            --border-card: none;
+            --spacing-inner: 20px;
+            --btn-transform: scale(1.05);
+        }
+
+        /* 8. Professional SaaS */
+        [data-theme="saas"] {
+            --font-ar: 'Cairo', sans-serif; --font-en: 'Inter', sans-serif;
+            --bg-body: #F1F5F9; --bg-card: #FFFFFF;
+            --text-main: #1E293B; --text-muted: #64748B;
+            --accent-1: #4F46E5; --accent-2: #818CF8;
+            --accent-bg: #EEF2FF;
+            --radius-card: 6px; --radius-btn: 6px; --radius-element: 4px;
+            --shadow-card: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --border-card: 1px solid #E2E8F0;
+            --spacing-inner: 24px;
+            --btn-transform: translateY(-1px);
+        }
+
+        /* 9. Calm Psychological */
+        [data-theme="calm"] {
+            --font-ar: 'Tajawal', sans-serif; --font-en: 'Roboto', sans-serif;
+            --bg-body: #F4F4F0; --bg-card: #FFFFFF;
+            --text-main: #1C2E2A; --text-muted: #5F736D;
+            --accent-1: #4A6B63; --accent-2: #A5B6B0;
+            --accent-bg: #EAECE8;
+            --radius-card: 16px; --radius-btn: 16px; --radius-element: 8px;
+            --shadow-card: 0 8px 30px rgba(0,0,0,0.04);
+            --border-card: 1px solid #EAECE8;
+            --spacing-inner: 32px;
+            --btn-transform: translateY(0);
+        }
+
+        /* 10. Social Matching App */
+        [data-theme="social"] {
+            --font-ar: 'Cairo', sans-serif; --font-en: 'Inter', sans-serif;
+            --bg-body: #F9FAFB; --bg-card: #FFFFFF;
+            --text-main: #111827; --text-muted: #6B7280;
+            --accent-1: #FE3C72; --accent-2: #FD297B;
+            --accent-bg: #FFE4E6;
+            --radius-card: 20px; --radius-btn: 99px; --radius-element: 99px;
+            --shadow-card: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --border-card: none;
+            --spacing-inner: 20px;
+            --btn-transform: scale(1.03);
+        }
+
+        /* 11. Mobile-first Cards */
+        [data-theme="mobile-cards"] {
+            --font-ar: 'Tajawal', sans-serif; --font-en: 'Roboto', sans-serif;
+            --bg-body: #E5E7EB; --bg-card: #FFFFFF;
+            --text-main: #1F2937; --text-muted: #6B7280;
+            --accent-1: #10B981; --accent-2: #34D399;
+            --accent-bg: #D1FAE5;
+            --radius-card: 40px; --radius-btn: 24px; --radius-element: 16px;
+            --shadow-card: 0 25px 50px -12px rgba(0,0,0,0.25);
+            --border-card: none;
+            --spacing-inner: 32px;
+            --btn-transform: translateY(0);
+        }
+
+        /* ==================================================== */
+        /* COMPONENT STYLES BOUND TO VARIABLES                  */
+        /* ==================================================== */
+
+        .theme-body { background-color: var(--bg-body); color: var(--text-main); min-height: 100vh; transition: 0.3s; }
+        .theme-card { 
+            background-color: var(--bg-card); 
+            border-radius: var(--radius-card); 
+            box-shadow: var(--shadow-card); 
+            border: var(--border-card); 
+            padding: var(--spacing-inner); 
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .theme-btn { 
+            background-color: var(--accent-1); 
+            color: var(--bg-card); /* Inverse */
+            border-radius: var(--radius-btn); 
+            padding: 12px 24px; 
+            font-weight: 700; 
+            text-align: center; 
+            cursor: pointer; 
+            transition: 0.2s; 
+            border: none;
+            width: 100%;
+        }
+        .theme-btn:hover { transform: var(--btn-transform); opacity: 0.9; }
+        
+        .theme-btn-outline {
+            background-color: transparent;
+            color: var(--accent-1);
+            border: 2px solid var(--accent-1);
+            border-radius: var(--radius-btn);
+            padding: 12px 24px;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+            transition: 0.2s;
+        }
+
+        .theme-text-muted { color: var(--text-muted); }
+        .theme-text-accent { color: var(--accent-1); }
+        .theme-bg-accent { background-color: var(--accent-bg); }
+        
+        .theme-progress-track { background-color: var(--bg-body); border-radius: var(--radius-element); height: 8px; overflow: hidden; }
+        .theme-progress-bar { background-color: var(--accent-1); height: 100%; }
+
+        .theme-input {
+            width: 100%; padding: 16px; border-radius: var(--radius-element);
+            border: 1px solid var(--text-muted); background: transparent; color: var(--text-main);
+        }
+        .theme-input:focus { border-color: var(--accent-1); outline: none; }
+
+        /* App Frame for demo */
+        .app-frame {
+            width: 390px;
+            min-height: 844px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Nav controls */
+        #controls {
+            position: fixed; top: 0; right: 0; width: 300px; height: 100vh;
+            background: #111827; color: white; padding: 20px; overflow-y: auto; z-index: 50;
+            box-shadow: -5px 0 25px rgba(0,0,0,0.5);
+            font-family: 'Inter', sans-serif;
+        }
+        .theme-btn-select { display: block; width: 100%; padding: 10px; margin-bottom: 8px; border-radius: 6px; background: #1F2937; text-align: left; cursor: pointer; border: 1px solid #374151; transition: 0.2s;}
+        .theme-btn-select:hover { background: #374151; }
+        .theme-btn-select.active { background: #3B82F6; border-color: #60A5FA; }
+
+    </style>
+</head>
+<body data-theme="premium-dark" class="theme-body pb-20">
+
+    <!-- Controls Sidebar -->
+    <div id="controls" dir="ltr">
+        <h2 class="text-xl font-bold mb-6">Select Concept</h2>
+        <div id="theme-buttons"></div>
+    </div>
+
+    <div class="mr-[300px] p-10">
+        <div class="max-w-4xl mx-auto mb-12 text-center">
+            <h1 class="text-4xl font-bold mb-4">كتالوج الهويات البصرية - تَوَافُق</h1>
+            <p class="theme-text-muted text-lg">اختر الثيم من القائمة الجانبية لتشاهد كيف يتغير النظام التصميمي بالكامل (حواف، خطوط، مسافات، ألوان، ظلال) على كل الشاشات.</p>
+        </div>
+
+        <div class="flex flex-wrap gap-10 justify-center">
+
+            <!-- ============================================== -->
+            <!-- 1. SPLASH SCREEN -->
+            <!-- ============================================== -->
+            <div>
+                <h3 class="font-bold mb-4 text-center">Splash Screen</h3>
+                <div class="app-frame theme-card flex flex-col items-center justify-center h-[844px]">
+                    <!-- Abstract shape that changes rounding based on theme -->
+                    <div class="w-32 h-32 theme-bg-accent mb-8 flex items-center justify-center" style="border-radius: var(--radius-card);">
+                        <svg class="w-16 h-16 theme-text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582" />
+                        </svg>
+                    </div>
+                    <h2 class="text-5xl font-bold mb-2">تَوَافُق</h2>
+                    <p class="theme-text-muted tracking-widest text-sm uppercase en-text">Science Based Matching</p>
+                </div>
+            </div>
+
+            <!-- ============================================== -->
+            <!-- 2. MATCH RESULT CARD -->
+            <!-- ============================================== -->
+            <div>
+                <h3 class="font-bold mb-4 text-center">Match Result UI</h3>
+                <div class="app-frame" style="background-color: var(--bg-body); padding: 20px;">
+                    
+                    <div class="theme-card">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-20 h-20 bg-gray-300 flex items-center justify-center text-3xl" style="border-radius: var(--radius-element);">👤</div>
+                            <div class="text-left">
+                                <div class="text-4xl font-bold theme-text-accent en-text">85%</div>
+                                <div class="text-xs theme-text-muted">نسبة التوافق</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-1">أحمد، <span class="en-text">29</span></h3>
+                        <p class="theme-text-muted mb-6">مهندس برمجيات • الرياض</p>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="theme-bg-accent theme-text-accent px-3 py-1 text-sm font-bold" style="border-radius: var(--radius-element);">قيم دينية متطابقة</span>
+                            <span class="theme-bg-accent theme-text-accent px-3 py-1 text-sm font-bold" style="border-radius: var(--radius-element);">نمط حياة هادئ</span>
+                        </div>
+
+                        <button class="theme-btn">إرسال طلب تواصل</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ============================================== -->
+            <!-- 3. QUESTIONNAIRE UI -->
+            <!-- ============================================== -->
+            <div>
+                <h3 class="font-bold mb-4 text-center">Questionnaire UI</h3>
+                <div class="app-frame" style="background-color: var(--bg-body); padding: 20px;">
+                    
+                    <div class="flex justify-between items-center mb-6 px-2">
+                        <span class="theme-text-muted font-bold text-sm">تحليل الشخصية</span>
+                        <span class="en-text font-bold theme-text-muted text-sm">4/73</span>
+                    </div>
+                    <div class="theme-progress-track mb-10 w-full">
+                        <div class="theme-progress-bar w-[15%]"></div>
+                    </div>
+
+                    <div class="theme-card mb-8">
+                        <h3 class="text-2xl font-bold leading-relaxed mb-8">أُفضل الالتزام بخطط واضحة بدلاً من العفوية في السفر والإجازات.</h3>
+                        
+                        <div class="flex flex-col gap-3">
+                            <div class="p-4 theme-bg-accent theme-text-accent font-bold cursor-pointer" style="border-radius: var(--radius-btn); border: 2px solid var(--accent-1);">
+                                أوافق بشدة
+                            </div>
+                            <div class="p-4 cursor-pointer theme-text-muted border" style="border-radius: var(--radius-btn); border-color: var(--text-muted);">
+                                أوافق
+                            </div>
+                            <div class="p-4 cursor-pointer theme-text-muted border" style="border-radius: var(--radius-btn); border-color: var(--text-muted);">
+                                محايد
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="theme-btn">التالي</button>
+                </div>
+            </div>
+
+            <!-- ============================================== -->
+            <!-- 4. TRAIT ANALYSIS (PAID FEATURE) -->
+            <!-- ============================================== -->
+            <div>
+                <h3 class="font-bold mb-4 text-center">Trait Analysis UI</h3>
+                <div class="app-frame" style="background-color: var(--bg-body); padding: 20px;">
+                    
+                    <h2 class="text-3xl font-bold mb-6">التقرير النفسي</h2>
+
+                    <div class="theme-card mb-4">
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 class="font-bold text-lg">الذكاء العاطفي (EQ)</h4>
+                            <span class="en-text font-bold theme-text-accent">92/100</span>
+                        </div>
+                        <div class="theme-progress-track mb-2">
+                            <div class="theme-progress-bar w-[92%]"></div>
+                        </div>
+                        <p class="theme-text-muted text-sm leading-relaxed">لديك قدرة عالية على فهم مشاعرك ومشاعر شريكك، مما يقلل من حدة الخلافات مستقبلاً.</p>
+                    </div>
+
+                    <!-- Locked Premium Card -->
+                    <div class="theme-card relative opacity-90">
+                        <!-- Blur overlay for locked -->
+                        <div class="absolute inset-0 backdrop-blur-md bg-[var(--bg-card)]/50 z-10 flex flex-col items-center justify-center p-6 text-center">
+                            <span class="text-4xl mb-2">🔒</span>
+                            <h4 class="font-bold mb-2">سمات القيادة والسيطرة</h4>
+                            <p class="text-sm theme-text-muted mb-4">اشترك في الباقة المتقدمة لاكتشاف باقي الـ 317 سمة شخصية</p>
+                            <button class="theme-btn text-sm">ترقية الحساب</button>
+                        </div>
+                        
+                        <!-- Dummy content behind blur -->
+                        <div class="blur-sm">
+                            <div class="flex justify-between items-center mb-4">
+                                <h4 class="font-bold text-lg">السمات العميقة</h4>
+                                <span class="en-text font-bold">??/100</span>
+                            </div>
+                            <div class="theme-progress-track mb-2">
+                                <div class="theme-progress-bar w-[50%]"></div>
+                            </div>
+                            <p class="theme-text-muted text-sm">نص مخفي هنا يظهر للمشتركين...</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ============================================== -->
+            <!-- 5. PRICING SCREEN -->
+            <!-- ============================================== -->
+            <div>
+                <h3 class="font-bold mb-4 text-center">Pricing UI</h3>
+                <div class="app-frame" style="background-color: var(--bg-body); padding: 20px;">
+                    
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold mb-2">باقات توافق</h2>
+                        <p class="theme-text-muted">استثمر في شريك حياتك القادم</p>
+                    </div>
+
+                    <!-- Advanced Plan (Recommended) -->
+                    <div class="theme-card mb-6" style="border: 2px solid var(--accent-1); transform: scale(1.02); box-shadow: var(--shadow-card), 0 0 0 4px var(--accent-bg);">
+                        <div class="theme-bg-accent theme-text-accent px-3 py-1 text-xs font-bold absolute top-0 right-0 left-0 text-center uppercase en-text tracking-widest">Recommended</div>
+                        <div class="mt-4 mb-6 text-center">
+                            <h3 class="text-2xl font-bold mb-1">المتقدمة (Advanced)</h3>
+                            <div class="text-4xl font-bold theme-text-accent en-text mt-3">149 <span class="text-sm theme-text-muted">EGP/mo</span></div>
+                        </div>
+                        <ul class="flex flex-col gap-3 mb-8 text-sm">
+                            <li class="flex items-center gap-2"><span>✅</span> 50-80 سؤال تحليل</li>
+                            <li class="flex items-center gap-2"><span>✅</span> فحص الفراسة بالوجه</li>
+                            <li class="flex items-center gap-2"><span>✅</span> 287 سمة شخصية</li>
+                            <li class="flex items-center gap-2"><span>✅</span> فحص الثالوث المظلم</li>
+                        </ul>
+                        <button class="theme-btn">اشترك الآن</button>
+                    </div>
+
+                    <!-- Basic Plan -->
+                    <div class="theme-card opacity-80 scale-95">
+                        <div class="mb-4 flex justify-between items-center">
+                            <h3 class="font-bold">الأساسية (Basic)</h3>
+                            <div class="font-bold en-text">79 EGP</div>
+                        </div>
+                        <ul class="text-xs theme-text-muted flex flex-col gap-2 mb-4">
+                            <li>• 30-45 سؤال</li>
+                            <li>• 155 سمة شخصية</li>
+                        </ul>
+                        <button class="theme-btn-outline text-sm">اختيار</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ============================================== -->
+            <!-- 6. ERROR / EMPTY STATE -->
+            <!-- ============================================== -->
+            <div>
+                <h3 class="font-bold mb-4 text-center">States (Empty/Loading)</h3>
+                <div class="app-frame" style="background-color: var(--bg-body); padding: 20px;">
+                    
+                    <div class="h-full flex flex-col items-center justify-center text-center mt-32">
+                        <div class="w-24 h-24 theme-bg-accent text-4xl flex items-center justify-center mb-6" style="border-radius: var(--radius-card);">
+                            🔍
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">لا توجد نتائج حالياً</h3>
+                        <p class="theme-text-muted mb-8 px-4">قم بتوسيع نطاق البحث أو تحديث تفضيلاتك لرؤية توافقات أكثر.</p>
+                        <button class="theme-btn-outline w-auto">تحديث الفلاتر</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const themes = [
+            { id: 'medical', name: '1. Modern Medical Clean', desc: 'Sharp, clinical, blue/white' },
+            { id: 'premium-dark', name: '2. Premium Dark', desc: 'Deep navy, gold, luxurious' },
+            { id: 'soft-friendly', name: '3. Soft Friendly', desc: 'Pastel, highly rounded' },
+            { id: 'minimal-white', name: '4. Minimal White', desc: 'Brutalist, stark black/white' },
+            { id: 'futuristic', name: '5. Futuristic AI', desc: 'Neon cyan, dark space' },
+            { id: 'luxury', name: '6. Luxury Gold', desc: 'Midnight blue, rich gold, serif' },
+            { id: 'youthful', name: '7. Youthful Gradient', desc: 'Vibrant, glassmorphism' },
+            { id: 'saas', name: '8. Professional SaaS', desc: 'Slate, indigo, structured' },
+            { id: 'calm', name: '9. Calm Psychological', desc: 'Sage, sand, organic' },
+            { id: 'social', name: '10. Social Matching App', desc: 'Tinder/Bumble vibe, pink' },
+            { id: 'mobile-cards', name: '11. Mobile-first Cards', desc: 'Huge rounded floating cards' }
+        ];
+
+        const container = document.getElementById('theme-buttons');
+        const body = document.body;
+
+        themes.forEach((theme, index) => {
+            const btn = document.createElement('button');
+            btn.className = `theme-btn-select ${index === 1 ? 'active' : ''}`; // default premium-dark
+            btn.innerHTML = `<strong>${theme.name}</strong><br><span style="font-size:11px;opacity:0.7;">${theme.desc}</span>`;
+            
+            btn.onclick = () => {
+                document.querySelectorAll('.theme-btn-select').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                body.setAttribute('data-theme', theme.id);
+            };
+            
+            container.appendChild(btn);
+        });
+    </script>
+</body>
+</html>
