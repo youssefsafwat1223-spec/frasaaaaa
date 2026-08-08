@@ -1,0 +1,560 @@
+{
+ "all": {
+  "brow_arch": {
+   "mean": 0.05632,
+   "std": 0.00805,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "brow_eye_distance_ratio": {
+   "mean": 0.11908,
+   "std": 0.01811,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "brow_inner_distance": {
+   "mean": 0.18843,
+   "std": 0.01452,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "chin_width_ratio": {
+   "mean": 0.3254,
+   "std": 0.02267,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "eye_open_ratio": {
+   "mean": 0.32834,
+   "std": 0.07015,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "eye_size_ratio": {
+   "mean": 0.19259,
+   "std": 0.0124,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "eye_spacing_ratio": {
+   "mean": 0.25085,
+   "std": 0.01596,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "eye_tilt_ratio": {
+   "mean": 0.0,
+   "std": 0.00865,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "face_aspect_ratio": {
+   "mean": 0.84779,
+   "std": 0.10536,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "forehead_ratio": {
+   "mean": 0.342,
+   "std": 0.07447,
+   "n": 1011,
+   "source": "fairface_all"
+  },
+  "forehead_slant_ratio": {
+   "mean": 0.01313,
+   "std": 0.01148,
+   "n": 1011,
+   "source": "fairface_all"
+  },
+  "forehead_width_ratio": {
+   "mean": 0.71744,
+   "std": 0.0333,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "jaw_angle_sharpness": {
+   "mean": 117.26642,
+   "std": 11.85693,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "jaw_width_ratio": {
+   "mean": 0.79553,
+   "std": 0.03025,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "lower_face_ratio": {
+   "mean": 0.3799,
+   "std": 0.05661,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "lower_lip_protrusion": {
+   "mean": -0.03531,
+   "std": 0.0284,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "lower_lip_ratio": {
+   "mean": 0.05648,
+   "std": 0.01246,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "mouth_corner_tilt": {
+   "mean": -0.01055,
+   "std": 0.01747,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "mouth_height_ratio": {
+   "mean": 0.00576,
+   "std": 0.02099,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "mouth_width_ratio": {
+   "mean": 0.35271,
+   "std": 0.03509,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "nose_length_ratio": {
+   "mean": 0.28092,
+   "std": 0.03631,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "nose_tip_drop_ratio": {
+   "mean": 0.03531,
+   "std": 0.01162,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "nose_width_ratio": {
+   "mean": 0.28896,
+   "std": 0.0226,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "nostril_width_ratio": {
+   "mean": 0.26721,
+   "std": 0.02278,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "philtrum_ratio": {
+   "mean": 0.12049,
+   "std": 0.01895,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "upper_lip_ratio": {
+   "mean": 0.03562,
+   "std": 0.00938,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "widening_ratio": {
+   "mean": 0.8708,
+   "std": 0.02454,
+   "n": 1033,
+   "source": "fairface_all"
+  },
+  "chin_projection_ratio": {
+   "mean": 0.01521,
+   "std": 0.01872,
+   "n": 173,
+   "source": "dataset_frontal_clean"
+  },
+  "nose_tip_projection_ratio": {
+   "mean": 0.0102,
+   "std": 0.01399,
+   "n": 173,
+   "source": "dataset_frontal_clean"
+  },
+  "forehead_lines_density": {
+   "mean": 0.05,
+   "std": 0.03,
+   "n": 0,
+   "source": "provisional"
+  },
+  "forehead_smoothness": {
+   "mean": 0.95,
+   "std": 0.03,
+   "n": 0,
+   "source": "provisional"
+  },
+  "brow_density": {
+   "mean": 0.3,
+   "std": 0.15,
+   "n": 0,
+   "source": "provisional"
+  },
+  "cheek_fullness": {
+   "mean": 0.15,
+   "std": 0.08,
+   "n": 0,
+   "source": "provisional"
+  },
+  "chin_sagittal_projection": {
+   "mean": 0.02,
+   "std": 0.03,
+   "n": 0,
+   "source": "provisional"
+  },
+  "nose_bridge_convexity": {
+   "mean": 0.0,
+   "std": 0.02,
+   "n": 0,
+   "source": "provisional"
+  },
+  "brow_ridge_projection": {
+   "mean": 0.05,
+   "std": 0.04,
+   "n": 0,
+   "source": "provisional"
+  },
+  "forehead_slope_profile": {
+   "mean": 0.25,
+   "std": 0.15,
+   "n": 0,
+   "source": "provisional"
+  },
+  "nose_profile_angle": {
+   "mean": 100.0,
+   "std": 12.0,
+   "n": 0,
+   "source": "provisional"
+  }
+ },
+ "male": {
+  "brow_arch": {
+   "mean": 0.05526,
+   "std": 0.00832,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "brow_eye_distance_ratio": {
+   "mean": 0.11803,
+   "std": 0.0189,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "brow_inner_distance": {
+   "mean": 0.18647,
+   "std": 0.01531,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "chin_width_ratio": {
+   "mean": 0.32771,
+   "std": 0.02344,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "eye_open_ratio": {
+   "mean": 0.3169,
+   "std": 0.06926,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "eye_size_ratio": {
+   "mean": 0.19105,
+   "std": 0.0122,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "eye_spacing_ratio": {
+   "mean": 0.24934,
+   "std": 0.01609,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "eye_tilt_ratio": {
+   "mean": 0.0,
+   "std": 0.00872,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "face_aspect_ratio": {
+   "mean": 0.85142,
+   "std": 0.1109,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "forehead_ratio": {
+   "mean": 0.33984,
+   "std": 0.07812,
+   "n": 605,
+   "source": "fairface_male"
+  },
+  "forehead_slant_ratio": {
+   "mean": 0.01357,
+   "std": 0.01167,
+   "n": 605,
+   "source": "fairface_male"
+  },
+  "forehead_width_ratio": {
+   "mean": 0.72029,
+   "std": 0.03229,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "jaw_angle_sharpness": {
+   "mean": 117.30895,
+   "std": 12.44361,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "jaw_width_ratio": {
+   "mean": 0.79749,
+   "std": 0.03133,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "lower_face_ratio": {
+   "mean": 0.38131,
+   "std": 0.05899,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "lower_lip_protrusion": {
+   "mean": -0.03669,
+   "std": 0.03015,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "lower_lip_ratio": {
+   "mean": 0.05638,
+   "std": 0.01326,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "mouth_corner_tilt": {
+   "mean": -0.00984,
+   "std": 0.01683,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "mouth_height_ratio": {
+   "mean": 0.00616,
+   "std": 0.02015,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "mouth_width_ratio": {
+   "mean": 0.34909,
+   "std": 0.03419,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "nose_length_ratio": {
+   "mean": 0.28171,
+   "std": 0.03569,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "nose_tip_drop_ratio": {
+   "mean": 0.03458,
+   "std": 0.01176,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "nose_width_ratio": {
+   "mean": 0.28931,
+   "std": 0.02185,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "nostril_width_ratio": {
+   "mean": 0.26805,
+   "std": 0.02177,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "philtrum_ratio": {
+   "mean": 0.12104,
+   "std": 0.01957,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "upper_lip_ratio": {
+   "mean": 0.03518,
+   "std": 0.00931,
+   "n": 617,
+   "source": "fairface_male"
+  },
+  "widening_ratio": {
+   "mean": 0.8751,
+   "std": 0.02287,
+   "n": 617,
+   "source": "fairface_male"
+  }
+ },
+ "female": {
+  "brow_arch": {
+   "mean": 0.0575,
+   "std": 0.00778,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "brow_eye_distance_ratio": {
+   "mean": 0.12061,
+   "std": 0.01676,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "brow_inner_distance": {
+   "mean": 0.19049,
+   "std": 0.0128,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "chin_width_ratio": {
+   "mean": 0.32177,
+   "std": 0.02081,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "eye_open_ratio": {
+   "mean": 0.34296,
+   "std": 0.07022,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "eye_size_ratio": {
+   "mean": 0.19427,
+   "std": 0.0121,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "eye_spacing_ratio": {
+   "mean": 0.25287,
+   "std": 0.01643,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "eye_tilt_ratio": {
+   "mean": 0.0,
+   "std": 0.00859,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "face_aspect_ratio": {
+   "mean": 0.84061,
+   "std": 0.09746,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "forehead_ratio": {
+   "mean": 0.34386,
+   "std": 0.06652,
+   "n": 406,
+   "source": "fairface_female"
+  },
+  "forehead_slant_ratio": {
+   "mean": 0.01263,
+   "std": 0.01136,
+   "n": 406,
+   "source": "fairface_female"
+  },
+  "forehead_width_ratio": {
+   "mean": 0.71362,
+   "std": 0.03411,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "jaw_angle_sharpness": {
+   "mean": 117.15168,
+   "std": 11.06048,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "jaw_width_ratio": {
+   "mean": 0.79257,
+   "std": 0.02788,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "lower_face_ratio": {
+   "mean": 0.3783,
+   "std": 0.05175,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "lower_lip_protrusion": {
+   "mean": -0.03416,
+   "std": 0.02671,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "lower_lip_ratio": {
+   "mean": 0.05659,
+   "std": 0.01072,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "mouth_corner_tilt": {
+   "mean": -0.01158,
+   "std": 0.01809,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "mouth_height_ratio": {
+   "mean": 0.00548,
+   "std": 0.02269,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "mouth_width_ratio": {
+   "mean": 0.35923,
+   "std": 0.03476,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "nose_length_ratio": {
+   "mean": 0.27955,
+   "std": 0.03793,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "nose_tip_drop_ratio": {
+   "mean": 0.03633,
+   "std": 0.01141,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "nose_width_ratio": {
+   "mean": 0.28889,
+   "std": 0.02387,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "nostril_width_ratio": {
+   "mean": 0.26591,
+   "std": 0.02273,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "philtrum_ratio": {
+   "mean": 0.11971,
+   "std": 0.01709,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "upper_lip_ratio": {
+   "mean": 0.0363,
+   "std": 0.00921,
+   "n": 416,
+   "source": "fairface_female"
+  },
+  "widening_ratio": {
+   "mean": 0.86267,
+   "std": 0.02359,
+   "n": 416,
+   "source": "fairface_female"
+  }
+ }
+}

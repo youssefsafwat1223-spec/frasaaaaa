@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2B4C41">
+  <title>تَوَافُق — تحليل الفراسة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Readex+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css?v=1">
+</head>
+<body>
+<div class="phone">
+
+  <!-- ① الترحيب -->
+  <section class="screen active" id="s-intro">
+    <div class="intro-icon">🤖</div>
+    <h3 class="intro-h">تحليل الفراسة بالذكاء الاصطناعي</h3>
+    <p class="intro-p">هنقرأ ملامح وجهك من ٣ زوايا لاستخراج سمات شخصيتك.</p>
+    <div class="glass tips">
+      <div class="tip"><div class="ic">📸</div>
+        <div><h4>إضاءة جيدة</h4><p>قف في مكان مضيء والضوء قدّامك مش وراك.</p></div></div>
+      <div class="tip"><div class="ic">🚫</div>
+        <div><h4>لا نظارات أو قبعات</h4><p>ملامح الوجه والجبهة لازم تكون واضحة.</p></div></div>
+      <div class="tip"><div class="ic">😐</div>
+        <div><h4>تعبير محايد</h4><p>بُق مقفول وعيون مفتوحة طبيعي.</p></div></div>
+      <div class="tip"><div class="ic">🔒</div>
+        <div><h4>خصوصية تامة</h4><p>التحليل على جهازك — الصورة لا تُرفع لأي سيرفر.</p></div></div>
+    </div>
+    <div class="gender-row">
+      <button class="gbtn" data-g="male">👨 ذكر</button>
+      <button class="gbtn" data-g="female">👩 أنثى</button>
+    </div>
+    <button class="btn-primary" id="btnStart" disabled>فتح الكاميرا</button>
+    <div class="boot" id="boot">جارٍ التحميل…</div>
+  </section>
+
+  <!-- ② فحص الجاهزية -->
+  <section class="screen" id="s-check">
+    <div class="check-head">
+      <h3>فحص الجاهزية</h3>
+      <p class="muted-w">ظبّط الحاجات دي الأول — كل بند هيتعلّم ✓ لوحده</p>
+    </div>
+    <div class="check-cam"><video id="vidCheck" playsinline muted></video></div>
+    <div class="check-list" id="checkList"></div>
+    <div class="check-actions">
+      <button class="btn-primary" id="btnToCapture" disabled>التالي — التصوير</button>
+      <button class="btn-ghost" id="btnCheckBack">رجوع</button>
+    </div>
+  </section>
+
+  <!-- ③ التصوير (أسلوب Face ID) -->
+  <section class="screen" id="s-scan">
+    <video id="vid" playsinline muted></video>
+    <div class="rotate-overlay" id="rotateOverlay">
+      <div class="ro-phone">📱</div>
+      <div>دوّر الموبايل بشكل عمودي</div>
+      <p>التصوير لازم يكون والموبايل واقف رأسي</p>
+    </div>
+    <canvas id="arCanvas"></canvas>
+    <div class="vignette"></div>
+    <div class="flash" id="flash"></div>
+    <div class="scan-top">
+      <button class="xbtn" id="btnClose" aria-label="إغلاق">✕</button>
+      <div class="angle-dots">
+        <span class="adot">١</span>
+        <span class="adot">٢</span>
+        <span class="adot">٣</span>
+      </div>
+    </div>
+    <div class="scan-bottom">
+      <h3 class="scan-h" id="scanH">حط وشك جوّه الدايرة</h3>
+      <p class="scan-p" id="scanP">هنلف الراس ببطء يمين وشمال — من غير وقفات</p>
+      <div class="turn-bubble" id="turnBubble">➡️</div>
+      <button class="manual-link" id="btnManual">التقاط يدوي</button>
+    </div>
+  </section>
+
+  <!-- ④ المعالجة -->
+  <section class="screen" id="s-busy">
+    <div class="ai-node" style="top:40%;left:45%;animation-delay:.1s"></div>
+    <div class="ai-node" style="top:45%;left:55%;animation-delay:.3s"></div>
+    <div class="ai-node" style="top:50%;left:48%;animation-delay:.5s"></div>
+    <div class="ai-node" style="top:38%;left:52%;animation-delay:.2s"></div>
+    <div class="ai-node" style="top:55%;left:45%;animation-delay:.6s"></div>
+    <div>
+      <div class="busy-spin"></div>
+      <h3>جاري استخراج السمات…</h3>
+      <p class="sub">يقوم الذكاء الاصطناعي بتحليل ٤٧٨ نقطة في وجهك</p>
+      <div class="progress"><i id="busyBar"></i></div>
+    </div>
+  </section>
+
+  <!-- ⑤ النتايج -->
+  <section class="screen" id="s-done">
+    <div class="done-icon">✨</div>
+    <h2 class="done-h">تم التحليل بنجاح!</h2>
+    <p class="done-p" id="doneP"></p>
+    <div class="tcards" id="tcards"></div>
+    <div class="mini-stats" id="miniStats"></div>
+    <div class="repeat-note" id="repeatNote"></div>
+    <div class="actions">
+      <button class="btn-primary" id="btnAgain">🔁 قيس تاني — اختبر ثبات القراءة</button>
+      <button class="btn-ghost" id="btnDetails">التفاصيل الكاملة (وضع الاختبار)</button>
+    </div>
+    <p class="privacy">🔒 التحليل تم بالكامل على جهازك — لم تُرفع أي صورة</p>
+  </section>
+
+</div>
+
+<div id="errBox"></div>
+<script>
+(function(){
+  var box=document.getElementById('errBox');
+  function show(m){box.style.display='block';box.textContent+=m+'\n';}
+  window.addEventListener('error',function(e){
+    show((e.message||'error')+' @ '+(e.filename||'').split('/').pop()+':'+(e.lineno||''));
+  },true);
+  window.addEventListener('unhandledrejection',function(e){
+    show('promise: '+(e.reason&&e.reason.message||e.reason));
+  });
+})();
+</script>
+<script type="module" src="./face.js?v=1"></script>
+<script type="module" src="./segment.js?v=1"></script>
+<script src="./scoring.js?v=1"></script>
+<script type="module" src="./app.js?v=1"></script>
+</body>
+</html>
