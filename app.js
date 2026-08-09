@@ -231,56 +231,53 @@ function mapPts(lm, v) {
   const ox = (cw - vw * s) / 2, oy = (ch - vh * s) / 2;
   return lm.map(p => [cw - (p.x * vw * s + ox), p.y * vh * s + oy]); // mirrored
 }
+// circle geometry — must match .circle-mask CSS (width:min(72vw,300px), top:44%)
 function ringGeom() {
   const cw = ar.cv.width, ch = ar.cv.height;
-  return { cx: cw / 2, cy: ch * 0.46, R: Math.min(cw * 0.40, 190) };
+  return { cx: cw / 2, cy: ch * 0.44, R: Math.min(cw * 0.36, 150) };
 }
+// Apple-style tick ring: thin radial marks just outside the circle.
+// Covered ticks GROW and colour in with a springy lerp — like Face ID enroll.
 function drawTicks(ctx) {
   const { cx, cy, R } = ringGeom();
   for (let i = 0; i < TICKS; i++) {
+    const target = fid.covered[i] ? 1 : 0;
+    fid.anim[i] += (target - fid.anim[i]) * 0.18;          // spring-ish ease
+    const t = fid.anim[i];
     const a = i * (2 * Math.PI / TICKS);
-    const cov = fid.covered[i];
-    ctx.strokeStyle = cov ? "#7FDCA4" : "rgba(255,255,255,.28)";
-    ctx.lineWidth = 3.5; ctx.lineCap = "round";
-    ctx.shadowColor = cov ? "#7FDCA4" : "transparent";
-    ctx.shadowBlur = cov ? 6 : 0;
+    const len = 12 + 12 * t;                               // 12px → 24px when covered
+    const r0 = R + 8;
+    ctx.strokeStyle = t > 0.5 ? "#7FDCA4" : `rgba(255,255,255,${0.22 + 0.5 * t})`;
+    ctx.lineWidth = 2 + 1.2 * t;
+    ctx.lineCap = "round";
+    ctx.shadowColor = "#7FDCA4";
+    ctx.shadowBlur = 8 * t;
     ctx.beginPath();
-    ctx.moveTo(cx + (R - 9) * Math.cos(a), cy + (R - 9) * Math.sin(a));
-    ctx.lineTo(cx + (R + 9) * Math.cos(a), cy + (R + 9) * Math.sin(a));
+    ctx.moveTo(cx + r0 * Math.cos(a), cy + r0 * Math.sin(a));
+    ctx.lineTo(cx + (r0 + len) * Math.cos(a), cy + (r0 + len) * Math.sin(a));
     ctx.stroke();
   }
   ctx.shadowBlur = 0;
 }
+// Face-ID look: tick ring only — no mesh dots over the face.
 function drawAR(lm, v) {
   if (!ar.ctx) return;
-  const cw = ar.cv.width, ch = ar.cv.height;
   const ctx = ar.ctx;
-  ctx.clearRect(0, 0, cw, ch);
+  ctx.clearRect(0, 0, ar.cv.width, ar.cv.height);
   drawTicks(ctx);
-  if (!lm) return;
-  const pts = mapPts(lm, v);
-  if (!pts) return;
-  const col = "#FECA83";
-  ctx.globalAlpha = 0.5; ctx.fillStyle = col;
-  for (const [x, y] of pts) ctx.fillRect(x - 0.8, y - 0.8, 1.6, 1.6);
-  ctx.globalAlpha = 0.95; ctx.shadowColor = col; ctx.shadowBlur = 6;
-  for (const i of AR_ANCHORS) {
-    const [x, y] = pts[i];
-    ctx.beginPath(); ctx.arc(x, y, 2.2, 0, Math.PI * 2); ctx.fill();
-  }
-  ctx.shadowBlur = 0; ctx.globalAlpha = 1;
 }
 
 // ---------------------------------------------------------- Face-ID-style capture
 // The user slowly turns the head right then left. Ticks around the ring light
 // up per covered yaw. The engine opportunistically keeps the SHARPEST frame
 // per side zone — no hold-still stops. Front is a quick 3-frame burst first.
-const TICKS = 36, YAW_MAX = 75;
+const TICKS = 72, YAW_MAX = 75;
 const SIDE_MIN = 40, SIDE_BEST = 56, SIDE_DONE = 48;
 const BURST_N = 3, BURST_GAP = 120;
 const fid = {};
 function fidReset() {
   fid.covered = new Array(TICKS).fill(false);
+  fid.anim = new Array(TICKS).fill(0);
   fid.front = null; fid.frontSince = 0; fid.lastYaw = 0;
   fid.zones = {
     left:  { best: null, done: false },   // user turns RIGHT (yaw +40..72)
@@ -291,7 +288,7 @@ fidReset();
 const tickYaw = i => YAW_MAX * Math.cos(i * (2 * Math.PI / TICKS));
 function markCovered(yaw) {
   for (let i = 0; i < TICKS; i++)
-    if (Math.abs(yaw - tickYaw(i)) <= 9) fid.covered[i] = true;
+    if (Math.abs(yaw - tickYaw(i)) <= 7) fid.covered[i] = true;
 }
 function centerCheck(lm, v) {
   if (!ar.cv || !ar.cv.width) return { ok: true, hint: "" };
@@ -369,7 +366,7 @@ function fidFrame(v, lm, res, blend, now) {
 
   if (!fid.front) {
     // step 1: quick frontal burst (needs neutral face, brief settle only)
-    el("scanH").textContent = "حط وشك جوّه الدايرة";
+    el("scanH").textContent = "ضع وجهك داخل الدائرة";
     setTurn(null);
     const expr = expressionIssue(blend);
     const moving = motionOf(lm) > STILL_THR * 2;
@@ -396,14 +393,13 @@ function fidFrame(v, lm, res, blend, now) {
         flash(); setDotsFid();
       }
     }
+    el("scanH").textContent = "حرّك رأسك ببطء لإكمال الدائرة";
     if (!L.done) {
-      el("scanH").textContent = "لِف راسك يمين ببطء";
       setTurn("➡️");
-      hint = c.ok ? "كمّل لحد ما الشُرط تخضرّ" : c.hint;
+      hint = c.ok ? "لِف ناحية اليمين…" : c.hint;
     } else if (!R2.done) {
-      el("scanH").textContent = "جميل! دلوقتي شمال ببطء";
       setTurn("⬅️");
-      hint = c.ok ? "كمّل لحد ما الشُرط تخضرّ" : c.hint;
+      hint = c.ok ? "ممتاز — دلوقتي ناحية الشمال…" : c.hint;
     }
     if (L.done && R2.done) { finishFid(); return; }
   }

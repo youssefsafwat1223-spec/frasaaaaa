@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Readex+Pro:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css?v=1">
+  <link rel="stylesheet" href="./style.css?v=2">
 </head>
 <body>
 <div class="phone">
@@ -58,20 +58,15 @@
       <div>دوّر الموبايل بشكل عمودي</div>
       <p>التصوير لازم يكون والموبايل واقف رأسي</p>
     </div>
+    <div class="circle-mask"></div>
     <canvas id="arCanvas"></canvas>
-    <div class="vignette"></div>
     <div class="flash" id="flash"></div>
     <div class="scan-top">
       <button class="xbtn" id="btnClose" aria-label="إغلاق">✕</button>
-      <div class="angle-dots">
-        <span class="adot">١</span>
-        <span class="adot">٢</span>
-        <span class="adot">٣</span>
-      </div>
     </div>
     <div class="scan-bottom">
-      <h3 class="scan-h" id="scanH">حط وشك جوّه الدايرة</h3>
-      <p class="scan-p" id="scanP">هنلف الراس ببطء يمين وشمال — من غير وقفات</p>
+      <h3 class="scan-h" id="scanH">ضع وجهك داخل الدائرة</h3>
+      <p class="scan-p" id="scanP">انظر مباشرة للكاميرا</p>
       <div class="turn-bubble" id="turnBubble">➡️</div>
       <button class="manual-link" id="btnManual">التقاط يدوي</button>
     </div>
@@ -122,9 +117,9 @@
   });
 })();
 </script>
-<script type="module" src="./face.js?v=1"></script>
-<script type="module" src="./segment.js?v=1"></script>
-<script src="./scoring.js?v=1"></script>
-<script type="module" src="./app.js?v=1"></script>
+<script type="module" src="./face.js?v=2"></script>
+<script type="module" src="./segment.js?v=2"></script>
+<script src="./scoring.js?v=2"></script>
+<script type="module" src="./app.js?v=2"></script>
 </body>
 </html>
