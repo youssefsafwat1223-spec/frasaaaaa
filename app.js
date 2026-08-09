@@ -286,6 +286,7 @@ function fidReset() {
   fid.anim = new Array(TICKS).fill(0);
   fid.front = null; fid.frontSince = 0; fid.lastYaw = 0;
   fid.faceSeen = false; fid.completing = false;
+  fid.prevYaw = null; fid.tooFast = false;
   fid.zones = {
     left:  { best: null, done: false },   // user turns RIGHT (yaw +40..72)
     right: { best: null, done: false },   // user turns LEFT  (yaw -40..-72)
@@ -293,9 +294,24 @@ function fidReset() {
 }
 fidReset();
 const tickYaw = i => YAW_MAX * Math.cos(i * (2 * Math.PI / TICKS));
+// Like iOS: coverage only registers while the head moves SLOWLY.
+// A fast turn lights nothing and triggers the "slow down" hint.
+const MAX_YAW_STEP = 2.4;   // deg per frame (~70°/s at 30fps)
 function markCovered(yaw) {
+  const step = fid.prevYaw == null ? 0 : Math.abs(yaw - fid.prevYaw);
+  fid.prevYaw = yaw;
+  fid.tooFast = step > MAX_YAW_STEP;
+  if (fid.tooFast) return;
   for (let i = 0; i < TICKS; i++)
     if (Math.abs(yaw - tickYaw(i)) <= 7) fid.covered[i] = true;
+}
+// a side is complete only when its WHOLE arc (28°..62°) has been swept slowly
+function arcCovered(sign) {
+  for (let i = 0; i < TICKS; i++) {
+    const ty = tickYaw(i) * sign;
+    if (ty >= 28 && ty <= 62 && !fid.covered[i]) return false;
+  }
+  return true;
 }
 function centerCheck(lm, v) {
   if (!ar.cv || !ar.cv.width) return { ok: true, hint: "" };
@@ -398,18 +414,15 @@ function fidFrame(v, lm, res, blend, now) {
       const score = (q.metrics.sharp ?? 0) * 100 - Math.abs(Math.abs(pose.yaw) - SIDE_BEST) * 0.4;
       if (!zone.best || score > zone.best.score + 0.3)
         zone.best = { canvas: snapshot(), score };
-      if (Math.abs(pose.yaw) >= SIDE_DONE && zone.best) {
-        zone.done = true;
-        flash(); setDotsFid();
-      }
     }
+    // completion = the whole arc swept slowly + a good side frame in hand
+    if (!L.done && L.best && arcCovered(1))   { L.done = true; flash(); }
+    if (L.done && !R2.done && R2.best && arcCovered(-1)) { R2.done = true; flash(); }
     el("scanH").textContent = "حرّك رأسك ببطء لإكمال الدائرة";
     if (!L.done) {
-      setTurn("➡️");
-      hint = c.ok ? "لِف ناحية اليمين…" : c.hint;
+      hint = fid.tooFast ? "بشويش… حرّك رأسك أبطأ" : c.ok ? "لِف ناحية اليمين…" : c.hint;
     } else if (!R2.done) {
-      setTurn("⬅️");
-      hint = c.ok ? "ممتاز — دلوقتي ناحية الشمال…" : c.hint;
+      hint = fid.tooFast ? "بشويش… حرّك رأسك أبطأ" : c.ok ? "ممتاز — دلوقتي ناحية الشمال…" : c.hint;
     }
     if (L.done && R2.done) {
       // iOS-style completion moment: whole ring settles green, then continue
