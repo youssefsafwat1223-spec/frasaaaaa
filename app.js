@@ -365,6 +365,11 @@ function setTurn(arrow) {
   b.classList.toggle("show", !!arrow);
   if (arrow) b.textContent = arrow;
 }
+// the animated head guideline under the circle: pg-front | pg-right | pg-left
+function setGuide(cls) {
+  const g = el("poseGuide");
+  if (g && !g.classList.contains(cls)) g.className = "pose-guide " + cls;
+}
 function finishFid() {
   stopCamera();
   state.fronts = fid.front;
@@ -393,6 +398,7 @@ function fidFrame(v, lm, res, blend, now) {
   if (!fid.front) {
     // step 1: quick frontal burst (needs neutral face, brief settle only)
     el("scanH").textContent = "ضع وجهك داخل الدائرة";
+    setGuide("pg-front");
     setTurn(null);
     const expr = expressionIssue(blend);
     const moving = motionOf(lm) > STILL_THR * 2;
@@ -420,8 +426,10 @@ function fidFrame(v, lm, res, blend, now) {
     if (L.done && !R2.done && R2.best && arcCovered(-1)) { R2.done = true; flash(); }
     el("scanH").textContent = "حرّك رأسك ببطء لإكمال الدائرة";
     if (!L.done) {
+      setGuide("pg-right");
       hint = fid.tooFast ? "بشويش… حرّك رأسك أبطأ" : c.ok ? "لِف ناحية اليمين…" : c.hint;
     } else if (!R2.done) {
+      setGuide("pg-left");
       hint = fid.tooFast ? "بشويش… حرّك رأسك أبطأ" : c.ok ? "ممتاز — دلوقتي ناحية الشمال…" : c.hint;
     }
     if (L.done && R2.done) {
@@ -430,6 +438,7 @@ function fidFrame(v, lm, res, blend, now) {
       fid.covered.fill(true);
       el("scanH").textContent = "اكتمل المسح ✓";
       el("scanP").textContent = "";
+      setGuide("pg-front");
       setTurn(null);
       setTimeout(finishFid, 900);
       drawAR(lm, v);

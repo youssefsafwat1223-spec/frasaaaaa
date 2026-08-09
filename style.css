@@ -108,6 +108,22 @@ button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
 .scan-h{color:#1C1C1E;font-size:1.35rem;font-weight:700;margin-bottom:8px}
 .scan-p{color:#6C6C70;font-size:.95rem;min-height:1.4em}
 .turn-bubble{display:none !important}
+/* animated head-pose guideline (front / turn-right / turn-left) */
+.pose-guide{position:relative;height:74px;display:flex;align-items:center;
+  justify-content:center;perspective:260px;color:#6C6C70;margin-bottom:6px}
+.pg-head{width:52px;height:52px;transition:transform .4s ease}
+.pg-arrow{position:absolute;top:-6px;left:50%;translate:-50% 0;width:78px;height:27px;
+  color:#34C759;opacity:0;transition:opacity .3s}
+.pose-guide.pg-right .pg-arrow{opacity:1}
+.pose-guide.pg-left  .pg-arrow{opacity:1;transform:scaleX(-1)}
+.pose-guide.pg-right .pg-head{animation:pgTurnR 1.8s ease-in-out infinite}
+.pose-guide.pg-left  .pg-head{animation:pgTurnL 1.8s ease-in-out infinite}
+@keyframes pgTurnR{0%,100%{transform:rotateY(0) translateX(0)}
+  45%,62%{transform:rotateY(-44deg) translateX(11px)}}
+@keyframes pgTurnL{0%,100%{transform:rotateY(0) translateX(0)}
+  45%,62%{transform:rotateY(44deg) translateX(-11px)}}
+@media (prefers-reduced-motion:reduce){
+  .pose-guide.pg-right .pg-head,.pose-guide.pg-left .pg-head{animation-duration:4s}}
 .manual-link{margin-top:16px;background:none;border:none;color:#8E8E93;
   font-size:.8rem;text-decoration:underline;cursor:pointer;font-family:'Tajawal',sans-serif}
 
