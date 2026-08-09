@@ -231,35 +231,41 @@ function mapPts(lm, v) {
   const ox = (cw - vw * s) / 2, oy = (ch - vh * s) / 2;
   return lm.map(p => [cw - (p.x * vw * s + ox), p.y * vh * s + oy]); // mirrored
 }
-// circle geometry — must match .circle-mask CSS (width:min(72vw,300px), top:44%)
+// circle geometry — must match .circle-mask CSS (width:min(78vw,330px), top:42%)
 function ringGeom() {
   const cw = ar.cv.width, ch = ar.cv.height;
-  return { cx: cw / 2, cy: ch * 0.44, R: Math.min(cw * 0.36, 150) };
+  return { cx: cw / 2, cy: ch * 0.42, R: Math.min(cw * 0.39, 165) };
 }
-// Apple-style tick ring: thin radial marks just outside the circle.
-// Covered ticks GROW and colour in with a springy lerp — like Face ID enroll.
+// ---- Face-ID exact tick ring ----
+// iOS enrollment behaviour: light-gray thin ticks; the fan of ticks in the
+// direction the head currently points ELONGATES live (before capture); once a
+// direction is registered its ticks settle LONG and iOS-GREEN and stay.
+const IOS_GREEN = "#34C759", TICK_GRAY = "#D1D1D6", TICK_POINT = "#8E8E93";
 function drawTicks(ctx) {
   const { cx, cy, R } = ringGeom();
+  const r0 = R + 6;
   for (let i = 0; i < TICKS; i++) {
+    // live "pointing" boost: gaussian falloff around the current head yaw
+    const dYaw = fid.lastYaw - tickYaw(i);
+    const point = fid.faceSeen ? Math.exp(-(dYaw * dYaw) / (2 * 8 * 8)) : 0;
+    // covered ticks spring to full length and stay
     const target = fid.covered[i] ? 1 : 0;
-    fid.anim[i] += (target - fid.anim[i]) * 0.18;          // spring-ish ease
+    fid.anim[i] += (target - fid.anim[i]) * 0.16;
     const t = fid.anim[i];
+    const grow = Math.max(t, point * 0.8);
+    const len = 10 + 16 * grow;                     // 10px → 26px
     const a = i * (2 * Math.PI / TICKS);
-    const len = 12 + 12 * t;                               // 12px → 24px when covered
-    const r0 = R + 8;
-    ctx.strokeStyle = t > 0.5 ? "#7FDCA4" : `rgba(255,255,255,${0.22 + 0.5 * t})`;
-    ctx.lineWidth = 2 + 1.2 * t;
+    ctx.strokeStyle = t > 0.5 ? IOS_GREEN
+                    : point > 0.25 ? TICK_POINT : TICK_GRAY;
+    ctx.lineWidth = 2 + 0.8 * grow;
     ctx.lineCap = "round";
-    ctx.shadowColor = "#7FDCA4";
-    ctx.shadowBlur = 8 * t;
     ctx.beginPath();
     ctx.moveTo(cx + r0 * Math.cos(a), cy + r0 * Math.sin(a));
     ctx.lineTo(cx + (r0 + len) * Math.cos(a), cy + (r0 + len) * Math.sin(a));
     ctx.stroke();
   }
-  ctx.shadowBlur = 0;
 }
-// Face-ID look: tick ring only — no mesh dots over the face.
+// Face-ID look: tick ring only — clean face, no overlays inside the circle.
 function drawAR(lm, v) {
   if (!ar.ctx) return;
   const ctx = ar.ctx;
@@ -279,6 +285,7 @@ function fidReset() {
   fid.covered = new Array(TICKS).fill(false);
   fid.anim = new Array(TICKS).fill(0);
   fid.front = null; fid.frontSince = 0; fid.lastYaw = 0;
+  fid.faceSeen = false; fid.completing = false;
   fid.zones = {
     left:  { best: null, done: false },   // user turns RIGHT (yaw +40..72)
     right: { best: null, done: false },   // user turns LEFT  (yaw -40..-72)
@@ -351,11 +358,14 @@ function finishFid() {
 }
 
 function fidFrame(v, lm, res, blend, now) {
+  if (fid.completing) { drawAR(lm, v); return; }
   if (!lm) {
+    fid.faceSeen = false;
     el("scanP").textContent = "لا يوجد وجه واضح…";
     drawAR(null, v);
     return;
   }
+  fid.faceSeen = true;
   const pose = window.Face.poseFromLandmarks(lm);
   const q = window.Face.frameQuality(v, lm);
   const sharpOk = (q.metrics.sharp ?? 0) >= 0.015;
@@ -401,7 +411,17 @@ function fidFrame(v, lm, res, blend, now) {
       setTurn("⬅️");
       hint = c.ok ? "ممتاز — دلوقتي ناحية الشمال…" : c.hint;
     }
-    if (L.done && R2.done) { finishFid(); return; }
+    if (L.done && R2.done) {
+      // iOS-style completion moment: whole ring settles green, then continue
+      fid.completing = true;
+      fid.covered.fill(true);
+      el("scanH").textContent = "اكتمل المسح ✓";
+      el("scanP").textContent = "";
+      setTurn(null);
+      setTimeout(finishFid, 900);
+      drawAR(lm, v);
+      return;
+    }
   }
   el("scanP").textContent = hint;
   drawAR(lm, v);

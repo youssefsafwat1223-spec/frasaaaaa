@@ -80,14 +80,13 @@ button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
 .chk .ic{font-size:1.25rem;flex:none}
 .check-actions{display:flex;flex-direction:column;gap:8px;padding-bottom:6px}
 
-/* ---------- ③ scanner (Face-ID style) ---------- */
-#s-scan{position:relative;background:var(--green);overflow:hidden;min-height:100dvh}
+/* ---------- ③ scanner — Face-ID exact: white ground, camera in a circle ---------- */
+#s-scan{position:relative;background:#FFFEFF;overflow:hidden;min-height:100dvh}
 #vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
 #arCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:10;pointer-events:none}
-/* Face-ID: camera visible ONLY inside a perfect circle; solid ground outside */
-.circle-mask{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%);
-  width:min(72vw,300px);aspect-ratio:1;border-radius:50%;z-index:5;pointer-events:none;
-  box-shadow:0 0 0 9999px var(--green)}
+.circle-mask{position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);
+  width:min(78vw,330px);aspect-ratio:1;border-radius:50%;z-index:5;pointer-events:none;
+  box-shadow:0 0 0 9999px #FFFEFF;border:1px solid rgba(0,0,0,.08)}
 .flash{position:absolute;inset:0;z-index:30;pointer-events:none;background:#fff;
   opacity:0;transition:opacity .25s ease}
 .flash.show{opacity:.75;transition:none}
@@ -99,28 +98,17 @@ button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
 .rotate-overlay p{font-size:.9rem;font-weight:500;color:var(--peach);margin:0}
 .ro-phone{font-size:3rem;animation:rockPhone 1.6s ease-in-out infinite}
 @keyframes rockPhone{0%,100%{transform:rotate(90deg)}50%{transform:rotate(0deg)}}
-.scan-top{position:relative;z-index:20;display:flex;justify-content:space-between;
+.scan-top{position:relative;z-index:20;display:flex;justify-content:flex-start;
   align-items:center;padding:48px 20px 0}
-.xbtn{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);
-  backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#fff;
-  font-size:1.1rem;cursor:pointer}
-.angle-dots{display:flex;gap:8px}
-.adot{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;
-  justify-content:center;font-size:.72rem;font-weight:700;color:#fff;
-  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)}
-.adot.cur{border-color:var(--gold);color:var(--gold)}
-.adot.done{background:rgba(127,220,164,.25);border-color:var(--ok);color:var(--ok)}
-.scan-bottom{position:absolute;z-index:20;bottom:0;left:0;right:0;
-  text-align:center;padding:0 24px calc(40px + env(safe-area-inset-bottom))}
-.scan-h{color:#fff;font-size:1.4rem;font-weight:700;margin-bottom:6px}
-.scan-p{color:var(--peach);opacity:.9;font-size:.88rem;min-height:1.4em}
-.turn-bubble{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.2);
-  backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.4);color:#fff;
-  font-size:1.6rem;display:none;align-items:center;justify-content:center;
-  margin:14px auto 0;animation:pulse 1.2s ease-in-out infinite}
-.turn-bubble.show{display:flex}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
-.manual-link{margin-top:12px;background:none;border:none;color:rgba(255,255,255,.7);
+.xbtn{width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,.05);
+  border:1px solid rgba(0,0,0,.08);color:#3A3A3C;font-size:1.1rem;cursor:pointer}
+/* instruction sits right under the circle, dark on white — like iOS */
+.scan-bottom{position:absolute;z-index:20;left:0;right:0;
+  top:calc(42% + min(39vw,165px) + 34px);text-align:center;padding:0 28px}
+.scan-h{color:#1C1C1E;font-size:1.35rem;font-weight:700;margin-bottom:8px}
+.scan-p{color:#6C6C70;font-size:.95rem;min-height:1.4em}
+.turn-bubble{display:none !important}
+.manual-link{margin-top:16px;background:none;border:none;color:#8E8E93;
   font-size:.8rem;text-decoration:underline;cursor:pointer;font-family:'Tajawal',sans-serif}
 
 /* ---------- ④ processing ---------- */
