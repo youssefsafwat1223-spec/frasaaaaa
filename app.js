@@ -288,8 +288,8 @@ function fidReset() {
   fid.faceSeen = false; fid.completing = false;
   fid.prevYaw = null; fid.tooFast = false;
   fid.zones = {
-    left:  { best: null, done: false },   // user turns RIGHT (yaw +40..72)
-    right: { best: null, done: false },   // user turns LEFT  (yaw -40..-72)
+    left:  { best: null, done: false, maxYaw: 0 },  // user turns RIGHT (+yaw)
+    right: { best: null, done: false, maxYaw: 0 },  // user turns LEFT  (-yaw)
   };
 }
 fidReset();
@@ -415,22 +415,35 @@ function fidFrame(v, lm, res, blend, now) {
     // step 2: slow turn right then left — best frame per zone, no stopping
     motionOf(lm);   // keep the motion tracker warm
     const L = fid.zones.left, R2 = fid.zones.right;
+    const absYaw = Math.abs(pose.yaw);
     const zone = pose.yaw >= SIDE_MIN ? L : pose.yaw <= -SIDE_MIN ? R2 : null;
-    if (zone && !zone.done && !capturing && sharpOk && c.ok) {
-      const score = (q.metrics.sharp ?? 0) * 100 - Math.abs(Math.abs(pose.yaw) - SIDE_BEST) * 0.4;
+    if (zone && !zone.done && !capturing && sharpOk) {
+      // FULL-profile hunting: strongly prefer the DEEPEST trackable angle
+      // (tracking usually survives to ~75-85° — near-full profile with the ear)
+      if (absYaw > zone.maxYaw) zone.maxYaw = absYaw;
+      const score = absYaw * 1.2 + (q.metrics.sharp ?? 0) * 40;
       if (!zone.best || score > zone.best.score + 0.3)
-        zone.best = { canvas: snapshot(), score };
+        zone.best = { canvas: snapshot(), score, yaw: absYaw };
     }
-    // completion = the whole arc swept slowly + a good side frame in hand
-    if (!L.done && L.best && arcCovered(1))   { L.done = true; flash(); }
-    if (L.done && !R2.done && R2.best && arcCovered(-1)) { R2.done = true; flash(); }
+    // a side finalises when: arc swept slowly + user reached their deepest turn
+    // (started coming back, or hit ~80°) — so the saved frame is the deepest one
+    const deepDone = z => z.best && (z.maxYaw >= 80 || (z.maxYaw >= SIDE_DONE && absYaw < z.maxYaw - 6));
+    if (!L.done && arcCovered(1) && deepDone(L))            { L.done = true; flash(); }
+    if (L.done && !R2.done && arcCovered(-1) && deepDone(R2)) { R2.done = true; flash(); }
     el("scanH").textContent = "حرّك رأسك ببطء لإكمال الدائرة";
+    const centerHint = (!c.ok && absYaw < SIDE_MIN) ? c.hint : null;
     if (!L.done) {
       setGuide("pg-right");
-      hint = fid.tooFast ? "بشويش… حرّك رأسك أبطأ" : c.ok ? "لِف ناحية اليمين…" : c.hint;
+      hint = fid.tooFast ? "بشويش… حرّك رأسك أبطأ"
+           : centerHint ? centerHint
+           : (arcCovered(1) && L.maxYaw >= SIDE_DONE) ? "كمّل لِف لآخر ما تقدر… 👌"
+           : "لِف ناحية اليمين…";
     } else if (!R2.done) {
       setGuide("pg-left");
-      hint = fid.tooFast ? "بشويش… حرّك رأسك أبطأ" : c.ok ? "ممتاز — دلوقتي ناحية الشمال…" : c.hint;
+      hint = fid.tooFast ? "بشويش… حرّك رأسك أبطأ"
+           : centerHint ? centerHint
+           : (arcCovered(-1) && R2.maxYaw >= SIDE_DONE) ? "كمّل لِف لآخر ما تقدر… 👌"
+           : "ممتاز — دلوقتي ناحية الشمال…";
     }
     if (L.done && R2.done) {
       // iOS-style completion moment: whole ring settles green, then continue
