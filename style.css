@@ -185,6 +185,15 @@ button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
 .rest-wrap>summary::-webkit-details-marker{display:none}
 .rest-wrap[open]>summary{margin-bottom:12px}
 .rest-wrap .tcard-x{margin-bottom:12px}
+/* the 3-shot preview (right / front / left) */
+.shots-card{padding:14px 16px;border-radius:26px}
+.shots-title{font-size:.78rem;font-weight:800;color:var(--green);opacity:.75;margin-bottom:8px}
+.shots-row{display:flex;gap:8px}
+.shot{flex:1;margin:0;min-width:0}
+.shot img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;display:block;
+  border:2px solid rgba(255,255,255,.7)}
+.shot figcaption{text-align:center;font-size:.7rem;opacity:.65;margin-top:4px}
+
 .mini-stats{display:flex;gap:8px;margin:18px 0}
 .mini{flex:1;padding:12px 8px;text-align:center;border-radius:22px}
 .mini b{display:block;font-size:1.3rem;font-family:'Readex Pro',sans-serif}

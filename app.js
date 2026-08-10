@@ -5,7 +5,7 @@
 //   ▸ AI processing ▸ results
 // No voice. No hold-still stops — capture happens during motion.
 // ============================================================
-import { FilesetResolver, FaceLandmarker }
+import { FilesetResolver, FaceLandmarker, FaceDetector }
   from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14";
 
 const VISION_WASM =
@@ -13,6 +13,10 @@ const VISION_WASM =
 const MODEL_CANDIDATES = [
   "./models/face_landmarker.task",
   "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+];
+const DET_CANDIDATES = [
+  "./models/blaze_face_short_range.tflite",
+  "https://storage.googleapis.com/mediapipe-models/face_detector/blaze_face_short_range/float16/1/blaze_face_short_range.tflite",
 ];
 
 const el = id => document.getElementById(id);
@@ -174,6 +178,23 @@ let lastTs = -1, capturing = false;
 const pre = { hair: null, hairBusy: false, hairLast: 0 };
 let _hairCv = null;
 
+// optional extreme-profile detector: BlazeFace still SEES the face at ~85-90°
+// after the landmark mesh has dropped — used to save a full-profile DISPLAY shot
+let faceDet = null;
+async function initFaceDetector() {
+  if (faceDet) return;
+  const vision = await FilesetResolver.forVisionTasks(VISION_WASM);
+  for (const path of DET_CANDIDATES) {
+    try {
+      faceDet = await FaceDetector.createFromOptions(vision, {
+        baseOptions: { modelAssetPath: path },
+        runningMode: "VIDEO", minDetectionConfidence: 0.3,
+      });
+      return;
+    } catch (_) { /* try next */ }
+  }
+}
+
 async function initVideoLandmarker() {
   if (vidLm) return;
   const vision = await FilesetResolver.forVisionTasks(VISION_WASM);
@@ -288,9 +309,9 @@ function fidReset() {
   fid.faceSeen = false; fid.completing = false;
   fid.prevYaw = null; fid.tooFast = false;
   fid.zones = {
-    left:  { best: null, done: false, maxYaw: 0 },  // user turns RIGHT (+yaw)
-    right: { best: null, done: false, maxYaw: 0 },  // user turns LEFT  (-yaw)
-  };
+    left:  { best: null, done: false, maxYaw: 0, display: null, dispYaw: 0, lastDetSnap: 0 },
+    right: { best: null, done: false, maxYaw: 0, display: null, dispYaw: 0, lastDetSnap: 0 },
+  };  // left = user turns RIGHT (+yaw) · right = user turns LEFT (-yaw)
 }
 fidReset();
 const tickYaw = i => YAW_MAX * Math.cos(i * (2 * Math.PI / TICKS));
@@ -375,6 +396,12 @@ function finishFid() {
   state.fronts = fid.front;
   state.left = fid.zones.left.best.canvas;
   state.right = fid.zones.right.best.canvas;
+  // the 3-shot preview (deepest display frames when available)
+  state.shots = {
+    front: fid.front[0],
+    right: (fid.zones.left.display || fid.zones.left.best).canvas,
+    left:  (fid.zones.right.display || fid.zones.right.best).canvas,
+  };
   runAnalysis();
 }
 
@@ -382,7 +409,24 @@ function fidFrame(v, lm, res, blend, now) {
   if (fid.completing) { drawAR(lm, v); return; }
   if (!lm) {
     fid.faceSeen = false;
-    el("scanP").textContent = "لا يوجد وجه واضح…";
+    // mesh lost at a deep turn? the detector can still see the face — keep the
+    // deepest FULL-PROFILE display shot (no landmarks → for display only)
+    let extreme = false;
+    if (fid.front && faceDet && Math.abs(fid.lastYaw) >= 50) {
+      let det = null;
+      try { det = faceDet.detectForVideo(v, now); } catch (_) {}
+      if (det && det.detections && det.detections.length) {
+        extreme = true;
+        const zone = fid.lastYaw > 0 ? fid.zones.left : fid.zones.right;
+        if (!zone.done && now - zone.lastDetSnap > 160 && !capturing) {
+          zone.lastDetSnap = now;
+          zone.dispYaw = 90;
+          zone.display = { canvas: snapshot() };
+        }
+        el("scanP").textContent = "ممتاز — ده أعمق بروفايل 👌 ارجع بشويش";
+      }
+    }
+    if (!extreme) el("scanP").textContent = "لا يوجد وجه واضح…";
     drawAR(null, v);
     return;
   }
@@ -422,8 +466,15 @@ function fidFrame(v, lm, res, blend, now) {
       // (tracking usually survives to ~75-85° — near-full profile with the ear)
       if (absYaw > zone.maxYaw) zone.maxYaw = absYaw;
       const score = absYaw * 1.2 + (q.metrics.sharp ?? 0) * 40;
-      if (!zone.best || score > zone.best.score + 0.3)
-        zone.best = { canvas: snapshot(), score, yaw: absYaw };
+      let snap = null;
+      if (!zone.best || score > zone.best.score + 0.3) {
+        snap = snapshot();
+        zone.best = { canvas: snap, score, yaw: absYaw };
+      }
+      if (absYaw >= zone.dispYaw) {           // deepest shot kept for display
+        zone.dispYaw = absYaw;
+        zone.display = { canvas: snap || snapshot() };
+      }
     }
     // a side finalises when: arc swept slowly + user reached their deepest turn
     // (started coming back, or hit ~80°) — so the saved frame is the deepest one
@@ -519,7 +570,8 @@ async function startCheck() {
       });
     }
     el("vidCheck").srcObject = stream; await el("vidCheck").play();
-    await Promise.all([window.Face.init(), initVideoLandmarker()]);
+    await Promise.all([window.Face.init(), initVideoLandmarker(),
+                       initFaceDetector().catch(() => {})]);
     running = true; lastTs = -1;
     requestAnimationFrame(loop);
   } catch (e) {
@@ -696,8 +748,21 @@ function renderResults() {
     </details>`;
   }
 
+  // the 3-shot preview: profile · front · profile — like the reference render
+  const shotsCard = state.shots ? `<div class="glass shots-card">
+    <div class="shots-title">لقطاتك الثلاث</div>
+    <div class="shots-row">
+      <figure class="shot"><img src="${state.shots.right.toDataURL("image/jpeg", 0.72)}" alt="">
+        <figcaption>يمين</figcaption></figure>
+      <figure class="shot"><img src="${state.shots.front.toDataURL("image/jpeg", 0.72)}" alt="">
+        <figcaption>أمامية</figcaption></figure>
+      <figure class="shot"><img src="${state.shots.left.toDataURL("image/jpeg", 0.72)}" alt="">
+        <figcaption>شمال</figcaption></figure>
+    </div></div>` : "";
+
   el("doneP").textContent = "الـ15 صفة الأساسية اللي بنركّز عليها — افتح أي صفة تشوف ليه طلعت كده:";
   el("tcards").innerHTML =
+    shotsCard +
     frameCard +
     focus.map((r, i) => traitCard(r, i, i === 0)).join("") +
     (rest.length ? `<details class="rest-wrap"><summary>باقي الصفات (${rest.length}) — تجريبية، دقتها أقل</summary>
