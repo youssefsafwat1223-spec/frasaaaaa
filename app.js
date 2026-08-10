@@ -620,9 +620,21 @@ const CNN_CLASSES = ["heart", "oblong", "oval", "round", "square"];
 let cnnSession = null;
 async function classifyFrameCNN(canvas) {
   if (!canvas || typeof ort === "undefined") return null;
-  if (!cnnSession)
-    cnnSession = await ort.InferenceSession.create("./models/face_shape_fp16.onnx",
-      { executionProviders: ["wasm"] });
+  if (!cnnSession) {
+    // the 35MB fp16 model ships as 5 chunks (kept small so slow links can
+    // upload/download them) — fetch all, stitch, create the session in-memory
+    const PARTS = 5;
+    const bufs = await Promise.all(Array.from({ length: PARTS }, (_, i) =>
+      fetch(`./models/face_shape_fp16.onnx.part${i}`).then(r => {
+        if (!r.ok) throw new Error("part " + i);
+        return r.arrayBuffer();
+      })));
+    const total = bufs.reduce((a, b) => a + b.byteLength, 0);
+    const u8 = new Uint8Array(total);
+    let off = 0;
+    for (const b of bufs) { u8.set(new Uint8Array(b), off); off += b.byteLength; }
+    cnnSession = await ort.InferenceSession.create(u8, { executionProviders: ["wasm"] });
+  }
   const s = Math.min(canvas.width, canvas.height);
   const sx = (canvas.width - s) / 2, sy = (canvas.height - s) / 2;
   const cv = document.createElement("canvas");
