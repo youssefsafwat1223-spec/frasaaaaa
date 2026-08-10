@@ -497,6 +497,7 @@ async function analyzeMultiAngle({ front, left, right }) {
     const f = await analyzeImageElement(front, { segHairline: !!window.Segment });
     if (f) {
       out.metrics = { ...f.metrics };
+      out.frontCrop = f.canvas;          // face crop (with hair) — for the CNN
       out.angles.front = f.pose;
       if (f.eyeColor) out.pixel.eye_color = f.eyeColor;
       if (f.sclera)   out.pixel.sclera = f.sclera;

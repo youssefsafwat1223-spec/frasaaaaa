@@ -1,394 +1,394 @@
 {
-  "face_aspect_ratio": {
-    "js_metric": "face_aspect_ratio",
-    "threshold_metric": "face_aspect_ratio",
-    "phase2_uses": false,
-    "status": "available",
-    "note": ""
-  },
-  "jaw_width_ratio": {
-    "js_metric": "jaw_width_ratio",
-    "threshold_metric": "jaw_width_ratio",
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "brow_eye_distance_ratio": {
-    "js_metric": "brow_eye_distance_ratio",
-    "threshold_metric": "brow_eye_distance_ratio",
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "mouth_height_ratio": {
-    "js_metric": "mouth_height_ratio",
-    "threshold_metric": "mouth_height_ratio",
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "upper_lip_ratio": {
-    "js_metric": "upper_lip_ratio",
-    "threshold_metric": "upper_lip_ratio",
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "lower_lip_ratio": {
-    "js_metric": "lower_lip_ratio",
-    "threshold_metric": "lower_lip_ratio",
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "mouth_width_ratio": {
-    "js_metric": "mouth_width_ratio",
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "available",
-    "note": ""
-  },
-  "eye_open_ratio": {
-    "js_metric": "eye_open_ratio",
-    "threshold_metric": "eye_open_ratio",
-    "phase2_uses": false,
-    "status": "available",
-    "note": ""
-  },
-  "eye_spacing_ratio": {
-    "js_metric": "eye_spacing_ratio",
-    "threshold_metric": "eye_spacing_ratio",
-    "phase2_uses": false,
-    "status": "available",
-    "note": ""
-  },
-  "eye_tilt_ratio": {
-    "js_metric": "eye_tilt_ratio",
-    "threshold_metric": "eye_tilt_ratio",
-    "phase2_uses": false,
-    "status": "available",
-    "note": ""
-  },
-  "chin_projection_ratio": {
-    "js_metric": "chin_sagittal_projection",
-    "threshold_metric": "chin_projection_ratio",
-    "phase2_uses": true,
-    "status": "available",
-    "note": "from profile capture (frontal x-offset measured asymmetry noise, not projection)"
-  },
-  "nose_length_ratio": {
-    "js_metric": "nose_length_ratio",
-    "threshold_metric": "nose_length_ratio",
-    "phase2_uses": false,
-    "status": "available",
-    "note": ""
-  },
-  "nose_tip_drop_ratio": {
-    "js_metric": "nose_tip_drop_ratio",
-    "threshold_metric": "nose_tip_drop_ratio",
-    "phase2_uses": false,
-    "status": "available",
-    "note": ""
-  },
-  "brow_inner_distance": {
-    "js_metric": "brow_inner_distance",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "brow_arch": {
-    "js_metric": "brow_arch",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "chin_width_ratio": {
-    "js_metric": "chin_width_ratio",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "jaw_angle_sharpness": {
-    "js_metric": "jaw_angle_sharpness",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "nostril_width_ratio": {
-    "js_metric": "nostril_width_ratio",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "nose_width_ratio": {
-    "js_metric": "nose_width_ratio",
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "available",
-    "note": ""
-  },
-  "lower_lip_protrusion": {
-    "js_metric": "lower_lip_protrusion",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "mouth_corner_tilt": {
-    "js_metric": "mouth_corner_tilt",
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "available",
-    "note": ""
-  },
-  "forehead_lines": {
-    "js_metric": "forehead_lines_density",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": "PROXY/approximation"
-  },
-  "forehead_smoothness": {
-    "js_metric": "forehead_smoothness",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "brow_density": {
-    "js_metric": "brow_density",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "cheek_fullness": {
-    "js_metric": "cheek_fullness",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": ""
-  },
-  "forehead_width_ratio": {
-    "js_metric": "forehead_width_ratio",
-    "threshold_metric": "forehead_top_width",
-    "phase2_uses": true,
-    "status": "available",
-    "note": "scale-free ratio (was raw pixels — did not transfer across cameras)"
-  },
-  "forehead_shape": {
-    "js_metric": "forehead_slant_ratio",
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "available",
-    "note": "PROXY/approximation"
-  },
-  "brow_tilt": {
-    "js_metric": "eye_tilt_ratio",
-    "threshold_metric": "eye_tilt_ratio",
-    "phase2_uses": true,
-    "status": "available",
-    "note": "PROXY/approximation"
-  },
-  "eye_warmth_proxy": {
-    "js_metric": "eye_open_ratio",
-    "threshold_metric": "eye_open_ratio",
-    "phase2_uses": true,
-    "status": "available",
-    "note": "PROXY/approximation"
-  },
-  "eye_roundness": {
-    "js_metric": "eye_open_ratio",
-    "threshold_metric": "eye_open_ratio",
-    "phase2_uses": false,
-    "status": "available",
-    "note": "PROXY/approximation"
-  },
-  "mouth_open_ratio": {
-    "js_metric": "mouth_height_ratio",
-    "threshold_metric": "mouth_height_ratio",
-    "phase2_uses": true,
-    "status": "available",
-    "note": "PROXY/approximation"
-  },
-  "face_squareness": {
-    "js_metric": "face_aspect_ratio",
-    "threshold_metric": "face_aspect_ratio",
-    "phase2_uses": false,
-    "status": "available",
-    "note": "PROXY/approximation"
-  },
-  "mouth_stability": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "dropped",
-    "note": "requires video to observe over time"
-  },
-  "chin_stability": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "dropped",
-    "note": "requires video to observe over time"
-  },
-  "feature_rigidity": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "dropped",
-    "note": "composite — derive from constituent signals if needed"
-  },
-  "mouth_tension_ratio": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "dropped",
-    "note": "pixel-level muscle tension not reliable from photo"
-  },
-  "lower_lip_tension": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "dropped",
-    "note": "too subtle for static photo"
-  },
-  "upper_lip_tension": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "too subtle for static photo"
-  },
-  "forehead_tension": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "dropped",
-    "note": "rolled into forehead_lines_density (use that instead)"
-  },
-  "face_muscle_tension": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": true,
-    "status": "dropped",
-    "note": "composite — use forehead_lines_density + brow_density"
-  },
-  "lip_flexibility": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "requires video"
-  },
-  "eye_depth": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "requires 3D / depth — not reliable from 2D"
-  },
-  "lash_density": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "not feasible from landmarks"
-  },
-  "upper_lid_coverage": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "needs precise lid landmarks beyond MediaPipe defaults"
-  },
-  "nose_bridge_height": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "requires profile view"
-  },
-  "nose_bridge_straightness": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "requires profile view"
-  },
-  "nose_tip_sharpness": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "requires profile view"
-  },
-  "nose_tip_size": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "requires precise tip landmarks"
-  },
-  "cheekbone_prominence": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "requires 3D"
-  },
-  "cheekbone_height": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "requires 3D"
-  },
-  "feature_softness": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "composite — currently use proxy via edges"
-  },
-  "chin_roundness": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "requires fine chin contour landmarks"
-  },
-  "chin_dimple": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "pixel detection unreliable"
-  },
-  "brow_definition": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "edge analysis too noisy"
-  },
-  "brow_symmetry": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "composite — derive if needed"
-  },
-  "brow_tension": {
-    "js_metric": null,
-    "threshold_metric": null,
-    "phase2_uses": false,
-    "status": "dropped",
-    "note": "pixel detection unreliable"
-  }
+ "face_aspect_ratio": {
+  "js_metric": "face_aspect_ratio",
+  "threshold_metric": "face_aspect_ratio",
+  "phase2_uses": false,
+  "status": "available",
+  "note": ""
+ },
+ "jaw_width_ratio": {
+  "js_metric": "jaw_width_ratio",
+  "threshold_metric": "jaw_width_ratio",
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "brow_eye_distance_ratio": {
+  "js_metric": "brow_eye_distance_ratio",
+  "threshold_metric": "brow_eye_distance_ratio",
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "mouth_height_ratio": {
+  "js_metric": "mouth_height_ratio",
+  "threshold_metric": "mouth_height_ratio",
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "upper_lip_ratio": {
+  "js_metric": "upper_lip_ratio",
+  "threshold_metric": "upper_lip_ratio",
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "lower_lip_ratio": {
+  "js_metric": "lower_lip_ratio",
+  "threshold_metric": "lower_lip_ratio",
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "mouth_width_ratio": {
+  "js_metric": "mouth_width_ratio",
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "available",
+  "note": ""
+ },
+ "eye_open_ratio": {
+  "js_metric": "eye_open_ratio",
+  "threshold_metric": "eye_open_ratio",
+  "phase2_uses": false,
+  "status": "available",
+  "note": ""
+ },
+ "eye_spacing_ratio": {
+  "js_metric": "eye_spacing_ratio",
+  "threshold_metric": "eye_spacing_ratio",
+  "phase2_uses": false,
+  "status": "available",
+  "note": ""
+ },
+ "eye_tilt_ratio": {
+  "js_metric": "eye_tilt_ratio",
+  "threshold_metric": "eye_tilt_ratio",
+  "phase2_uses": false,
+  "status": "available",
+  "note": ""
+ },
+ "chin_projection_ratio": {
+  "js_metric": "chin_sagittal_projection",
+  "threshold_metric": "chin_projection_ratio",
+  "phase2_uses": true,
+  "status": "available",
+  "note": "from profile capture (frontal x-offset measured asymmetry noise, not projection)"
+ },
+ "nose_length_ratio": {
+  "js_metric": "nose_length_ratio",
+  "threshold_metric": "nose_length_ratio",
+  "phase2_uses": false,
+  "status": "available",
+  "note": ""
+ },
+ "nose_tip_drop_ratio": {
+  "js_metric": "nose_tip_drop_ratio",
+  "threshold_metric": "nose_tip_drop_ratio",
+  "phase2_uses": false,
+  "status": "available",
+  "note": ""
+ },
+ "brow_inner_distance": {
+  "js_metric": "brow_inner_distance",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "brow_arch": {
+  "js_metric": "brow_arch",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "chin_width_ratio": {
+  "js_metric": "chin_width_ratio",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "jaw_angle_sharpness": {
+  "js_metric": "jaw_angle_sharpness",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "nostril_width_ratio": {
+  "js_metric": "nostril_width_ratio",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "nose_width_ratio": {
+  "js_metric": "nose_width_ratio",
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "available",
+  "note": ""
+ },
+ "lower_lip_protrusion": {
+  "js_metric": "lower_lip_protrusion",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "mouth_corner_tilt": {
+  "js_metric": "mouth_corner_tilt",
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "available",
+  "note": ""
+ },
+ "forehead_lines": {
+  "js_metric": "forehead_lines_density",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": "PROXY/approximation"
+ },
+ "forehead_smoothness": {
+  "js_metric": "forehead_smoothness",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "brow_density": {
+  "js_metric": "brow_density",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "cheek_fullness": {
+  "js_metric": "cheek_fullness",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": ""
+ },
+ "forehead_width_ratio": {
+  "js_metric": "forehead_width_ratio",
+  "threshold_metric": "forehead_top_width",
+  "phase2_uses": true,
+  "status": "available",
+  "note": "scale-free ratio (was raw pixels — did not transfer across cameras)"
+ },
+ "forehead_shape": {
+  "js_metric": "forehead_slant_ratio",
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "available",
+  "note": "PROXY/approximation"
+ },
+ "brow_tilt": {
+  "js_metric": "eye_tilt_ratio",
+  "threshold_metric": "eye_tilt_ratio",
+  "phase2_uses": true,
+  "status": "available",
+  "note": "PROXY/approximation"
+ },
+ "eye_warmth_proxy": {
+  "js_metric": "eye_open_ratio",
+  "threshold_metric": "eye_open_ratio",
+  "phase2_uses": true,
+  "status": "available",
+  "note": "PROXY/approximation"
+ },
+ "eye_roundness": {
+  "js_metric": "eye_open_ratio",
+  "threshold_metric": "eye_open_ratio",
+  "phase2_uses": false,
+  "status": "available",
+  "note": "PROXY/approximation"
+ },
+ "mouth_open_ratio": {
+  "js_metric": "mouth_height_ratio",
+  "threshold_metric": "mouth_height_ratio",
+  "phase2_uses": true,
+  "status": "available",
+  "note": "PROXY/approximation"
+ },
+ "face_squareness": {
+  "js_metric": "frame_square_score",
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "available",
+  "note": "CNN face-frame probability (was face_aspect_ratio proxy)"
+ },
+ "mouth_stability": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "dropped",
+  "note": "requires video to observe over time"
+ },
+ "chin_stability": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "dropped",
+  "note": "requires video to observe over time"
+ },
+ "feature_rigidity": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "dropped",
+  "note": "composite — derive from constituent signals if needed"
+ },
+ "mouth_tension_ratio": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "dropped",
+  "note": "pixel-level muscle tension not reliable from photo"
+ },
+ "lower_lip_tension": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "dropped",
+  "note": "too subtle for static photo"
+ },
+ "upper_lip_tension": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "too subtle for static photo"
+ },
+ "forehead_tension": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "dropped",
+  "note": "rolled into forehead_lines_density (use that instead)"
+ },
+ "face_muscle_tension": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": true,
+  "status": "dropped",
+  "note": "composite — use forehead_lines_density + brow_density"
+ },
+ "lip_flexibility": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "requires video"
+ },
+ "eye_depth": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "requires 3D / depth — not reliable from 2D"
+ },
+ "lash_density": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "not feasible from landmarks"
+ },
+ "upper_lid_coverage": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "needs precise lid landmarks beyond MediaPipe defaults"
+ },
+ "nose_bridge_height": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "requires profile view"
+ },
+ "nose_bridge_straightness": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "requires profile view"
+ },
+ "nose_tip_sharpness": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "requires profile view"
+ },
+ "nose_tip_size": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "requires precise tip landmarks"
+ },
+ "cheekbone_prominence": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "requires 3D"
+ },
+ "cheekbone_height": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "requires 3D"
+ },
+ "feature_softness": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "composite — currently use proxy via edges"
+ },
+ "chin_roundness": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "requires fine chin contour landmarks"
+ },
+ "chin_dimple": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "pixel detection unreliable"
+ },
+ "brow_definition": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "edge analysis too noisy"
+ },
+ "brow_symmetry": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "composite — derive if needed"
+ },
+ "brow_tension": {
+  "js_metric": null,
+  "threshold_metric": null,
+  "phase2_uses": false,
+  "status": "dropped",
+  "note": "pixel detection unreliable"
+ }
 }

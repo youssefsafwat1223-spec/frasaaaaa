@@ -613,6 +613,40 @@ el("btnManual").addEventListener("click", () => {
   }
 });
 
+// ---------------------------------------------------------- face-shape CNN
+// EfficientNet (fp16 onnx, 35MB, ref. accuracy 85%) via onnxruntime-web.
+// Output probabilities drive the frame card AND feed traits (frame_*_score).
+const CNN_CLASSES = ["heart", "oblong", "oval", "round", "square"];
+let cnnSession = null;
+async function classifyFrameCNN(canvas) {
+  if (!canvas || typeof ort === "undefined") return null;
+  if (!cnnSession)
+    cnnSession = await ort.InferenceSession.create("./models/face_shape_fp16.onnx",
+      { executionProviders: ["wasm"] });
+  const s = Math.min(canvas.width, canvas.height);
+  const sx = (canvas.width - s) / 2, sy = (canvas.height - s) / 2;
+  const cv = document.createElement("canvas");
+  cv.width = 224; cv.height = 224;
+  const cctx = cv.getContext("2d");
+  cctx.drawImage(canvas, sx, sy, s, s, 0, 0, 224, 224);
+  const d = cctx.getImageData(0, 0, 224, 224).data;
+  const MEAN = [0.485, 0.456, 0.406], STD = [0.229, 0.224, 0.225];
+  const x = new Float32Array(3 * 224 * 224);
+  for (let i = 0; i < 224 * 224; i++) {
+    x[i]                 = (d[i*4]   / 255 - MEAN[0]) / STD[0];
+    x[224*224 + i]       = (d[i*4+1] / 255 - MEAN[1]) / STD[1];
+    x[2*224*224 + i]     = (d[i*4+2] / 255 - MEAN[2]) / STD[2];
+  }
+  const out = await cnnSession.run({ input: new ort.Tensor("float32", x, [1, 3, 224, 224]) });
+  const logits = Array.from(out.logits.data);
+  const m = Math.max(...logits);
+  const exps = logits.map(v => Math.exp(v - m));
+  const sum = exps.reduce((a, b) => a + b, 0);
+  const probs = {};
+  CNN_CLASSES.forEach((c, i) => probs[c] = exps[i] / sum);
+  return probs;
+}
+
 // ---------------------------------------------------------- analysis
 function median(arr) {
   const v = arr.slice().sort((a, b) => a - b), n = v.length;
@@ -639,6 +673,13 @@ async function runAnalysis() {
       if (vals.length) flat[k] = median(vals);
       else if (flats[0][k] != null) flat[k] = flats[0][k];
     }
+    // face-shape CNN → frame probabilities (frame card + trait features)
+    state.frameCNN = null;
+    try {
+      state.frameCNN = await classifyFrameCNN(runs[0].frontCrop || state.fronts[0]);
+      if (state.frameCNN)
+        for (const c of CNN_CLASSES) flat[`frame_${c}_score`] = state.frameCNN[c];
+    } catch (_) { /* CNN optional — geometric fallback below */ }
     state.flat = flat; state.rich = runs[0]; state.usedFrames = runs.length;
     state.z = Scoring.zScoreMetrics(flat, state.gender);
     bar.style.width = "100%";
@@ -722,7 +763,15 @@ function renderResults() {
   const rest = Object.values(all).filter(r => !FOCUS_15.includes(r.tid))
                      .sort((x, y) => y.conf - x.conf);
 
-  const fr = Scoring.classifyFaceFrame(state.z);
+  let fr = null;
+  if (state.frameCNN) {
+    const scored = CNN_CLASSES
+      .map(c => ({ frame: c, closeness: Math.round(state.frameCNN[c] * 100) }))
+      .sort((a, b) => b.closeness - a.closeness);
+    const margin = (scored[0].closeness - scored[1].closeness) / 100;
+    fr = { primary: scored[0].frame, secondary: margin < 0.15 ? scored[1].frame : null,
+           decisive: margin >= 0.15, scored, cnn: true };
+  } else fr = Scoring.classifyFaceFrame(state.z);
   let frameCard = "";
   if (fr) {
     const p = FRAME_AR[fr.primary] || { name: fr.primary, em: "✨", meaning: "" };
@@ -743,7 +792,7 @@ function renderResults() {
       <div class="why">
         <div class="why-head">أقرب الإطارات لقياساتك</div>
         ${bars}
-        <div class="why-note">تصنيف تجريبي متعلّم من 1,265 وجه مرجعي — بيتحسّن مع الداتا. ${s ? "وجهك بين إطارين فذكرناهما معًا بأمانة." : ""}</div>
+        <div class="why-note">${fr.cnn ? "تصنيف بشبكة عصبية (دقة مرجعية 85%)" : "تصنيف هندسي تجريبي (1,265 وجه)"} — ${s ? "وجهك بين إطارين فذكرناهما معًا بأمانة." : "بيتحسّن مع الداتا."}</div>
       </div>
     </details>`;
   }

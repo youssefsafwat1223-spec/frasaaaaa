@@ -227,6 +227,36 @@
    "std": 12.0,
    "n": 0,
    "source": "provisional"
+  },
+  "frame_heart_score": {
+   "mean": 0.2,
+   "std": 0.25,
+   "n": 0,
+   "source": "cnn_prior"
+  },
+  "frame_oblong_score": {
+   "mean": 0.2,
+   "std": 0.25,
+   "n": 0,
+   "source": "cnn_prior"
+  },
+  "frame_oval_score": {
+   "mean": 0.2,
+   "std": 0.25,
+   "n": 0,
+   "source": "cnn_prior"
+  },
+  "frame_round_score": {
+   "mean": 0.2,
+   "std": 0.25,
+   "n": 0,
+   "source": "cnn_prior"
+  },
+  "frame_square_score": {
+   "mean": 0.2,
+   "std": 0.25,
+   "n": 0,
+   "source": "cnn_prior"
   }
  },
  "male": {
