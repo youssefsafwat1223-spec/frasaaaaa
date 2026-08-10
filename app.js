@@ -20,6 +20,20 @@ const DET_CANDIDATES = [
 ];
 
 const el = id => document.getElementById(id);
+const DEBUG = new URLSearchParams(location.search).has("debug");
+function dbgShow(txt) {
+  if (!DEBUG) return;
+  let d = document.getElementById("dbgYaw");
+  if (!d) {
+    d = document.createElement("div");
+    d.id = "dbgYaw";
+    d.style.cssText = "position:fixed;top:8px;left:50%;transform:translateX(-50%);" +
+      "z-index:999;background:rgba(0,0,0,.8);color:#0f0;font:bold 15px monospace;" +
+      "padding:6px 14px;border-radius:10px;direction:ltr;white-space:pre";
+    document.body.appendChild(d);
+  }
+  d.textContent = txt;
+}
 function show(id) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   el(id).classList.add("active");
@@ -432,6 +446,7 @@ function fidFrame(v, lm, res, blend, now) {
   }
   fid.faceSeen = true;
   const pose = window.Face.poseFromLandmarks(lm);
+  dbgShow(`yaw=${pose.yaw > 0 ? "+" : ""}${pose.yaw}  zone=${pose.yaw >= 40 ? "L(+)" : pose.yaw <= -40 ? "R(-)" : "front"}`);
   const q = window.Face.frameQuality(v, lm);
   const sharpOk = (q.metrics.sharp ?? 0) >= 0.015;
   const c = centerCheck(lm, v);
