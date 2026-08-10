@@ -145,6 +145,27 @@ function checkOrientation() {
 window.addEventListener("resize", checkOrientation);
 window.addEventListener("orientationchange", checkOrientation);
 
+// ---- true phone verticality via gyroscope (beta ≈ 90° when upright) ----
+// iOS needs a user-gesture permission; graceful fallback if denied.
+const tilt = { ok: true, beta: null, active: false };
+function initTilt() {
+  if (tilt.active || typeof DeviceOrientationEvent === "undefined") return;
+  const attach = () => {
+    tilt.active = true;
+    window.addEventListener("deviceorientation", e => {
+      if (e.beta == null) return;
+      tilt.beta = Math.round(e.beta);
+      tilt.ok = Math.abs(e.beta - 90) <= 30;
+    });
+  };
+  try {
+    if (typeof DeviceOrientationEvent.requestPermission === "function")
+      DeviceOrientationEvent.requestPermission()
+        .then(s => { if (s === "granted") attach(); }).catch(() => {});
+    else attach();
+  } catch (_) {}
+}
+
 const still = { prev: null, val: 1 };
 const STILL_THR = 0.006;
 function motionOf(lm) {
@@ -300,12 +321,39 @@ function drawTicks(ctx) {
     ctx.stroke();
   }
 }
-// Face-ID look: tick ring only — clean face, no overlays inside the circle.
-function drawAR(lm, v) {
+// nose-axis guide (front step): the face midline (forehead→nasion→nose→chin)
+// must sit straight on the dashed reference — then it turns green and we shoot
+function drawNoseLine(ctx, lm, v, aligned) {
+  const pts = mapPts(lm, v);
+  if (!pts) return;
+  const { cx, cy, R } = ringGeom();
+  ctx.setLineDash([6, 8]);
+  ctx.strokeStyle = "rgba(255,255,255,.5)";
+  ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(cx, cy - R * 0.8); ctx.lineTo(cx, cy + R * 0.85); ctx.stroke();
+  ctx.setLineDash([]);
+  const col = aligned ? IOS_GREEN : "#FF9F0A";
+  ctx.strokeStyle = col; ctx.lineWidth = 4;
+  ctx.lineCap = "round"; ctx.lineJoin = "round";
+  ctx.shadowColor = col; ctx.shadowBlur = 8;
+  ctx.beginPath();
+  [10, 168, 1, 152].forEach((id, i) => {
+    const [x, y] = pts[id];
+    i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  });
+  ctx.stroke();
+  const [nx, ny] = pts[1];
+  ctx.fillStyle = col;
+  ctx.beginPath(); ctx.arc(nx, ny, 5, 0, Math.PI * 2); ctx.fill();
+  ctx.shadowBlur = 0;
+}
+// Face-ID look: tick ring + (front step) the nose-axis guide.
+function drawAR(lm, v, noseOpts) {
   if (!ar.ctx) return;
   const ctx = ar.ctx;
   ctx.clearRect(0, 0, ar.cv.width, ar.cv.height);
   drawTicks(ctx);
+  if (noseOpts && lm) drawNoseLine(ctx, lm, v, noseOpts.aligned);
 }
 
 // ---------------------------------------------------------- Face-ID-style capture
@@ -446,7 +494,7 @@ function fidFrame(v, lm, res, blend, now) {
   }
   fid.faceSeen = true;
   const pose = window.Face.poseFromLandmarks(lm);
-  dbgShow(`yaw=${pose.yaw > 0 ? "+" : ""}${pose.yaw}  zone=${pose.yaw >= 40 ? "L(+)" : pose.yaw <= -40 ? "R(-)" : "front"}`);
+  dbgShow(`yaw=${pose.yaw > 0 ? "+" : ""}${pose.yaw}  roll=${pose.roll}  beta=${tilt.beta ?? "?"}  zone=${pose.yaw >= 40 ? "L(+)" : pose.yaw <= -40 ? "R(-)" : "front"}`);
   const q = window.Face.frameQuality(v, lm);
   const sharpOk = (q.metrics.sharp ?? 0) >= 0.015;
   const c = centerCheck(lm, v);
@@ -455,22 +503,30 @@ function fidFrame(v, lm, res, blend, now) {
   let hint = "";
 
   if (!fid.front) {
-    // step 1: quick frontal burst (needs neutral face, brief settle only)
+    // step 1: quick frontal burst — nose-line must sit straight on the
+    // reference, phone upright (gyro), neutral face
     el("scanH").textContent = "ضع وجهك داخل الدائرة";
     setGuide("pg-front");
     setTurn(null);
     const expr = expressionIssue(blend);
     const moving = motionOf(lm) > STILL_THR * 2;
-    if (Math.abs(pose.yaw) > 10)      { hint = "بص للكاميرا في النص الأول"; fid.frontSince = 0; }
+    const aligned = Math.abs(pose.yaw) <= 10 && Math.abs(pose.roll) <= 8 && tilt.ok;
+    if (!tilt.ok)                     { hint = "خلّي الموبايل واقف عمودي 📱"; fid.frontSince = 0; }
+    else if (Math.abs(pose.yaw) > 10) { hint = "بص للكاميرا في النص الأول"; fid.frontSince = 0; }
+    else if (Math.abs(pose.roll) > 8) { hint = "عدّل ميل راسك — خلّي الخط مستقيم"; fid.frontSince = 0; }
     else if (!c.ok)                   { hint = c.hint; fid.frontSince = 0; }
     else if (expr)                    { hint = expr; fid.frontSince = 0; }
     else if (!sharpOk || moving)      { hint = "ثانية واحدة…"; fid.frontSince = 0; }
     else {
       if (!fid.frontSince) fid.frontSince = now;
-      hint = "تمام…";
+      hint = "الخط مستقيم ✓ ثبات…";
       if (now - fid.frontSince > 250 && !capturing) captureFrontBurst();
     }
-  } else {
+    el("scanP").textContent = hint;
+    drawAR(lm, v, { aligned });
+    return;
+  }
+  {
     // step 2: slow turn right then left — best frame per zone, no stopping
     motionOf(lm);   // keep the motion tracker warm
     const L = fid.zones.left, R2 = fid.zones.right;
@@ -596,6 +652,7 @@ async function startCheck() {
 }
 function beginCapture() {
   mode = "capture";
+  initTilt();                 // gyro permission — must come from this tap
   fidReset(); lastTs = -1;
   show("s-scan");
   el("vid").srcObject = stream; el("vid").play();
